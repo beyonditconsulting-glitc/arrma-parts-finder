@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -13,12 +13,19 @@ import {
   Linking,
   Alert,
 } from "react-native";
-import { vehicles, searchParts, retailerUrl, type Part } from "./src/catalog";
+import {
+  vehicles,
+  categories,
+  catalogVehicle,
+  searchParts,
+  retailerUrl,
+  type Part,
+} from "./src/catalog";
 
 const red = "#e5432f";
 export default function App() {
   const [query, setQuery] = useState("");
-  const [vehicle, setVehicle] = useState("All vehicles");
+  const [vehicle, setVehicle] = useState(catalogVehicle);
   const [category, setCategory] = useState("All parts");
   const { tab: routeTab } = useLocalSearchParams<{ tab?: string }>();
   const tab = ["Explore", "Upgrades", "Saved"].includes(routeTab ?? "")
@@ -28,6 +35,8 @@ export default function App() {
   const [saved, setSaved] = useState<string[]>([]);
   const [selected, setSelected] = useState<Part | null>(null);
   const [picker, setPicker] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(24);
+  useEffect(() => setVisibleCount(24), [query, vehicle, category, tab]);
   const results = searchParts(
     query,
     vehicle,
@@ -60,7 +69,7 @@ export default function App() {
             <Text style={s.micro}>THE ARRMA PARTS COMPANION</Text>
           </View>
           <View style={s.demo}>
-            <Text style={s.demoText}>DEMO CATALOG</Text>
+            <Text style={s.demoText}>SOURCED CATALOG</Text>
           </View>
         </View>
         <ScrollView
@@ -79,7 +88,8 @@ export default function App() {
                 : "Find your part.\nGet back out."}
           </Text>
           <Text style={s.subtitle}>
-            Replacement parts. Worthwhile upgrades.\nYour next run starts here.
+            210 sourced replacement listings for ARA8708T1. Your next run starts
+            here.
           </Text>
           <Pressable
             style={s.vehicle}
@@ -96,7 +106,7 @@ export default function App() {
             <Text style={{ fontSize: 24, color: "#7b7d80" }}>⌕</Text>
             <TextInput
               style={s.input}
-              placeholder="Part name, number, or vehicle"
+              placeholder="Part name, catalog ID, or vehicle"
               placeholderTextColor="#777b82"
               value={query}
               onChangeText={setQuery}
@@ -115,8 +125,9 @@ export default function App() {
           <View style={s.notice}>
             <Text style={{ color: "#af7120", fontSize: 16 }}>ⓘ</Text>
             <Text style={s.noticeText}>
-              Sample data, real possibilities. Prices, stock and fitment are
-              illustrative, not live verified. Confirm with the retailer.
+              Horizon-listed parts for ARA8708T1. Fitment is pending diagram
+              verification. Prices and stock are unknown. The “EXB V2” alias is
+              not yet confirmed for this model ID.
             </Text>
           </View>
           {tab === "Explore" && (
@@ -125,13 +136,7 @@ export default function App() {
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={s.chips}
             >
-              {[
-                "All parts",
-                "Suspension",
-                "Drivetrain",
-                "Wheels & tires",
-                "Upgrades",
-              ].map((c) => (
+              {categories.map((c) => (
                 <Pressable
                   key={c}
                   onPress={() => setCategory(c)}
@@ -158,10 +163,15 @@ export default function App() {
           </View>
           {results.length === 0 && (
             <View style={s.empty}>
-              <Text style={s.sectionTitle}>Nothing in the pit yet</Text>
+              <Text style={s.sectionTitle}>
+                {tab === "Upgrades"
+                  ? "Upgrade research is next"
+                  : "Nothing in the pit yet"}
+              </Text>
               <Text style={s.subtitle}>
-                Try another search or vehicle. Tap a part’s bookmark to save it
-                for this session.
+                {tab === "Upgrades"
+                  ? "No sourced upgrade records yet. We’ll add M2C, Perfect Pass and other brands when exact fitment evidence is available."
+                  : "Try another search or vehicle. Tap a part’s bookmark to save it for this session."}
               </Text>
               <Pressable
                 onPress={() => {
@@ -176,12 +186,12 @@ export default function App() {
             </View>
           )}
           <View style={s.grid}>
-            {results.map((p) => (
+            {results.slice(0, visibleCount).map((p) => (
               <View key={p.id} style={s.card}>
                 <Pressable
                   onPress={() => setSelected(p)}
                   style={s.art}
-                  accessibilityLabel={`Compare ${p.name}`}
+                  accessibilityLabel={`View sources and retailers for ${p.name}`}
                 >
                   <Text style={s.artLabel}>{p.category.toUpperCase()}</Text>
                   <Text style={s.partIcon}>{p.icon}</Text>
@@ -203,39 +213,50 @@ export default function App() {
                 </Pressable>
                 <View style={s.cardBody}>
                   <Text style={s.partNumber}>
-                    {p.brand} · {p.id}
+                    {p.brand} · Catalog ID: {p.id}
                   </Text>
                   <Text style={s.partName}>{p.name}</Text>
                   <Text style={s.fitment}>
-                    {p.vehicles.join(" / ")} · Check fitment
+                    {p.vehicles.join(" / ")} · Retailer-listed; diagram check
+                    pending
                   </Text>
                   <View style={s.cardFooter}>
                     <View>
-                      <Text style={s.micro}>SAMPLE FROM</Text>
-                      <Text style={s.price}>
-                        ${Math.min(...p.prices).toFixed(2)}
-                      </Text>
+                      <Text style={s.micro}>PRICE & STOCK</Text>
+                      <Text style={s.partName}>Unknown</Text>
                     </View>
                     <Pressable
                       style={s.compare}
                       onPress={() => setSelected(p)}
-                      accessibilityLabel={`Compare listings for ${p.name}`}
+                      accessibilityLabel={`View sources and retailers for ${p.name}`}
                     >
-                      <Text style={s.compareText}>Compare ↗</Text>
+                      <Text style={s.compareText}>Sources & retailers ↗</Text>
                     </Pressable>
                   </View>
                 </View>
               </View>
             ))}
           </View>
+          {visibleCount < results.length && (
+            <Pressable
+              style={s.saveButton}
+              onPress={() => setVisibleCount((count) => count + 24)}
+              accessibilityRole="button"
+            >
+              <Text style={s.compareText}>
+                Show more parts ({Math.min(visibleCount, results.length)} of{" "}
+                {results.length})
+              </Text>
+            </Pressable>
+          )}
           <View style={s.upgradeBanner}>
             <Text style={s.bannerKicker}>MAKE IT YOURS</Text>
             <Text style={[s.bannerTitle, { color: "white" }]}>
               Stock is just the start.
             </Text>
             <Text style={s.bannerText}>
-              Explore upgrade ideas from M2C, Perfect Pass and RPM. Always
-              verify exact model fitment.
+              M2C, Perfect Pass and RPM upgrade records are not sourced yet. No
+              compatibility claims until supporting evidence is available.
             </Text>
             <Pressable
               onPress={() => {
@@ -243,7 +264,7 @@ export default function App() {
                 setQuery("");
               }}
             >
-              <Text style={s.bannerLink}>Discover upgrades →</Text>
+              <Text style={s.bannerLink}>Upgrade research →</Text>
             </Pressable>
           </View>
           <Text style={s.disclaimer}>
@@ -281,7 +302,8 @@ export default function App() {
           <View style={s.sheet}>
             <Text style={s.sectionTitle}>Choose your vehicle</Text>
             <Text style={s.subtitle}>
-              Model families are illustrative. Check your revision.
+              Only ARA8708T1 has sourced parts in this release. Check the model
+              ID on your vehicle; versions are not interchangeable.
             </Text>
             {vehicles.map((v) => (
               <Pressable
@@ -319,7 +341,7 @@ export default function App() {
                 <>
                   <View style={s.section}>
                     <Text style={s.partNumber}>
-                      {selected.brand} / {selected.id}
+                      {selected.brand} / Catalog ID: {selected.id}
                     </Text>
                     <Pressable
                       onPress={() => setSelected(null)}
@@ -332,37 +354,48 @@ export default function App() {
                   <Text style={s.subtitle}>{selected.description}</Text>
                   <View style={s.notice}>
                     <Text style={s.noticeText}>
-                      ALL LISTINGS ARE SAMPLES · No live price, availability or
-                      compatibility has been verified. Shipping and tax are
-                      excluded.
+                      Retailer-listed fitment · Diagram verification pending. No
+                      live prices or availability are connected. Catalog IDs may
+                      differ from manufacturer part numbers.
                     </Text>
                   </View>
-                  {["Horizon Hobby", "Jenny’s RC", "eBay"].map(
-                    (retailer, i) => (
-                      <View key={retailer} style={s.listing}>
-                        <View style={{ flex: 1 }}>
-                          <Text style={s.partName}>{retailer}</Text>
-                          <Text style={s.fitment}>
-                            Sample price · Stock unknown
-                          </Text>
-                          <Pressable
-                            onPress={() =>
-                              open(retailerUrl(retailer, selected))
-                            }
-                          >
-                            <Text style={s.link}>Search retailer ↗</Text>
-                          </Pressable>
-                        </View>
-                        <Text style={s.price}>
-                          ${selected.prices[i].toFixed(2)}
+                  <Text style={s.fitment}>
+                    Source: {selected.provenance.publisher} replacement-parts
+                    lookup for {selected.provenance.vehicleId}. Captured{" "}
+                    {selected.provenance.observedAt.slice(0, 10)}. Categories
+                    are inferred from listing titles.
+                  </Text>
+                  <Pressable
+                    onPress={() => open(selected.provenance.sourceUrl)}
+                  >
+                    <Text style={s.link}>
+                      View source & vehicle association ↗
+                    </Text>
+                  </Pressable>
+                  {["Horizon Hobby", "Jenny’s RC", "eBay"].map((retailer) => (
+                    <View key={retailer} style={s.listing}>
+                      <View style={{ flex: 1 }}>
+                        <Text style={s.partName}>{retailer}</Text>
+                        <Text style={s.fitment}>
+                          Price unknown · Stock unknown
                         </Text>
+                        <Pressable
+                          onPress={() => open(retailerUrl(retailer, selected))}
+                        >
+                          <Text style={s.link}>
+                            {retailer === "Horizon Hobby"
+                              ? "Open catalog product ↗"
+                              : "Search catalog ID ↗"}
+                          </Text>
+                        </Pressable>
                       </View>
-                    ),
-                  )}
+                    </View>
+                  ))}
                   <Text style={s.disclaimer}>
-                    Retailer links open search results, not verified offers.
-                    Compare condition, shipping, seller reputation and exact
-                    part number before buying.
+                    Horizon opens the catalog product; other retailers search
+                    the catalog ID. A search does not establish a matching
+                    offer. Check manufacturer part number, fitment, condition,
+                    shipping and seller before buying.
                   </Text>
                   <Pressable
                     style={s.saveButton}

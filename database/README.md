@@ -1,8 +1,8 @@
 # Real catalog ingestion
 
-Status: schema and reviewed-data importer implemented. Official catalog discovery is now saved under `discovery/`: 112 distinct vehicle catalog IDs, 207 represented variant SKUs, and 210 retailer-listed ARA8708T1 parts entries. These are staging records, not independently verified version/fitment records. No reviewed data has been imported into SQLite or connected to the app; the app continues to use its clearly labeled sample catalog. No actual fitment or pricing has been verified yet.
+Status: schema and reviewed-data importer implemented. Official catalog discovery is now saved under `discovery/`: 112 distinct vehicle catalog IDs, 207 represented variant SKUs, and 210 retailer-listed ARA8708T1 parts entries. These are staging records, not independently verified version/fitment records. No reviewed data has been imported into SQLite. The app now bundles the 210 sourced ARA8708T1 entries as an offline catalog, labeled retailer-listed fitment pending diagram verification, with prices and stock unknown. No actual fitment or pricing has been verified yet.
 
-This SQLite database is maintained with Node 24 tooling. It is not yet connected to the Expo app. Do not bundle the Node SQLite importer in the mobile app.
+This SQLite database is maintained with Node 24 tooling. The reviewed SQLite tables are not exposed to the Expo app; the mobile app uses a separate generated discovery snapshot. Do not bundle the Node SQLite importer in the mobile app.
 
 ## Source requirements
 

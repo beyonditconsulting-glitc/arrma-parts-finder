@@ -22,15 +22,25 @@ EXPO_NO_TELEMETRY=1 npx expo export --platform ios --platform android
 
 ## Features and data boundaries
 
-- Search by vehicle, name, number or brand; combine vehicle and category filters.
-- Compare sample prices from Horizon Hobby, Jenny’s RC and eBay and open retailer searches.
-- Explore illustrative M2C, Perfect Pass and RPM upgrades.
-- Save parts for the current app session. Bookmarks do not survive restarting the app.
-- Accessible labels, dismissible native comparison and vehicle-selection sheets, empty search state.
+- 210 Horizon Hobby source-listed replacement entries for **Kraton 6S EXB (ARA8708T1)** replace the original six sample records.
+- Search by name, brand, catalog ID or exact vehicle ID, with title-derived category filters. Results display in batches of 24.
+- Part details show the source relation, capture date, source product link, fitment warning, and retailer search actions.
+- **Prices and stock are unknown.** No live offers, sample prices or invented availability are displayed.
+- Fitment is **retailer-listed, pending diagram verification**. The informal “EXB V2” alias has not been independently established for ARA8708T1. Other model versions do not inherit this association.
+- Catalog IDs are source identifiers and can differ from manufacturer part numbers. Always check the exact product and model before ordering.
+- Unsourced M2C, Perfect Pass and RPM upgrade samples have been removed; Upgrades shows an explicit empty state until evidence-backed records are added.
+- Session bookmarks remain available. They do not persist across app restarts.
 
-Every record in `src/catalog.ts` is **sample data**. Part numbers, model associations, prices and upgrade compatibility are not verified. Stock is unknown. Search links do not establish availability or exact product matches. Check manufacturer exploded diagrams, revision, dimensions and retailer details before ordering. No live retailer APIs or scraping are implemented, and no credentials are required for this demo.
+The app imports an offline data snapshot from `src/data/kraton.js`, generated from the captured official lookup in `database/discovery/kraton-ARA8708T1-parts.json`. This snapshot is not a live backend or a verified compatibility database. No new service or credential is required. Regenerate it with:
 
-For production live offers, add a server-side integration using authorized retailer feeds/APIs. Keep keys on the server. Validate product identity, currency, shipping, condition, source, fetched-at time and fitment evidence. Clearly mark stale or failed responses and never relabel sample fallback data as live. Verified offers should have source provenance and a verification timestamp. Retailer authorization and independently verified fitment data are outstanding production work.
+```sh
+node scripts/build-mobile-catalog.mjs
+npm test
+```
+
+The generator validates pagination and expected source/model relation and deliberately excludes price/stock claims. Tests compare every bundled ID, title, brand, source hash and capture time to the source snapshot. `database/` also contains the separate SQLite reviewed-data schema/importer and the broader vehicle research; those reviewed SQLite tables have not been populated or exposed as an API.
+
+For future live offers, add a server-side integration using authorized retailer feeds/APIs. Keep keys on the server, validate product identity and condition, and record currency, shipping, source, and fetched-at time. Label stale or failed responses explicitly. No live feeds or independently verified fitment data are currently connected.
 
 ## Validation scope
 
