@@ -1,0 +1,1101 @@
+{
+  "reported_total": 50,
+  "pages": [
+    {
+      "source_url": "https://www.horizonhobby.com/search?cgid=brands-arrma&prefn1=c_completionLevel&prefv1=Ready-To-Run%7CRoller%7CKit&start=0&sz=100",
+      "retrieved_at": "2026-10-26T21:16:24.281Z",
+      "sha256": "80ae7becf43ffeed195243cbf7c7c4d0fb08b637c4fa4d69f7321608d393d173",
+      "offset": 0,
+      "limit": 100,
+      "total": 50,
+      "record_ids": [
+        "ARA7816",
+        "ARA3521",
+        "ARA4408V2",
+        "ARA4303V4",
+        "ARA2104K",
+        "ARA3530",
+        "ARA7707V6",
+        "ARA4315V4",
+        "ARA2508S",
+        "ARA2508",
+        "ARA7617V2",
+        "ARA2315S",
+        "ARA3230SK",
+        "ARA4437",
+        "ARA2315",
+        "ARA2304",
+        "ARA3530S",
+        "ARA2304S",
+        "ARA7704V3",
+        "ARA2137",
+        "ARA2306S",
+        "ARA2130",
+        "ARA2104",
+        "ARA2106",
+        "ARA5810V2T1",
+        "ARA7615V2",
+        "ARA3537",
+        "ARA7604V3",
+        "ARA2306",
+        "ARA8708V6",
+        "ARA8611V6",
+        "ARA4302V4",
+        "ARA8406",
+        "ARA3505",
+        "ARA4404",
+        "ARA4306V4",
+        "ARA7116V2",
+        "ARA7816SPMX",
+        "ARA8606V5",
+        "ARA8608V6",
+        "ARA4206V4",
+        "ARA4202V4",
+        "ARA4410V2",
+        "ARA5808V2T1",
+        "ARA3230SKT1",
+        "ARA2102",
+        "ARA4305V4",
+        "ARA4312V4",
+        "ARA7604V2",
+        "ARA3230S"
+      ],
+      "query": {
+        "limit": 100,
+        "offset": 0,
+        "refine": [
+          "cgid=brands-arrma",
+          "c_completionLevel=Ready-To-Run|Roller|Kit",
+          "c_discontinued=false"
+        ]
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": "ARA7816",
+      "name": "ARRMA 1/7 LIMITLESS 120 8S AVC 4X4 RTR Speed Machine",
+      "product_url": "https://www.horizonhobby.com/product/ARA7816.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7816T1",
+        "ARA7816T2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7816]"
+    },
+    {
+      "id": "ARA3521",
+      "name": "ARRMA 1/10 FURY 223S DSC 2WD RTR Brushless Short Course Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA3521.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA3521T1",
+        "ARA3521T2",
+        "ARA3521T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA3521]"
+    },
+    {
+      "id": "ARA4408V2",
+      "name": "ARRMA 1/10 KRATON 4S 4X4 RTR Brushless Speed Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4408V2.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4408V2T1",
+        "ARA4408V2T2",
+        "ARA4408V2T3",
+        "ARA4408V2T4"
+      ],
+      "declared_discontinued": true,
+      "successor": {
+        "uuid": "46fbb1cee56facef173c778f86",
+        "id": "ARA4408V2T3",
+        "productName": "ARRMA 1/10 KRATON 4S 4X4 RTR Brushless Speed Truck, Red",
+        "productType": "variant",
+        "brand": "ARRMA",
+        "isSubscriptionOnly": false,
+        "images": {
+          "large": [
+            {
+              "alt": "ARRMA 1/10 KRATON 4S 4X4 RTR Brushless Speed Truck, Red",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw34a4e0f7/Images/ARA/ARA4408V2T3_A28_AEUV7D8A.jpg?sw=800&sh=800&sm=fit",
+              "title": "ARRMA 1/10 KRATON 4S 4X4 RTR Brushless Speed Truck, Red",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw34a4e0f7/Images/ARA/ARA4408V2T3_A28_AEUV7D8A.jpg?sw=800&sh=800&sm=fit"
+            },
+            {
+              "alt": "ARRMA 1/10 KRATON 4S 4X4 RTR Brushless Speed Truck, Red",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw7af0c24b/Images/ARA/ARA4408V2T3_A13_AEUV7D8A.jpg?sw=800&sh=800&sm=fit",
+              "title": "ARRMA 1/10 KRATON 4S 4X4 RTR Brushless Speed Truck, Red",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw7af0c24b/Images/ARA/ARA4408V2T3_A13_AEUV7D8A.jpg?sw=800&sh=800&sm=fit",
+              "lifeStyleImage": true
+            }
+          ]
+        },
+        "rating": 4.2,
+        "productBadge": {
+          "displayValue": "",
+          "value": null
+        },
+        "rcClubBadge": {
+          "displayValue": "",
+          "value": null
+        },
+        "customImages": {
+          "small": [
+            {
+              "alt": "ARRMA 1/10 KRATON 4S 4X4 RTR Brushless Speed Truck, Red",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw34a4e0f7/Images/ARA/ARA4408V2T3_A28_AEUV7D8A.jpg?sw=91&sh=91&sm=fit",
+              "title": "ARRMA 1/10 KRATON 4S 4X4 RTR Brushless Speed Truck, Red",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw34a4e0f7/Images/ARA/ARA4408V2T3_A28_AEUV7D8A.jpg?sw=91&sh=91&sm=fit"
+            },
+            {
+              "alt": null,
+              "url": null,
+              "title": null,
+              "absURL": null,
+              "lifeStyleImage": false
+            }
+          ]
+        },
+        "selectedQuantity": 1,
+        "minOrderQuantity": 1,
+        "maxOrderQuantity": 999,
+        "availability": {
+          "messages": [
+            "In Stock"
+          ],
+          "nextShipmentMessages": [],
+          "status": "in-stock",
+          "inStockDate": null,
+          "statusText": "In Stock"
+        },
+        "available": true,
+        "masterID": "ARA4408V2",
+        "productTags": "    <div class=\"tags-area\">\n        \n            \n                <div class=\"tag\">3S/4S Compatible</div>\n            \n        \n            \n                <div class=\"tag\">55+ MPH</div>\n            \n        \n            \n                <div class=\"tag\">4X4</div>\n            \n        \n            \n                <div class=\"tag\">Brushless</div>\n            \n        \n    </div>\n\n",
+        "secondaryName": "1/10 ARRMA KRATON 4S",
+        "ratingScore": 0,
+        "totalReviews": 0,
+        "online": true
+      },
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4408V2]"
+    },
+    {
+      "id": "ARA4303V4",
+      "name": "ARRMA 1/10 SENTON 223S DSC 4X4 RTR Brushless Short Course Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4303V4.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4303V4T1",
+        "ARA4303V4T2",
+        "ARA4303V4T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4303V4]"
+    },
+    {
+      "id": "ARA2104K",
+      "name": "ARRMA 1/16 MOJAVE GROM 4X4 RTA KIT Brushed Desert Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2104K.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2104KT1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2104K]"
+    },
+    {
+      "id": "ARA3530",
+      "name": "ARRMA 1/10 GORGON 223S 2WD RTR Brushless Monster Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA3530.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA3530T1",
+        "ARA3530T2",
+        "ARA3530T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA3530]"
+    },
+    {
+      "id": "ARA7707V6",
+      "name": "ARRMA 1/7 TALION 6S EXB 4X4 RTR Brushless Speed Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA7707V6.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7707V6T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7707V6]"
+    },
+    {
+      "id": "ARA4315V4",
+      "name": "ARRMA 1/8 INFRACTION 223S DSC 4X4 RTR Brushless All-Road Street Bash Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4315V4.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4315V4T1",
+        "ARA4315V4T2",
+        "ARA4315V4T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4315V4]"
+    },
+    {
+      "id": "ARA2508S",
+      "name": "ARRMA 1/16 MINI KRATON 3S DSC 4X4 RTR Brushless Speed Monster Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2508S.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2508ST1",
+        "ARA2508ST2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2508S]"
+    },
+    {
+      "id": "ARA2508",
+      "name": "ARRMA 1/16 MINI KRATON 3S DSC 4X4 RTR Brushless Speed Monster Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA2508.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2508T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2508]"
+    },
+    {
+      "id": "ARA7617V2",
+      "name": "ARRMA 1/7 FELONY 6S AVC 4X4 RTR Brushless All-Road Street Bash",
+      "product_url": "https://www.horizonhobby.com/product/ARA7617V2.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7617V2T1",
+        "ARA7617V2T2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7617V2]"
+    },
+    {
+      "id": "ARA2315S",
+      "name": "ARRMA 1/12 INFRACTION GROM 3S 4X4 Ready-To-Run Brushless All-Road Street Bash (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2315S.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2315ST1",
+        "ARA2315ST2",
+        "ARA2315ST3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2315S]"
+    },
+    {
+      "id": "ARA3230SK",
+      "name": "ARRMA 1/10 GORGON 2WD RTA Kit Brushed Monster Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA3230SK.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA3230SKT2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA3230SK]"
+    },
+    {
+      "id": "ARA4437",
+      "name": "ARRMA 1/8 QUAKE 4S DSC 4X4 RTR Brushless Monster Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4437.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4437T1",
+        "ARA4437T2",
+        "ARA4437T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4437]"
+    },
+    {
+      "id": "ARA2315",
+      "name": "ARRMA 1/12 INFRACTION GROM 3S 4X4 Ready-To-Run Brushless All-Road Street Bash",
+      "product_url": "https://www.horizonhobby.com/product/ARA2315.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2315T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2315]"
+    },
+    {
+      "id": "ARA2304",
+      "name": "ARRMA 1/16 MOJAVE GROM 223S DSC 4X4 RTR Brushless Desert Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA2304.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2304T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2304]"
+    },
+    {
+      "id": "ARA3530S",
+      "name": "ARRMA 1/10 FREEDOM FLYER 223S 2WD RTR Brushless Monster Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA3530S.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA3530SFFT1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA3530S]"
+    },
+    {
+      "id": "ARA2304S",
+      "name": "ARRMA 1/16 MOJAVE GROM 223S DSC 4X4 RTR Brushless Desert Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2304S.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2304ST1",
+        "ARA2304ST2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2304S]"
+    },
+    {
+      "id": "ARA7704V3",
+      "name": "ARRMA 1/7 MOJAVE 6S EXB 4X4 RTR Brushless Desert Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA7704V3.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7704V3T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7704V3]"
+    },
+    {
+      "id": "ARA2137",
+      "name": "ARRMA 1/16 QUAKE GROM 4X4 RTR Brushed Monster Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2137.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2137T1",
+        "ARA2137T2",
+        "ARA2137T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2137]"
+    },
+    {
+      "id": "ARA2306S",
+      "name": "ARRMA 1/14 TYPHON GROM 223S DSC 4X4 RTR Brushless Buggy (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2306S.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2306ST1",
+        "ARA2306ST2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2306S]"
+    },
+    {
+      "id": "ARA2130",
+      "name": "ARRMA 1/16 FREEDOM FLYER GROM 4X4 RTR Brushed Monster Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2130.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2130FF"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2130]"
+    },
+    {
+      "id": "ARA2104",
+      "name": "ARRMA 1/16 MOJAVE GROM 4X4 RTR Brushed Desert Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2104.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2104T1",
+        "ARA2104T2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2104]"
+    },
+    {
+      "id": "ARA2106",
+      "name": "ARRMA 1/14 TYPHON GROM 4X4 RTR Brushed Buggy (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2106.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2106T1",
+        "ARA2106T2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2106]"
+    },
+    {
+      "id": "ARA5810V2T1",
+      "name": "ARRMA 1/5 OUTCAST 8S EXB AVC 4X4 RTR Brushless Stunt Truck, Black",
+      "product_url": "https://www.horizonhobby.com/product/ARA5810V2T1.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA5810V2T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA5810V2T1]"
+    },
+    {
+      "id": "ARA7615V2",
+      "name": "ARRMA 1/7 INFRACTION 6S AVC 4X4 RTR Brushless All-Road Street Bash",
+      "product_url": "https://www.horizonhobby.com/product/ARA7615V2.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7615V2T1",
+        "ARA7615V2T2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7615V2]"
+    },
+    {
+      "id": "ARA3537",
+      "name": "ARRMA 1/10 QUAKE 223S DSC 2WD RTR Brushless Monster Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA3537.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA3537T1",
+        "ARA3537T2",
+        "ARA3537T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA3537]"
+    },
+    {
+      "id": "ARA7604V3",
+      "name": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA7604V3.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7604V3T1",
+        "ARA7604V3T2",
+        "ARA7604V3T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7604V3]"
+    },
+    {
+      "id": "ARA2306",
+      "name": "ARRMA 1/14 TYPHON GROM 223S DSC 4X4 RTR Brushless Buggy",
+      "product_url": "https://www.horizonhobby.com/product/ARA2306.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2306T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2306]"
+    },
+    {
+      "id": "ARA8708V6",
+      "name": "ARRMA 1/8 KRATON 6S EXB 4X4 RTR Brushless Speed Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA8708V6.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA8708V6T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA8708V6]"
+    },
+    {
+      "id": "ARA8611V6",
+      "name": "ARRMA 1/8 NOTORIOUS 6S 4X4 RTR Brushless Stunt Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA8611V6.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA8611V6T1",
+        "ARA8611V6T2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA8611V6]"
+    },
+    {
+      "id": "ARA4302V4",
+      "name": "ARRMA 1/10 GRANITE 223S 4X4 RTR Brushless Monster Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4302V4.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4302V4T1",
+        "ARA4302V4T2",
+        "ARA4302V4T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4302V4]"
+    },
+    {
+      "id": "ARA8406",
+      "name": "ARRMA 1/8 TYPHON 6S TLR Tuned 4X4 RTR Brushless Buggy, Red/Blue",
+      "product_url": "https://www.horizonhobby.com/product/ARA8406.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA8406"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA8406]"
+    },
+    {
+      "id": "ARA3505",
+      "name": "ARRMA 1/10 VORTEKS 223S DSC 2WD RTR Brushless Stadium Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA3505.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA3505T1",
+        "ARA3505T2",
+        "ARA3505T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA3505]"
+    },
+    {
+      "id": "ARA4404",
+      "name": "ARRMA 1/8 MOJAVE 4S 4X4 RTR Brushless Desert Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4404.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4404T1",
+        "ARA4404T2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4404]"
+    },
+    {
+      "id": "ARA4306V4",
+      "name": "ARRMA 1/8 TYPHON 223S 4X4 RTR Brushless Buggy",
+      "product_url": "https://www.horizonhobby.com/product/ARA4306V4.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4306V4T1",
+        "ARA4306V4T2",
+        "ARA4306V4T3",
+        "ARA4306V4T4"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4306V4]"
+    },
+    {
+      "id": "ARA7116V2",
+      "name": "ARRMA 1/7 LIMITLESS 6S 4X4 Roller Brushless Street Speed, Clear",
+      "product_url": "https://www.horizonhobby.com/product/ARA7116V2.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7116V2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7116V2]"
+    },
+    {
+      "id": "ARA7816SPMX",
+      "name": "ARRMA 1/7 LIMITLESS 120 8S AVC 4X4 RTR Speed Machine Combo (2 Batteries Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA7816SPMX.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7816SPMXT1",
+        "ARA7816SPMXT2"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7816SPMX]"
+    },
+    {
+      "id": "ARA8606V5",
+      "name": "ARRMA 1/8 TYPHON 6S 4X4 RTR Brushless Buggy, Black",
+      "product_url": "https://www.horizonhobby.com/product/ARA8606V5.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA8606V5"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA8606V5]"
+    },
+    {
+      "id": "ARA8608V6",
+      "name": "ARRMA 1/8 KRATON 6S 4X4 RTR Brushless Speed Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA8608V6.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA8608V6T1",
+        "ARA8608V6T2",
+        "ARA8608V6T3",
+        "ARA8608V6T4"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA8608V6]"
+    },
+    {
+      "id": "ARA4206V4",
+      "name": "ARRMA 1/8 TYPHON MEGA 665 4X4 RTR Brushed Buggy",
+      "product_url": "https://www.horizonhobby.com/product/ARA4206V4.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4206V4T1",
+        "ARA4206V4T2",
+        "ARA4206V4T3"
+      ],
+      "declared_discontinued": true,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4206V4]"
+    },
+    {
+      "id": "ARA4202V4",
+      "name": "ARRMA 1/10 GRANITE MEGA 665 4X4 RTR Brushed Monster Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4202V4.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4202V4T1",
+        "ARA4202V4T2",
+        "ARA4202V4T3"
+      ],
+      "declared_discontinued": true,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4202V4]"
+    },
+    {
+      "id": "ARA4410V2",
+      "name": "ARRMA 1/10 OUTCAST 4S 4X4 RTR Brushless Stunt Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4410V2.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4410V2T1",
+        "ARA4410V2T2",
+        "ARA4410V2T3",
+        "ARA4410V2T4"
+      ],
+      "declared_discontinued": true,
+      "successor": {
+        "uuid": "c34b8b1eba85e477e02c0c6e64",
+        "id": "ARA4410V2T3",
+        "productName": "ARRMA 1/10 OUTCAST 4S 4X4 RTR Brushless Stunt Truck, Gun Metal",
+        "productType": "variant",
+        "brand": "ARRMA",
+        "isSubscriptionOnly": false,
+        "images": {
+          "large": [
+            {
+              "alt": "ARRMA 1/10 OUTCAST 4S 4X4 RTR Brushless Stunt Truck, Gun Metal",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dwd38e14ed/Images/ARA/ARA4410V2T3_A31_XG4BPS2H.jpg?sw=800&sh=800&sm=fit",
+              "title": "ARRMA 1/10 OUTCAST 4S 4X4 RTR Brushless Stunt Truck, Gun Metal",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dwd38e14ed/Images/ARA/ARA4410V2T3_A31_XG4BPS2H.jpg?sw=800&sh=800&sm=fit"
+            },
+            {
+              "alt": "ARRMA 1/10 OUTCAST 4S 4X4 RTR Brushless Stunt Truck, Gun Metal",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw15840691/Images/ARA/ARA4410V2T3_A32_XG4BPS2H.jpg?sw=800&sh=800&sm=fit",
+              "title": "ARRMA 1/10 OUTCAST 4S 4X4 RTR Brushless Stunt Truck, Gun Metal",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw15840691/Images/ARA/ARA4410V2T3_A32_XG4BPS2H.jpg?sw=800&sh=800&sm=fit",
+              "lifeStyleImage": true
+            }
+          ]
+        },
+        "rating": 3.5,
+        "productBadge": {
+          "displayValue": "",
+          "value": null
+        },
+        "rcClubBadge": {
+          "displayValue": "",
+          "value": null
+        },
+        "customImages": {
+          "small": [
+            {
+              "alt": "ARRMA 1/10 OUTCAST 4S 4X4 RTR Brushless Stunt Truck, Gun Metal",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dwd38e14ed/Images/ARA/ARA4410V2T3_A31_XG4BPS2H.jpg?sw=91&sh=91&sm=fit",
+              "title": "ARRMA 1/10 OUTCAST 4S 4X4 RTR Brushless Stunt Truck, Gun Metal",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dwd38e14ed/Images/ARA/ARA4410V2T3_A31_XG4BPS2H.jpg?sw=91&sh=91&sm=fit"
+            },
+            {
+              "alt": null,
+              "url": null,
+              "title": null,
+              "absURL": null,
+              "lifeStyleImage": false
+            }
+          ]
+        },
+        "selectedQuantity": 1,
+        "minOrderQuantity": 1,
+        "maxOrderQuantity": 999,
+        "availability": {
+          "messages": [
+            "In Stock"
+          ],
+          "nextShipmentMessages": [],
+          "status": "in-stock",
+          "inStockDate": null,
+          "statusText": "In Stock"
+        },
+        "available": true,
+        "masterID": "ARA4410V2",
+        "productTags": "    <div class=\"tags-area\">\n        \n            \n                <div class=\"tag\">3S/4S Compatible</div>\n            \n        \n            \n                <div class=\"tag\">55+ MPH</div>\n            \n        \n            \n                <div class=\"tag\">4X4</div>\n            \n        \n            \n                <div class=\"tag\">Brushless</div>\n            \n        \n    </div>\n\n",
+        "secondaryName": "1/10 ARRMA OUTCAST 4S",
+        "ratingScore": 3,
+        "totalReviews": 2,
+        "online": true
+      },
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4410V2]"
+    },
+    {
+      "id": "ARA5808V2T1",
+      "name": "ARRMA 1/5 KRATON 8S EXB AVC 4X4 RTR Brushless Speed Truck, Black",
+      "product_url": "https://www.horizonhobby.com/product/ARA5808V2T1.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA5808V2T1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA5808V2T1]"
+    },
+    {
+      "id": "ARA3230SKT1",
+      "name": "ARRMA 1/10 GORGON 2WD RTA Kit Brushed Monster Truck (Battery & Charger Included), Gun Metal",
+      "product_url": "https://www.horizonhobby.com/product/ARA3230SKT1.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA3230SKT1"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA3230SKT1]"
+    },
+    {
+      "id": "ARA2102",
+      "name": "ARRMA 1/18 GRANITE GROM 4X4 RTR Brushed Monster Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA2102.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA2102T1",
+        "ARA2102T2",
+        "ARA2102T3"
+      ],
+      "declared_discontinued": true,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA2102]"
+    },
+    {
+      "id": "ARA4305V4",
+      "name": "ARRMA 1/10 VORTEKS 223S 4X4 RTR Brushless Stadium Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4305V4.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4305V4T1",
+        "ARA4305V4T2",
+        "ARA4305V4T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4305V4]"
+    },
+    {
+      "id": "ARA4312V4",
+      "name": "ARRMA 1/10 BIG ROCK 223S 4X4 RTR Brushless Monster Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA4312V4.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA4312V4T1",
+        "ARA4312V4T2",
+        "ARA4312V4T3"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA4312V4]"
+    },
+    {
+      "id": "ARA7604V2",
+      "name": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck",
+      "product_url": "https://www.horizonhobby.com/product/ARA7604V2.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA7604V2T1",
+        "ARA7604V2T2"
+      ],
+      "declared_discontinued": true,
+      "successor": {
+        "uuid": "2d833f77286894f6e5dd51dbf3",
+        "id": "ARA7604V3T1",
+        "productName": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck, Blue",
+        "productType": "variant",
+        "brand": "ARRMA",
+        "isSubscriptionOnly": false,
+        "images": {
+          "large": [
+            {
+              "alt": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck, Blue",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dwcf35357e/Images/ARA/ARA7604V3T1_A3_BUX8AQPR.jpg?sw=800&sh=800&sm=fit",
+              "title": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck, Blue",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dwcf35357e/Images/ARA/ARA7604V3T1_A3_BUX8AQPR.jpg?sw=800&sh=800&sm=fit"
+            },
+            {
+              "alt": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck, Blue",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw224760c3/Images/ARA/ARA7604V3T1_A41_BUX8AQPR.jpg?sw=800&sh=800&sm=fit",
+              "title": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck, Blue",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dw224760c3/Images/ARA/ARA7604V3T1_A41_BUX8AQPR.jpg?sw=800&sh=800&sm=fit",
+              "lifeStyleImage": true
+            }
+          ]
+        },
+        "rating": 4.2,
+        "productBadge": {
+          "value": "Backorder",
+          "displayValue": " "
+        },
+        "rcClubBadge": {
+          "displayValue": "",
+          "value": null
+        },
+        "customImages": {
+          "small": [
+            {
+              "alt": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck, Blue",
+              "url": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dwcf35357e/Images/ARA/ARA7604V3T1_A3_BUX8AQPR.jpg?sw=91&sh=91&sm=fit",
+              "title": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck, Blue",
+              "absURL": "https://bfbr-stg.my.commercecloud.salesforce.com/dw/image/v2/BFBR_STG/on/demandware.static/-/Sites-horizon-master/default/dwcf35357e/Images/ARA/ARA7604V3T1_A3_BUX8AQPR.jpg?sw=91&sh=91&sm=fit"
+            },
+            {
+              "alt": null,
+              "url": null,
+              "title": null,
+              "absURL": null,
+              "lifeStyleImage": false
+            }
+          ]
+        },
+        "selectedQuantity": 1,
+        "minOrderQuantity": 1,
+        "maxOrderQuantity": 999,
+        "availability": {
+          "messages": [
+            "Backorder | September 2026"
+          ],
+          "nextShipmentMessages": [
+            "Backorder | September 2026"
+          ],
+          "status": "backorder",
+          "inStockDate": "Wed Sep 09 2026"
+        },
+        "available": true,
+        "masterID": "ARA7604V3",
+        "productTags": "    <div class=\"tags-area\">\n        \n            \n                <div class=\"tag\">2S/3S/4S/6S Compatible</div>\n            \n        \n            \n                <div class=\"tag\">60+ MPH</div>\n            \n        \n            \n                <div class=\"tag\">4X4</div>\n            \n        \n            \n                <div class=\"tag\">Brushless</div>\n            \n        \n    </div>\n\n",
+        "secondaryName": "1/7 ARRMA MOJAVE 6S",
+        "ratingScore": 0,
+        "totalReviews": 0,
+        "online": true
+      },
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA7604V2]"
+    },
+    {
+      "id": "ARA3230S",
+      "name": "ARRMA 1/10 GORGON 2WD RTR Brushed Monster Truck (Battery & Charger Included)",
+      "product_url": "https://www.horizonhobby.com/product/ARA3230S.html",
+      "hit_type": "master",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA3230ST1",
+        "ARA3230ST2",
+        "ARA3230ST3",
+        "ARA3230ST4",
+        "ARA3230ST5"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"refine\":[\"cgid=brands-arrma\",\"c_completionLevel=Ready-To-Run|Roller|Kit\",\"c_discontinued=false\"]}].hits[productId=ARA3230S]"
+    }
+  ],
+  "validation": {
+    "complete": true,
+    "reported_total": 50,
+    "fetched_count": 50,
+    "errors": []
+  },
+  "scope": "Only these official search queries; not all ARRMA history. Variant SKUs are not generations."
+}

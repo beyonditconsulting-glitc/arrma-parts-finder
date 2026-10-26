@@ -1,6 +1,6 @@
 # Real catalog ingestion
 
-Status: schema and importer implemented; no real records imported. The app continues to use its clearly labeled sample catalog. No actual fitment or pricing has been verified yet.
+Status: schema and reviewed-data importer implemented. Official catalog discovery is now saved under `discovery/`: 112 distinct vehicle catalog IDs, 207 represented variant SKUs, and 210 retailer-listed ARA8708T1 parts entries. These are staging records, not independently verified version/fitment records. No reviewed data has been imported into SQLite or connected to the app; the app continues to use its clearly labeled sample catalog. No actual fitment or pricing has been verified yet.
 
 This SQLite database is maintained with Node 24 tooling. It is not yet connected to the Expo app. Do not bundle the Node SQLite importer in the mobile app.
 
@@ -31,3 +31,31 @@ Tests use fictional records and an in-memory database only. Run `npm test`.
 3. Import reviewed records, verify counts against the source, and inspect representative fitments.
 4. Connect a read-only catalog export or API to the app, keeping live offers separate from samples.
 5. Add authorized retailer feeds/APIs with freshness handling. No feeds or API credentials have been configured.
+
+## Discovery artifacts
+
+- `discovery/VEHICLES.md`: readable vehicle/model index.
+- `discovery/vehicle-inventory.json`: deduplicated catalog IDs with variant relationships and per-query evidence.
+- `discovery/active-vehicles.json` and `historical-vehicles.json`: complete captures of their respective current official search result sets. Neither proves all historical ARRMA models are included.
+- `discovery/KRATON-PARTS.md` and `kraton-ARA8708T1-parts.json`: retailer-listed replacement associations; not fitment approval.
+- `discovery/*-captures.json`: source URL, retrieval time and local retained-response location. Raw public HTML is kept locally in ignored `database/evidence/`, not pushed to Git. Source hashes in each sweep bind the facts to the captured response. Refetching dynamic pages may produce different bytes and should create new observations.
+
+Rebuild a sweep from its retained local evidence:
+
+```sh
+node scripts/extract-horizon-sweep.mjs database/discovery/active-vehicles-captures.json database/discovery/active-vehicles.json
+node scripts/validate-discovery.mjs database/discovery/active-vehicles.json
+node scripts/build-vehicle-inventory.mjs
+```
+
+Use `prefnN`/`prefvN` for official search refinements and `start`/`sz` for pagination. URL `offset`, `limit` and `refine` were silently ignored. Inspect selected query refinements in hydration data instead of assuming request parameters applied. Pagination validation catches missing results, duplicate IDs and changed totals. Version aliases, historical coverage, and compatibility still require review.
+
+The per-model pass fetched all 112 indexed product pages without errors and extracted 257 unique document links. `discovery/DOCUMENTS.md` is the readable index; `vehicle-documents.json` contains exact SKU/MPN evidence, product-page hashes, literal revision mentions with context, attachment URLs and parts-relation links. Revision mentions remain unassigned because they can describe a component such as an ESC rather than the vehicle generation.
+
+Refresh the per-model index with cached evidence (no network):
+
+```sh
+python3 scripts/collect-vehicle-documents.py
+```
+
+Use `--fetch` only to retrieve missing pages. The collector uses the existing HTTPS proxy and TLS verification, at most two concurrent requests and 30-second timeouts. It records failures instead of claiming complete coverage. Raw responses in `database/evidence/product-pages/` are local and ignored by Git. PDF links are inventoried; their content remains unreviewed. Access to `production-na01-horizonhobby.demandware.net` was added to the environment configuration draft because document requests were blocked.

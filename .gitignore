@@ -39,3 +39,9 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Retained source responses and generated databases
+database/evidence/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

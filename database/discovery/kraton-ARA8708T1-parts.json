@@ -1,0 +1,3434 @@
+{
+  "reported_total": 210,
+  "pages": [
+    {
+      "source_url": "https://www.horizonhobby.com/search?q=%22ARA8708T1Standardparts%22&relationType=Standardparts&parentProduct=ARA8708T1&sz=100&start=0",
+      "retrieved_at": "2026-10-26T21:17:39.228Z",
+      "sha256": "8afb978ce5eb0ecffefcd51efb496687c22f46ab349a67d82cc95ffd6f35bc0f",
+      "offset": 0,
+      "limit": 100,
+      "total": 210,
+      "record_ids": [
+        "SPM2340",
+        "SPMXSM1700",
+        "SPMSR6200A",
+        "SPMXSE2150",
+        "ARA390292",
+        "ARA320754",
+        "ARA330849",
+        "ARA340204",
+        "ARA320760",
+        "ARA311188",
+        "ARAC3495",
+        "ARA320758",
+        "ARA330817",
+        "ARA320762",
+        "ARA320756",
+        "ARAC5042",
+        "ARAC3742",
+        "ARA330816",
+        "ARA320570",
+        "ARAC3107",
+        "ARA320763",
+        "ARA320755",
+        "ARA311186",
+        "ARA330780",
+        "ARA330782",
+        "ARAC9652",
+        "ARA330813",
+        "ARA330811",
+        "ARA330814",
+        "ARA330812",
+        "ARA320757",
+        "ARA330702",
+        "ARA311189",
+        "ARA330815",
+        "ARA708009",
+        "ARAC9366",
+        "ARAC8928",
+        "ARAC9072",
+        "ARAC9911",
+        "ARA722418",
+        "ARA311187",
+        "ARA311190",
+        "ARAC8929",
+        "ARA320569",
+        "ARAC8985",
+        "ARA340175",
+        "ARAC8006",
+        "ARA709060",
+        "ARA311145",
+        "ARA716033",
+        "ARA311144",
+        "ARA310981",
+        "ARAC3430",
+        "ARAC4033",
+        "ARAC8605",
+        "ARA330788",
+        "ARA311094",
+        "ARA340198",
+        "ARAC3985",
+        "ARAC3981",
+        "ARAC9421",
+        "ARA311053",
+        "ARAC9860",
+        "ARA311117",
+        "ARA320574",
+        "ARA330656",
+        "ARA330654",
+        "ARA722314",
+        "ARA311028",
+        "ARAC4034",
+        "ARA330655",
+        "ARA330662",
+        "ARAC3982",
+        "ARAC9857",
+        "ARA330786",
+        "ARAC9810",
+        "ARA722414",
+        "ARA550059",
+        "ARAC8968",
+        "ARA320467",
+        "ARAC4032",
+        "ARA330608",
+        "ARAC9363",
+        "ARAC7414",
+        "ARA713032",
+        "ARAC3448",
+        "ARA320500",
+        "ARA310977",
+        "ARAC8987",
+        "ARA390300",
+        "ARA330645",
+        "ARA330658",
+        "ARA310979",
+        "ARA310978",
+        "ARAC9409",
+        "ARAC9880",
+        "ARA310991",
+        "ARA310980",
+        "ARAC9868",
+        "ARA709063"
+      ],
+      "query": {
+        "limit": 100,
+        "offset": 0,
+        "parentProduct": "ARA8708T1",
+        "q": "\"ARA8708T1Standardparts\"",
+        "refine": [
+          "c_discontinued=false"
+        ],
+        "relationType": "Standardparts"
+      }
+    },
+    {
+      "source_url": "https://www.horizonhobby.com/search?q=%22ARA8708T1Standardparts%22&relationType=Standardparts&parentProduct=ARA8708T1&sz=100&start=100",
+      "retrieved_at": "2026-10-26T21:17:39.188Z",
+      "sha256": "1b26694430305bb88a2f120e3a3ca64a06f44010c78c4463e351e647e3824d2f",
+      "offset": 100,
+      "limit": 100,
+      "total": 210,
+      "record_ids": [
+        "ARA311026",
+        "ARAC3450",
+        "ARA330737",
+        "ARAC3447",
+        "ARA320604",
+        "ARAC4081",
+        "ARAC3095",
+        "ARAC3070",
+        "ARA711003",
+        "ARA709064",
+        "ARA310985",
+        "ARA310982",
+        "ARA330659",
+        "ARA724406",
+        "ARA713033",
+        "ARA310983",
+        "ARA310984",
+        "ARAC9865",
+        "ARAC9906",
+        "ARA330729",
+        "ARA320469",
+        "ARA330728",
+        "ARA610040",
+        "ARAC8964",
+        "ARA320468",
+        "ARAC3039",
+        "ARAC9778",
+        "ARAC5032",
+        "ARAC9052",
+        "ARAC9046",
+        "ARAC9074",
+        "ARA330682",
+        "ARAC7415",
+        "ARAM1009",
+        "ARA724530",
+        "ARA320501",
+        "ARA320598",
+        "ARA330681",
+        "ARA340186",
+        "ARAC3042",
+        "ARAC3990",
+        "ARAC3029",
+        "ARAC9892",
+        "ARA709031",
+        "ARAC9759",
+        "ARAC8967",
+        "ARAC8965",
+        "ARA610039",
+        "ARAC9763",
+        "ARAC5034",
+        "ARAC8005",
+        "ARA330657",
+        "ARAC9367",
+        "ARA330554",
+        "ARAC9931",
+        "ARA721422",
+        "ARAC3476",
+        "ARAC9845",
+        "ARAC9909",
+        "ARA710006",
+        "ARAC9904",
+        "ARA610037",
+        "ARAC9912",
+        "ARAC9890",
+        "ARAC9875",
+        "ARAC9711",
+        "ARAC9891",
+        "ARAC9879",
+        "ARAC9878",
+        "ARAC9812",
+        "ARAC9800",
+        "ARA610038",
+        "ARAC9858",
+        "ARAC9807",
+        "ARAC9882",
+        "ARAC9762",
+        "ARAC9701",
+        "ARAC9830",
+        "ARAC9889",
+        "ARAC9761",
+        "ARAC9900",
+        "ARAC9801",
+        "ARAC3000",
+        "ARAC9756",
+        "ARAC9840",
+        "ARAC9818",
+        "ARAC9813",
+        "ARAC8820",
+        "ARA340199",
+        "ARAC9758",
+        "ARAC3036",
+        "ARA340174",
+        "ARA406169",
+        "ARA320759",
+        "ARA330830",
+        "ARA320808",
+        "ARA610054",
+        "ARA722206",
+        "ARA330848",
+        "ARA723306"
+      ],
+      "query": {
+        "limit": 100,
+        "offset": 100,
+        "parentProduct": "ARA8708T1",
+        "q": "\"ARA8708T1Standardparts\"",
+        "refine": [
+          "c_discontinued=false"
+        ],
+        "relationType": "Standardparts"
+      }
+    },
+    {
+      "source_url": "https://www.horizonhobby.com/search?q=%22ARA8708T1Standardparts%22&relationType=Standardparts&parentProduct=ARA8708T1&sz=100&start=200",
+      "retrieved_at": "2026-10-26T21:17:38.196Z",
+      "sha256": "88af4f9dfcd284e2227b754ca5d45301af900fd449fe7eead55eda4afb131c41",
+      "offset": 200,
+      "limit": 100,
+      "total": 210,
+      "record_ids": [
+        "ARA390304",
+        "ARA330843",
+        "ARA722422",
+        "ARA709069",
+        "ARA340207",
+        "ARA721437",
+        "ARA709068",
+        "ARA311199",
+        "ARA721418",
+        "ARA610055"
+      ],
+      "query": {
+        "limit": 100,
+        "offset": 200,
+        "parentProduct": "ARA8708T1",
+        "q": "\"ARA8708T1Standardparts\"",
+        "refine": [
+          "c_discontinued=false"
+        ],
+        "relationType": "Standardparts"
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": "SPM2340",
+      "name": "Spektrum DX3 Smart 3-Channel Transmitter with SR315 Receiver",
+      "product_url": "https://www.horizonhobby.com/product/SPM2340.html",
+      "hit_type": "product",
+      "brand": "Spektrum",
+      "variant_skus": [
+        "SPM2340"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=SPM2340]"
+    },
+    {
+      "id": "SPMXSM1700",
+      "name": "Spektrum Firma 4074 2050Kv Brushless Motor",
+      "product_url": "https://www.horizonhobby.com/product/SPMXSM1700.html",
+      "hit_type": "product",
+      "brand": "Spektrum",
+      "variant_skus": [
+        "SPMXSM1700"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=SPMXSM1700]"
+    },
+    {
+      "id": "SPMSR6200A",
+      "name": "Spektrum SR6200A DSMR 6-Channel AVC Surface Receiver",
+      "product_url": "https://www.horizonhobby.com/product/SPMSR6200A.html",
+      "hit_type": "product",
+      "brand": "Spektrum",
+      "variant_skus": [
+        "SPMSR6200A"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=SPMSR6200A]"
+    },
+    {
+      "id": "SPMXSE2150",
+      "name": "Spektrum Firma 150A Brushless Smart ESC V2, 3S - 6S: Dual IC5",
+      "product_url": "https://www.horizonhobby.com/product/SPMXSE2150.html",
+      "hit_type": "product",
+      "brand": "Spektrum",
+      "variant_skus": [
+        "SPMXSE2150"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=SPMXSE2150]"
+    },
+    {
+      "id": "ARA390292",
+      "name": "ARRMA Loop Connector: IC5",
+      "product_url": "https://www.horizonhobby.com/product/ARA390292.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA390292"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA390292]"
+    },
+    {
+      "id": "ARA320754",
+      "name": "ARRMA Aluminum Rear Brace V2",
+      "product_url": "https://www.horizonhobby.com/product/ARA320754.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320754"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320754]"
+    },
+    {
+      "id": "ARA330849",
+      "name": "ARRMA EXB Shock Set Bore:16mm, Length:134mm Piston: Machined 8x1.3mm Oil:1300cst Emulsion Caps",
+      "product_url": "https://www.horizonhobby.com/product/ARA330849.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330849"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330849]"
+    },
+    {
+      "id": "ARA340204",
+      "name": "ARRMA High Torque Slider Servo Saver Set",
+      "product_url": "https://www.horizonhobby.com/product/ARA340204.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA340204"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA340204]"
+    },
+    {
+      "id": "ARA320760",
+      "name": "ARRMA CNC Front Shock Tower MT",
+      "product_url": "https://www.horizonhobby.com/product/ARA320760.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320760"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320760]"
+    },
+    {
+      "id": "ARA311188",
+      "name": "ARRMA Centre Differential Gear Cover",
+      "product_url": "https://www.horizonhobby.com/product/ARA311188.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311188"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311188]"
+    },
+    {
+      "id": "ARAC3495",
+      "name": "ARRMA Center Roll Cage Set Composite",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3495.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3495"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3495]"
+    },
+    {
+      "id": "ARA320758",
+      "name": "ARRMA Wing Mount",
+      "product_url": "https://www.horizonhobby.com/product/ARA320758.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320758"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320758]"
+    },
+    {
+      "id": "ARA330817",
+      "name": "ARRMA Ball End Set",
+      "product_url": "https://www.horizonhobby.com/product/ARA330817.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330817"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330817]"
+    },
+    {
+      "id": "ARA320762",
+      "name": "ARRMA Front Brace Tube 93mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA320762.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320762"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320762]"
+    },
+    {
+      "id": "ARA320756",
+      "name": "ARRMA Aluminum Front Brace V2",
+      "product_url": "https://www.horizonhobby.com/product/ARA320756.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320756"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320756]"
+    },
+    {
+      "id": "ARAC5042",
+      "name": "ARRMA Hub Rear (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC5042.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC5042"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC5042]"
+    },
+    {
+      "id": "ARAC3742",
+      "name": "ARRMA Chassis Side Guards (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3742.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3742"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3742]"
+    },
+    {
+      "id": "ARA330816",
+      "name": "ARRMA EXB V2 Shock Standoff M4 (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330816.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330816"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330816]"
+    },
+    {
+      "id": "ARA320570",
+      "name": "ARRMA Aluminum Chassis CNC 7075 T6 LWB, Black: EXB",
+      "product_url": "https://www.horizonhobby.com/product/ARA320570.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320570"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320570]"
+    },
+    {
+      "id": "ARAC3107",
+      "name": "ARRMA Front Dirt Guards",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3107.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3107"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3107]"
+    },
+    {
+      "id": "ARA320763",
+      "name": "ARRMA Rear Brace Tube 120.5mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA320763.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320763"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320763]"
+    },
+    {
+      "id": "ARA320755",
+      "name": "ARRMA Aluminum Chassis Brace Insert",
+      "product_url": "https://www.horizonhobby.com/product/ARA320755.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320755"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320755]"
+    },
+    {
+      "id": "ARA311186",
+      "name": "ARRMA Aluminum Gearbox Set",
+      "product_url": "https://www.horizonhobby.com/product/ARA311186.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311186"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311186]"
+    },
+    {
+      "id": "ARA330780",
+      "name": "ARRMA Shock Springs, 85mm 1.21N/mm (6.91lbf/in) (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330780.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330780"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330780]"
+    },
+    {
+      "id": "ARA330782",
+      "name": "ARRMA Shock Springs, 72mm 0.97N/mm (5.54lbf/in) (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330782.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330782"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330782]"
+    },
+    {
+      "id": "ARAC9652",
+      "name": "ARRMA Wing 224mm Rear Black",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9652.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9652"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9652]"
+    },
+    {
+      "id": "ARA330813",
+      "name": "ARRMA Emulsion Cap Seal",
+      "product_url": "https://www.horizonhobby.com/product/ARA330813.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330813"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330813]"
+    },
+    {
+      "id": "ARA330811",
+      "name": "ARRMA Upper Shock Ball Rubber (8)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330811.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330811"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330811]"
+    },
+    {
+      "id": "ARA330814",
+      "name": "ARRMA Shock Lower Ball, Steel (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330814.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330814"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330814]"
+    },
+    {
+      "id": "ARA330812",
+      "name": "ARRMA Aluminum Emulsion Shock Cap (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330812.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330812"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330812]"
+    },
+    {
+      "id": "ARA320757",
+      "name": "ARRMA Rear Brace and Wing Bracket",
+      "product_url": "https://www.horizonhobby.com/product/ARA320757.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320757"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320757]"
+    },
+    {
+      "id": "ARA330702",
+      "name": "ARRMA Aluminum Shock Body, 16x62mm Red (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330702.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330702"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330702]"
+    },
+    {
+      "id": "ARA311189",
+      "name": "ARRMA Aluminum Center Differential Bearing Bottom Holder",
+      "product_url": "https://www.horizonhobby.com/product/ARA311189.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311189"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311189]"
+    },
+    {
+      "id": "ARA330815",
+      "name": "ARRMA Sway Bar Rod Ends",
+      "product_url": "https://www.horizonhobby.com/product/ARA330815.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330815"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330815]"
+    },
+    {
+      "id": "ARA708009",
+      "name": "ARRMA Flanged Lock Nut M3 Black (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA708009.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA708009"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA708009]"
+    },
+    {
+      "id": "ARAC9366",
+      "name": "ARRMA Composite Steering Block Front 6S (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9366.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9366"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9366]"
+    },
+    {
+      "id": "ARAC8928",
+      "name": "ARRMA Shock Spring 85mm 1.09n/mm 6.2lb/in (2): 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8928.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8928"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8928]"
+    },
+    {
+      "id": "ARAC9072",
+      "name": "ARRMA Shock Body 16x54mm Aluminum, Red (2): 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9072.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9072"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9072]"
+    },
+    {
+      "id": "ARAC9911",
+      "name": "ARRMA Set Screw 4X12mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9911.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9911"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9911]"
+    },
+    {
+      "id": "ARA722418",
+      "name": "ARRMA Flat Head Hex Machine Screw M4x18mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA722418.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA722418"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA722418]"
+    },
+    {
+      "id": "ARA311187",
+      "name": "ARRMA Differential Outdrive",
+      "product_url": "https://www.horizonhobby.com/product/ARA311187.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311187"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311187]"
+    },
+    {
+      "id": "ARA311190",
+      "name": "ARRMA Gearbox Sealing Gasket",
+      "product_url": "https://www.horizonhobby.com/product/ARA311190.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311190"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311190]"
+    },
+    {
+      "id": "ARAC8929",
+      "name": "ARRMA Shock Springs 95mm 0.87n/mm 5.0lb/in (2): 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8929.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8929"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8929]"
+    },
+    {
+      "id": "ARA320569",
+      "name": "ARRMA Aluminum Chassis Brace Spacer Set, Red: EXB",
+      "product_url": "https://www.horizonhobby.com/product/ARA320569.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320569"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320569]"
+    },
+    {
+      "id": "ARAC8985",
+      "name": "ARRMA Shock Shaft 4x64.5mm (2): 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8985.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8985"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8985]"
+    },
+    {
+      "id": "ARA340175",
+      "name": "ARRMA Steel Turnbuckle M4x95mm Silver (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA340175.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA340175"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA340175]"
+    },
+    {
+      "id": "ARAC8006",
+      "name": "ARRMA Pin 4x73mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8006.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8006"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8006]"
+    },
+    {
+      "id": "ARA709060",
+      "name": "ARRMA Shim 6.2x11.9x0.2mm (8)",
+      "product_url": "https://www.horizonhobby.com/product/ARA709060.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA709060"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA709060]"
+    },
+    {
+      "id": "ARA311145",
+      "name": "ARRMA Input Shaft Cup Sleeve (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA311145.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311145"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311145]"
+    },
+    {
+      "id": "ARA716033",
+      "name": "ARRMA O-Ring, 5.8x1.5mm (6): EXB",
+      "product_url": "https://www.horizonhobby.com/product/ARA716033.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA716033"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA716033]"
+    },
+    {
+      "id": "ARA311144",
+      "name": "ARRMA Input Shaft Cup, Safe-D",
+      "product_url": "https://www.horizonhobby.com/product/ARA311144.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311144"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311144]"
+    },
+    {
+      "id": "ARA310981",
+      "name": "ARRMA Steel Differential Outdrive (2): EXB",
+      "product_url": "https://www.horizonhobby.com/product/ARA310981.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310981"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310981]"
+    },
+    {
+      "id": "ARAC3430",
+      "name": "ARRMA Body Post Mount Set",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3430.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3430"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3430]"
+    },
+    {
+      "id": "ARAC4033",
+      "name": "ARRMA Dogbone 135mm (1)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC4033.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC4033"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC4033]"
+    },
+    {
+      "id": "ARAC8605",
+      "name": "ARRMA Battery Strap Large",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8605.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8605"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8605]"
+    },
+    {
+      "id": "ARA330788",
+      "name": "ARRMA Shock Boot 56mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330788.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330788"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330788]"
+    },
+    {
+      "id": "ARA311094",
+      "name": "ARRMA Differential Shim Set (Fits 29mm Differential Case) (3 Diffs)",
+      "product_url": "https://www.horizonhobby.com/product/ARA311094.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311094"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311094]"
+    },
+    {
+      "id": "ARA340198",
+      "name": "ARRMA Servo Horn 25T",
+      "product_url": "https://www.horizonhobby.com/product/ARA340198.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA340198"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA340198]"
+    },
+    {
+      "id": "ARAC3985",
+      "name": "ARRMA CVD Driveshaft Set 183mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3985.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3985"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3985]"
+    },
+    {
+      "id": "ARAC3981",
+      "name": "ARRMA CVD Axle 8x44.5mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3981.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3981"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3981]"
+    },
+    {
+      "id": "ARAC9421",
+      "name": "ARRMA Wheel Axle 8x45mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9421.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9421"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9421]"
+    },
+    {
+      "id": "ARA311053",
+      "name": "ARRMA 13T Mod1 Safe-D5 Pinion Gear",
+      "product_url": "https://www.horizonhobby.com/product/ARA311053.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311053"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311053]"
+    },
+    {
+      "id": "ARAC9860",
+      "name": "ARRMA Button Head Screw, 4x12mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9860.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9860"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9860]"
+    },
+    {
+      "id": "ARA311117",
+      "name": "ARRMA Aluminum Wheel Hex 17mm, 16.5mm Thick, Black (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA311117.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311117"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311117]"
+    },
+    {
+      "id": "ARA320574",
+      "name": "ARRMA Servo Mount, Aluminum: EXB",
+      "product_url": "https://www.horizonhobby.com/product/ARA320574.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320574"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320574]"
+    },
+    {
+      "id": "ARA330656",
+      "name": "ARRMA Front Lower Suspension Arms 135mm (Pr)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330656.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330656"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330656]"
+    },
+    {
+      "id": "ARA330654",
+      "name": "ARRMA Rear Lower Suspension Arms 148mm (Pr)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330654.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330654"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330654]"
+    },
+    {
+      "id": "ARA722314",
+      "name": "ARRMA Flat Head Hex Machine Screw, M3x14mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARA722314.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA722314"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA722314]"
+    },
+    {
+      "id": "ARA311028",
+      "name": "ARRMA Differential Outdrive Insert",
+      "product_url": "https://www.horizonhobby.com/product/ARA311028.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311028"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311028]"
+    },
+    {
+      "id": "ARAC4034",
+      "name": "ARRMA Dogbone 139mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC4034.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC4034"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC4034]"
+    },
+    {
+      "id": "ARA330655",
+      "name": "ARRMA Front Upper Suspension Arms 120mm (Pr)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330655.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330655"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330655]"
+    },
+    {
+      "id": "ARA330662",
+      "name": "ARRMA Steel Turnbuckle M5x95mm Silver (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330662.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330662"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330662]"
+    },
+    {
+      "id": "ARAC3982",
+      "name": "ARRMA CVD Driveshaft 142mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3982.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3982"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3982]"
+    },
+    {
+      "id": "ARAC9857",
+      "name": "ARRMA Button Head Screw 4x10mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9857.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9857"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9857]"
+    },
+    {
+      "id": "ARA330786",
+      "name": "ARRMA Shock Boot 46mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330786.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330786"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330786]"
+    },
+    {
+      "id": "ARAC9810",
+      "name": "ARRMA Flange Lock Nuts 4mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9810.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9810"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9810]"
+    },
+    {
+      "id": "ARA722414",
+      "name": "ARRMA Flat Head Screws, M4x14mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA722414.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA722414"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA722414]"
+    },
+    {
+      "id": "ARA550059",
+      "name": "ARRMA 1/8 dBoots Copperhead2 MT Front/Rear 3.8 Pre-Mounted Tires, 17mm Hex, Black (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA550059.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA550059"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA550059]"
+    },
+    {
+      "id": "ARAC8968",
+      "name": "ARRMA Shock Cap Aluminum, Black (2): 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8968.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8968"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8968]"
+    },
+    {
+      "id": "ARA320467",
+      "name": "ARRMA Aluminum Front Hub Nut Red (4) with O-Rings",
+      "product_url": "https://www.horizonhobby.com/product/ARA320467.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320467"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320467]"
+    },
+    {
+      "id": "ARAC4032",
+      "name": "ARRMA Dogbone 116mm",
+      "product_url": "https://www.horizonhobby.com/product/ARAC4032.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC4032"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC4032]"
+    },
+    {
+      "id": "ARA330608",
+      "name": "ARRMA HD Shock Rod End and Spring Cup Set (2 Pair)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330608.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330608"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330608]"
+    },
+    {
+      "id": "ARAC9363",
+      "name": "ARRMA Steering Plate A Aluminum Red (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9363.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9363"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9363]"
+    },
+    {
+      "id": "ARAC7414",
+      "name": "ARRMA O-Ring 11x1mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC7414.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC7414"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC7414]"
+    },
+    {
+      "id": "ARA713032",
+      "name": "ARRMA Shock Mount Pin 3x33mm Silver (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA713032.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA713032"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA713032]"
+    },
+    {
+      "id": "ARAC3448",
+      "name": "ARRMA Body Clip Large Black (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3448.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3448"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3448]"
+    },
+    {
+      "id": "ARA320500",
+      "name": "ARRMA Center Brace Mounts",
+      "product_url": "https://www.horizonhobby.com/product/ARA320500.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320500"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320500]"
+    },
+    {
+      "id": "ARA310977",
+      "name": "ARRMA Input Shaft Cup Safe-D",
+      "product_url": "https://www.horizonhobby.com/product/ARA310977.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310977"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310977]"
+    },
+    {
+      "id": "ARAC8987",
+      "name": "ARRMA Shock Shaft 4x73.5mm (2): 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8987.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8987"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8987]"
+    },
+    {
+      "id": "ARA390300",
+      "name": "ARRMA Fan Set",
+      "product_url": "https://www.horizonhobby.com/product/ARA390300.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA390300"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA390300]"
+    },
+    {
+      "id": "ARA330645",
+      "name": "ARRMA Suspension Arm End Cap",
+      "product_url": "https://www.horizonhobby.com/product/ARA330645.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330645"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330645]"
+    },
+    {
+      "id": "ARA330658",
+      "name": "ARRMA Hinge Pin Front Upper 4x49mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330658.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330658"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330658]"
+    },
+    {
+      "id": "ARA310979",
+      "name": "ARRMA Main Input Gear 10T Spiral Cut GP4 5mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA310979.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310979"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310979]"
+    },
+    {
+      "id": "ARA310978",
+      "name": "ARRMA Spur Gear 50T Plate Differential for 29mm Differential Case",
+      "product_url": "https://www.horizonhobby.com/product/ARA310978.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310978"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310978]"
+    },
+    {
+      "id": "ARAC9409",
+      "name": "ARRMA Hook & Loop Battery Strap (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9409.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9409"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9409]"
+    },
+    {
+      "id": "ARAC9880",
+      "name": "ARRMA Cap Head Screw 3x28mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9880.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9880"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9880]"
+    },
+    {
+      "id": "ARA310991",
+      "name": "ARRMA Limited Slip Center Differential Set 50T 100k",
+      "product_url": "https://www.horizonhobby.com/product/ARA310991.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310991"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310991]"
+    },
+    {
+      "id": "ARA310980",
+      "name": "ARRMA Main Differential Gear 43T Spiral 29mm Differential Case GP4 5mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA310980.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310980"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310980]"
+    },
+    {
+      "id": "ARAC9868",
+      "name": "ARRMA Button Head Screw 4x40mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9868.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9868"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9868]"
+    },
+    {
+      "id": "ARA709063",
+      "name": "ARRMA Shim 4.1x7.4x0.35mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARA709063.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA709063"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":0,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA709063]"
+    },
+    {
+      "id": "ARA311026",
+      "name": "ARRMA Crush Tube, 5x7x5mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA311026.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311026"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311026]"
+    },
+    {
+      "id": "ARAC3450",
+      "name": "ARRMA Body Clip 6mm Black (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3450.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3450"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3450]"
+    },
+    {
+      "id": "ARA330737",
+      "name": "ARRMA Suspension Arm Metal Shim Set",
+      "product_url": "https://www.horizonhobby.com/product/ARA330737.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330737"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330737]"
+    },
+    {
+      "id": "ARAC3447",
+      "name": "ARRMA Body Clip Retainer 1/8 Scale Black (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3447.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3447"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3447]"
+    },
+    {
+      "id": "ARA320604",
+      "name": "ARRMA Radio Box Set",
+      "product_url": "https://www.horizonhobby.com/product/ARA320604.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320604"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320604]"
+    },
+    {
+      "id": "ARAC4081",
+      "name": "ARRMA ESC Tray Set 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC4081.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC4081"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC4081]"
+    },
+    {
+      "id": "ARAC3095",
+      "name": "ARRMA Battery Tray Set, Large",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3095.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3095"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3095]"
+    },
+    {
+      "id": "ARAC3070",
+      "name": "ARRMA Ball Cups Composite",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3070.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3070"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3070]"
+    },
+    {
+      "id": "ARA711003",
+      "name": "ARRMA X-Ring 4x7.5mm (8)",
+      "product_url": "https://www.horizonhobby.com/product/ARA711003.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA711003"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA711003]"
+    },
+    {
+      "id": "ARA709064",
+      "name": "ARRMA Shim 8x12x0.2mm (8)",
+      "product_url": "https://www.horizonhobby.com/product/ARA709064.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA709064"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA709064]"
+    },
+    {
+      "id": "ARA310985",
+      "name": "ARRMA Differential Gear Set for 29mm Differential Case",
+      "product_url": "https://www.horizonhobby.com/product/ARA310985.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310985"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310985]"
+    },
+    {
+      "id": "ARA310982",
+      "name": "ARRMA Differential Gasket for 29mm Differential Case (3)",
+      "product_url": "https://www.horizonhobby.com/product/ARA310982.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310982"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310982]"
+    },
+    {
+      "id": "ARA330659",
+      "name": "ARRMA Front Upper Suspension Mount CNC Aluminum Red",
+      "product_url": "https://www.horizonhobby.com/product/ARA330659.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330659"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330659]"
+    },
+    {
+      "id": "ARA724406",
+      "name": "ARRMA Set Screw, M4x6mm (4): EXB",
+      "product_url": "https://www.horizonhobby.com/product/ARA724406.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA724406"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA724406]"
+    },
+    {
+      "id": "ARA713033",
+      "name": "ARRMA Pin, 2.5x11.5mm (6): EXB",
+      "product_url": "https://www.horizonhobby.com/product/ARA713033.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA713033"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA713033]"
+    },
+    {
+      "id": "ARA310983",
+      "name": "ARRMA Differential Case 29mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA310983.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310983"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310983]"
+    },
+    {
+      "id": "ARA310984",
+      "name": "ARRMA Limited Slip Differential Plates for 29mm Differential Case",
+      "product_url": "https://www.horizonhobby.com/product/ARA310984.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA310984"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA310984]"
+    },
+    {
+      "id": "ARAC9865",
+      "name": "ARRMA Button Head Screw 4x35mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9865.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9865"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9865]"
+    },
+    {
+      "id": "ARAC9906",
+      "name": "ARRMA Set Screw 3x10mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9906.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9906"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9906]"
+    },
+    {
+      "id": "ARA330729",
+      "name": "ARRMA Machined Shock Seal Guide Set",
+      "product_url": "https://www.horizonhobby.com/product/ARA330729.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330729"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330729]"
+    },
+    {
+      "id": "ARA320469",
+      "name": "ARRMA Sliding Motor Mount Plate, Red",
+      "product_url": "https://www.horizonhobby.com/product/ARA320469.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320469"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320469]"
+    },
+    {
+      "id": "ARA330728",
+      "name": "ARRMA Machined Shock Piston, Tapered, 8x1.2mm Hole (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330728.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330728"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330728]"
+    },
+    {
+      "id": "ARA610040",
+      "name": "ARRMA Ball Bearing 5x11x4mm (2RS) (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA610040.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA610040"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA610040]"
+    },
+    {
+      "id": "ARAC8964",
+      "name": "ARRMA Shock Collar Aluminum, Black (2): 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8964.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8964"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8964]"
+    },
+    {
+      "id": "ARA320468",
+      "name": "ARRMA Sliding Motor Mount, Red",
+      "product_url": "https://www.horizonhobby.com/product/ARA320468.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320468"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320468]"
+    },
+    {
+      "id": "ARAC3039",
+      "name": "ARRMA Ball 3x7.8x8mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3039.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3039"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3039]"
+    },
+    {
+      "id": "ARAC9778",
+      "name": "ARRMA Button Head Screw 3x6mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9778.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9778"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9778]"
+    },
+    {
+      "id": "ARAC5032",
+      "name": "ARRMA Hinge Pin Lower 4x67.5mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC5032.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC5032"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC5032]"
+    },
+    {
+      "id": "ARAC9052",
+      "name": "ARRMA Suspension Mount Set Composite (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9052.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9052"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9052]"
+    },
+    {
+      "id": "ARAC9046",
+      "name": "ARRMA Suspension Mount FF Aluminum Red",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9046.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9046"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9046]"
+    },
+    {
+      "id": "ARAC9074",
+      "name": "ARRMA Sway Bar Front 2.4mm",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9074.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9074"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9074]"
+    },
+    {
+      "id": "ARA330682",
+      "name": "ARRMA Steel RF Suspension Mount",
+      "product_url": "https://www.horizonhobby.com/product/ARA330682.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330682"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330682]"
+    },
+    {
+      "id": "ARAC7415",
+      "name": "ARRMA O-Ring 19x1mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC7415.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC7415"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC7415]"
+    },
+    {
+      "id": "ARAM1009",
+      "name": "ARRMA ADS Grommets (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAM1009.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAM1009"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAM1009]"
+    },
+    {
+      "id": "ARA724530",
+      "name": "ARRMA Set Screw M5x30mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA724530.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA724530"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA724530]"
+    },
+    {
+      "id": "ARA320501",
+      "name": "ARRMA Ball Cup and Balls",
+      "product_url": "https://www.horizonhobby.com/product/ARA320501.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320501"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320501]"
+    },
+    {
+      "id": "ARA320598",
+      "name": "ARRMA Aluminum Top Plate, Black",
+      "product_url": "https://www.horizonhobby.com/product/ARA320598.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320598"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320598]"
+    },
+    {
+      "id": "ARA330681",
+      "name": "ARRMA Steel RR Suspension Mount",
+      "product_url": "https://www.horizonhobby.com/product/ARA330681.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330681"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330681]"
+    },
+    {
+      "id": "ARA340186",
+      "name": "ARRMA Steel Steering Post 6x42mm Black (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA340186.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA340186"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA340186]"
+    },
+    {
+      "id": "ARAC3042",
+      "name": "ARRMA Ball 3x7.8x10.5mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3042.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3042"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3042]"
+    },
+    {
+      "id": "ARAC3990",
+      "name": "ARRMA CVD Rebuild Set (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3990.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3990"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3990]"
+    },
+    {
+      "id": "ARAC3029",
+      "name": "ARRMA Composite Ball Set 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3029.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3029"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3029]"
+    },
+    {
+      "id": "ARAC9892",
+      "name": "ARRMA Flat Head Hex Machine Screw 4x16mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9892.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9892"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9892]"
+    },
+    {
+      "id": "ARA709031",
+      "name": "ARRMA Washer, 13x16x0.2mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA709031.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA709031"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA709031]"
+    },
+    {
+      "id": "ARAC9759",
+      "name": "ARRMA Flat Head Screws, 3x5mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9759.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9759"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9759]"
+    },
+    {
+      "id": "ARAC8967",
+      "name": "ARRMA Shock Cap Lower Aluminum, Black (2): 6S",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8967.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8967"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8967]"
+    },
+    {
+      "id": "ARAC8965",
+      "name": "ARRMA Shock Cap Protector 6S (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8965.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8965"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8965]"
+    },
+    {
+      "id": "ARA610039",
+      "name": "ARRMA Ball Bearing 8x19x6mm (2RS) (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA610039.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA610039"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA610039]"
+    },
+    {
+      "id": "ARAC9763",
+      "name": "ARRMA Wheel Nut Aluminum 17mm Black (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9763.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9763"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9763]"
+    },
+    {
+      "id": "ARAC5034",
+      "name": "ARRMA Hinge Pin Outer 4x45mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC5034.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC5034"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC5034]"
+    },
+    {
+      "id": "ARAC8005",
+      "name": "ARRMA Pin 2.5x16.8mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8005.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8005"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8005]"
+    },
+    {
+      "id": "ARA330657",
+      "name": "ARRMA Pivot Ball - Fine Thread M6x14x37mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330657.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330657"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330657]"
+    },
+    {
+      "id": "ARAC9367",
+      "name": "ARRMA Steering Step Screw 3x14mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9367.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9367"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9367]"
+    },
+    {
+      "id": "ARA330554",
+      "name": "ARRMA Ball M3x8x12mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330554.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330554"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330554]"
+    },
+    {
+      "id": "ARAC9931",
+      "name": "ARRMA Washer 3.4x10x0.5mm 6S (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9931.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9931"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9931]"
+    },
+    {
+      "id": "ARA721422",
+      "name": "ARRMA Button Head Hex Machine Screws, M4x22mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARA721422.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA721422"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA721422]"
+    },
+    {
+      "id": "ARAC3476",
+      "name": "ARRMA Body Post Set",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3476.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3476"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3476]"
+    },
+    {
+      "id": "ARAC9845",
+      "name": "ARRMA Button Head Screw 3x22mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9845.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9845"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9845]"
+    },
+    {
+      "id": "ARAC9909",
+      "name": "ARRMA Set Screw 4x4mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9909.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9909"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9909]"
+    },
+    {
+      "id": "ARA710006",
+      "name": "ARRMA E Clip Din 6799, 3.2mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARA710006.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA710006"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA710006]"
+    },
+    {
+      "id": "ARAC9904",
+      "name": "ARRMA Set Screw 3x5mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9904.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9904"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9904]"
+    },
+    {
+      "id": "ARA610037",
+      "name": "ARRMA Ball Bearing 8x16x5mm (2RS) (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA610037.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA610037"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA610037]"
+    },
+    {
+      "id": "ARAC9912",
+      "name": "ARRMA Set Screw 5x5mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9912.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9912"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9912]"
+    },
+    {
+      "id": "ARAC9890",
+      "name": "ARRMA Flat Head Screws, 3x20mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9890.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9890"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9890]"
+    },
+    {
+      "id": "ARAC9875",
+      "name": "ARRMA Cap Head Screw 2.5x8mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9875.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9875"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9875]"
+    },
+    {
+      "id": "ARAC9711",
+      "name": "ARRMA Cap HD Screw M3X10mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9711.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9711"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9711]"
+    },
+    {
+      "id": "ARAC9891",
+      "name": "ARRMA Flat Head Screws, 4x12mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9891.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9891"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9891]"
+    },
+    {
+      "id": "ARAC9879",
+      "name": "ARRMA Cap Head Hex Machine Screw 3x20mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9879.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9879"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9879]"
+    },
+    {
+      "id": "ARAC9878",
+      "name": "ARRMA Cap Head Screw 3x12mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9878.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9878"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9878]"
+    },
+    {
+      "id": "ARAC9812",
+      "name": "ARRMA Flat Head Screws, 3x12mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9812.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9812"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9812]"
+    },
+    {
+      "id": "ARAC9800",
+      "name": "ARRMA Button Head Screw 3x10mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9800.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9800"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9800]"
+    },
+    {
+      "id": "ARA610038",
+      "name": "ARRMA Ball Bearing 15x21x4mm (2RS) (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA610038.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA610038"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA610038]"
+    },
+    {
+      "id": "ARAC9858",
+      "name": "ARRMA Button Head Screw 4x14mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9858.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9858"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9858]"
+    },
+    {
+      "id": "ARAC9807",
+      "name": "ARRMA Button Head Screw 3x8mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9807.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9807"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9807]"
+    },
+    {
+      "id": "ARAC9882",
+      "name": "ARRMA Cap Head Screw, 3x8mm 4x4 (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9882.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9882"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9882]"
+    },
+    {
+      "id": "ARAC9762",
+      "name": "ARRMA Nut M4 Nylon (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9762.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9762"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9762]"
+    },
+    {
+      "id": "ARAC9701",
+      "name": "ARRMA Cap Head Screw 2.5x12mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9701.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9701"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9701]"
+    },
+    {
+      "id": "ARAC9830",
+      "name": "ARRMA Washer 3x8x0.5mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9830.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9830"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9830]"
+    },
+    {
+      "id": "ARAC9889",
+      "name": "ARRMA Flat Head Screws, 3x16mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9889.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9889"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9889]"
+    },
+    {
+      "id": "ARAC9761",
+      "name": "ARRMA Nylon Nut 2.5mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9761.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9761"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9761]"
+    },
+    {
+      "id": "ARAC9900",
+      "name": "ARRMA Set Screw 3x3mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9900.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9900"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9900]"
+    },
+    {
+      "id": "ARAC9801",
+      "name": "ARRMA Button Head Screw 3x12mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9801.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9801"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9801]"
+    },
+    {
+      "id": "ARAC3000",
+      "name": "ARRMA Antenna Pipe Set 60mm",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3000.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3000"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3000]"
+    },
+    {
+      "id": "ARAC9756",
+      "name": "ARRMA Button Head Screw 3x20mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9756.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9756"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9756]"
+    },
+    {
+      "id": "ARAC9840",
+      "name": "ARRMA Button Head Screw 3x16mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9840.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9840"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9840]"
+    },
+    {
+      "id": "ARAC9818",
+      "name": "ARRMA Nylon Nut 3mm (4)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9818.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9818"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9818]"
+    },
+    {
+      "id": "ARAC9813",
+      "name": "ARRMA Flat Head Screws, 3x8mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9813.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9813"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9813]"
+    },
+    {
+      "id": "ARAC8820",
+      "name": "ARRMA Monster Truck Roll Tower Top",
+      "product_url": "https://www.horizonhobby.com/product/ARAC8820.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC8820"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC8820]"
+    },
+    {
+      "id": "ARA340199",
+      "name": "ARRMA Ball 3x6.8x6.75mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA340199.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA340199"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA340199]"
+    },
+    {
+      "id": "ARAC9758",
+      "name": "ARRMA Flat Head Screws, 2x8mm (10)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC9758.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC9758"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC9758]"
+    },
+    {
+      "id": "ARAC3036",
+      "name": "ARRMA Ball 3x6.8x6.3mm (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARAC3036.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARAC3036"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARAC3036]"
+    },
+    {
+      "id": "ARA340174",
+      "name": "ARRMA Steering Rack CNC 7075 Aluminum Red",
+      "product_url": "https://www.horizonhobby.com/product/ARA340174.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA340174"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA340174]"
+    },
+    {
+      "id": "ARA406169",
+      "name": "ARRMA KRATON 6S EXB Painted Decalled Cut Body, Black / Red",
+      "product_url": "https://www.horizonhobby.com/product/ARA406169.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA406169"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA406169]"
+    },
+    {
+      "id": "ARA320759",
+      "name": "ARRMA CNC Rear Shock Tower",
+      "product_url": "https://www.horizonhobby.com/product/ARA320759.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320759"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320759]"
+    },
+    {
+      "id": "ARA330830",
+      "name": "ARRMA Rear Hub V2 (Wide)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330830.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330830"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330830]"
+    },
+    {
+      "id": "ARA320808",
+      "name": "ARRMA Super Basher Front Bumper V2",
+      "product_url": "https://www.horizonhobby.com/product/ARA320808.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA320808"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA320808]"
+    },
+    {
+      "id": "ARA610054",
+      "name": "ARRMA Ball Bearing 5x13x4 RS (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA610054.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA610054"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA610054]"
+    },
+    {
+      "id": "ARA722206",
+      "name": "ARRMA Flat Head Screws, Mx6mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA722206.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA722206"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA722206]"
+    },
+    {
+      "id": "ARA330848",
+      "name": "ARRMA EXB Shock Set Bore:16mm, Length:117mm Piston: Machined 8x1.2mm Oil:1300cst Emulsion Caps",
+      "product_url": "https://www.horizonhobby.com/product/ARA330848.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330848"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330848]"
+    },
+    {
+      "id": "ARA723306",
+      "name": "ARRMA Cap Head Screw M3 x 6mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA723306.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA723306"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":100,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA723306]"
+    },
+    {
+      "id": "ARA390304",
+      "name": "ARRMA Motor Heatsink V2: 4074",
+      "product_url": "https://www.horizonhobby.com/product/ARA390304.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA390304"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA390304]"
+    },
+    {
+      "id": "ARA330843",
+      "name": "ARRMA Machined Shock Piston, Tapered, 8x1.3mm Hole (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA330843.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA330843"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA330843]"
+    },
+    {
+      "id": "ARA722422",
+      "name": "ARRMA Flat Head Screws, M4x22mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA722422.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA722422"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA722422]"
+    },
+    {
+      "id": "ARA709069",
+      "name": "ARRMA Shim 12.1x19.5x0.3mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA709069.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA709069"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA709069]"
+    },
+    {
+      "id": "ARA340207",
+      "name": "ARRMA High Torque Slider Servo Saver Plastic Parts",
+      "product_url": "https://www.horizonhobby.com/product/ARA340207.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA340207"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA340207]"
+    },
+    {
+      "id": "ARA721437",
+      "name": "ARRMA Button Head Screw M4 x 37mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA721437.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA721437"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA721437]"
+    },
+    {
+      "id": "ARA709068",
+      "name": "ARRMA Shim 12.2x21x1mm",
+      "product_url": "https://www.horizonhobby.com/product/ARA709068.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA709068"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA709068]"
+    },
+    {
+      "id": "ARA311199",
+      "name": "ARRMA Front/Rear Differential Set GP4 5mm 29mm Open Differential 80K",
+      "product_url": "https://www.horizonhobby.com/product/ARA311199.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA311199"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA311199]"
+    },
+    {
+      "id": "ARA721418",
+      "name": "ARRMA BUTTON HEAD SCREW FLANGED M4x18mm V2",
+      "product_url": "https://www.horizonhobby.com/product/ARA721418.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA721418"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA721418]"
+    },
+    {
+      "id": "ARA610055",
+      "name": "ARRMA Ball Bearing 6x10x3 RS (2)",
+      "product_url": "https://www.horizonhobby.com/product/ARA610055.html",
+      "hit_type": "product",
+      "brand": "ARRMA",
+      "variant_skus": [
+        "ARA610055"
+      ],
+      "declared_discontinued": null,
+      "successor": null,
+      "evidence_status": "discovered",
+      "revision": null,
+      "source_locator": "mobify-data productStore.searchResultsByKey[{\"limit\":100,\"offset\":200,\"parentProduct\":\"ARA8708T1\",\"q\":\"\\\"ARA8708T1Standardparts\\\"\",\"refine\":[\"c_discontinued=false\"],\"relationType\":\"Standardparts\"}].hits[productId=ARA610055]"
+    }
+  ],
+  "validation": {
+    "complete": true,
+    "reported_total": 210,
+    "fetched_count": 210,
+    "errors": []
+  },
+  "scope": "Only these official search queries; not all ARRMA history. Variant SKUs are not generations."
+}
