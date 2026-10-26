@@ -1,6 +1,6 @@
 # Real catalog ingestion
 
-Status: schema and reviewed-data importer implemented. Official catalog discovery is now saved under `discovery/`: 112 distinct vehicle catalog IDs, 207 represented variant SKUs, and 210 retailer-listed ARA8708T1 parts entries. These are staging records, not independently verified version/fitment records. No reviewed data has been imported into SQLite. The app now bundles the 210 sourced ARA8708T1 entries as an offline catalog, labeled retailer-listed fitment pending diagram verification, with prices and stock unknown. No actual fitment or pricing has been verified yet.
+Status: schema and reviewed-data importer implemented. Official catalog discovery is now saved under `discovery/`: 112 distinct vehicle catalog IDs, 207 represented variant SKUs, and 210 retailer-listed ARA8708T1 parts entries. These are staging records, not independently verified version/fitment records. No reviewed data has been imported into SQLite. The app now bundles the 210 sourced ARA8708T1 entries as an offline catalog, labeled retailer-listed fitment pending diagram verification, with dated Horizon price snapshots and stock unverified. No independently verified diagram fitment or live pricing is connected.
 
 This SQLite database is maintained with Node 24 tooling. The reviewed SQLite tables are not exposed to the Expo app; the mobile app uses a separate generated discovery snapshot. Do not bundle the Node SQLite importer in the mobile app.
 
@@ -59,3 +59,11 @@ python3 scripts/collect-vehicle-documents.py
 ```
 
 Use `--fetch` only to retrieve missing pages. The collector uses the existing HTTPS proxy and TLS verification, at most two concurrent requests and 30-second timeouts. It records failures instead of claiming complete coverage. Raw responses in `database/evidence/product-pages/` are local and ignored by Git. PDF links are inventoried; their content remains unreviewed. Access to `production-na01-horizonhobby.demandware.net` was added to the environment configuration draft because document requests were blocked.
+
+## Shared part associations
+
+`discovery/part-associations.json` captures all 210 exact product pages: 5,564 literal parent-model associations, 336 distinct source model IDs, source hashes, manufacturer numbers, and dated Horizon USD price observations. It includes other brands when the source explicitly associates the same product. Standard and Optional are preserved; no family, color or successor inference is used. Source specifications’ `Manufacturer #` take precedence over generic JSON-LD mpn, which sometimes repeats the retailer catalog ID; both identities are retained.
+
+The generated app snapshot merges only exact model IDs. Conflicting standard/optional evidence is marked as mixed and retains both sources. Part-page HTML is retained under ignored `database/evidence/part-pages/`. Rebuild with `node scripts/collect-part-associations.mjs`, then `node scripts/build-mobile-catalog.mjs`. Missing or truncated source pages cause a failure instead of an apparently complete shared-fitment list. The generated prices are observations and must never be presented as live or transferred as checkout guarantees.
+
+The new mobile vendor-cart SQLite key/value store is separate from the reviewed catalog schema. It holds local shopping selections only, with no retailer credentials, remote cart session or payment details.

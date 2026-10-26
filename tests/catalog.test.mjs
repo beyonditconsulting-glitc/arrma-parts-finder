@@ -35,7 +35,8 @@ test("mobile catalog contains every sourced entry exactly once and no demo recor
     assert.equal(p.provenance.sourceSha256, page.sha256);
     assert.equal(p.provenance.sourceUrl, page.source_url);
     assert.equal(p.provenance.observedAt, page.retrieved_at);
-    assert.deepEqual(p.vehicles, [catalogVehicle]);
+    assert.ok(p.vehicles.includes(catalogVehicle));
+    assert.ok(p.fitments.some((row) => row.vehicleId === "ARA8708T1"));
   }
 });
 test("search finds exact IDs, names, vehicle ID and combined filters", () => {
@@ -58,7 +59,8 @@ test("search finds exact IDs, names, vehicle ID and combined filters", () => {
 test("fitment does not spread to other models or imply confirmed V2 alias", () => {
   assert.equal(searchParts("", "Kraton 6S EXB V2").length, 0);
   assert.equal(searchParts("", "Typhon 6S").length, 0);
-  assert.deepEqual(vehicles, ["All vehicles", catalogVehicle]);
+  assert.ok(vehicles.includes(catalogVehicle));
+  assert.ok(vehicles.some((v) => v.includes("ARA7704V3")));
 });
 test("retailer actions distinguish source product link from unverified searches", () => {
   const p = parts.find((p) => p.id === "ARA320754");

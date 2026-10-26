@@ -1,5 +1,26 @@
 import catalog from "./data/kraton.js";
+export type Fitment = {
+  vehicleId: string;
+  name: string;
+  brand: string;
+  relationship: string;
+  sources: {
+    url: string;
+    sha256: string;
+    observedAt: string;
+    locator: string;
+  }[];
+};
 export type Part = {
+  manufacturerPartNumber: string | null;
+  fitments: Fitment[];
+  associationCoverage: string;
+  observedPrice: {
+    amountMinor: number;
+    currency: string;
+    observedAt: string;
+    sourceUrl: string;
+  } | null;
   id: string;
   name: string;
   brand: string;
@@ -20,7 +41,13 @@ export type Part = {
   };
 };
 export const catalogVehicle = catalog.vehicle;
-export const vehicles = ["All vehicles", catalogVehicle];
+export const vehicles = [
+  "All vehicles",
+  catalogVehicle,
+  ...[...new Set(catalog.records.flatMap((part) => part.vehicles))]
+    .filter((v) => v !== catalogVehicle)
+    .sort(),
+];
 export const categories = [
   "All parts",
   "Suspension",
@@ -43,14 +70,14 @@ export function searchParts(
       (vehicle === "All vehicles" || p.vehicles.includes(vehicle)) &&
       (category === "All parts" || p.category === category) &&
       terms.every((t) =>
-        `${p.id} ${p.name} ${p.brand} ${p.category} ${p.vehicles.join(" ")}`
+        `${p.manufacturerPartNumber ?? ""} ${p.id} ${p.name} ${p.brand} ${p.category} ${p.vehicles.join(" ")}`
           .toLowerCase()
           .includes(t),
       ),
   );
 }
 export function retailerUrl(retailer: string, part: Part) {
-  const q = encodeURIComponent(part.id);
+  const q = encodeURIComponent(part.manufacturerPartNumber ?? part.id);
   return retailer === "Horizon Hobby"
     ? part.provenance.productUrl
     : retailer === "Jenny’s RC"

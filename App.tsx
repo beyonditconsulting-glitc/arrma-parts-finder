@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useVendorCart } from "./src/useVendorCart";
+import { vendors, type Vendor } from "./src/cart";
+import { displayObservedPrice } from "./src/offers";
+import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
+import { FitmentList } from "./src/components/FitmentList";
 import { StatusBar } from "expo-status-bar";
 import {
   ScrollView,
@@ -24,6 +29,9 @@ import {
 
 const red = "#e5432f";
 export default function App() {
+  const { cart, add, quantity, storageError } = useVendorCart();
+  const [cartVendor, setCartVendor] = useState<Vendor | null>(null);
+  const [vehicleQuery, setVehicleQuery] = useState("");
   const [query, setQuery] = useState("");
   const [vehicle, setVehicle] = useState(catalogVehicle);
   const [category, setCategory] = useState("All parts");
@@ -44,6 +52,23 @@ export default function App() {
   ).filter((p) => tab !== "Saved" || saved.includes(p.id));
   const toggle = (id: string) =>
     setSaved((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
+  const openCart = (vendor: Vendor) => {
+    setSelected(null);
+    setCartVendor(vendor);
+  };
+  const manualCheckout = (vendor: Vendor, part: Part) => {
+    Alert.alert(
+      `Continue to ${vendor}?`,
+      "This opens the retailer outside the app. Items and quantities will not transfer automatically; you must add them there.",
+      [
+        { text: "Stay in app", style: "cancel" },
+        {
+          text: "Continue manually",
+          onPress: () => void open(retailerUrl(vendor, part)),
+        },
+      ],
+    );
+  };
   const open = async (url: string) => {
     try {
       await Linking.openURL(url);
@@ -72,6 +97,20 @@ export default function App() {
             <Text style={s.demoText}>SOURCED CATALOG</Text>
           </View>
         </View>
+        <Pressable
+          style={{
+            paddingHorizontal: 22,
+            paddingVertical: 12,
+            backgroundColor: "#edf0e7",
+          }}
+          onPress={() => openCart(vendors[0])}
+          accessibilityLabel="Review vendor carts"
+        >
+          <Text style={s.link}>
+            Vendor carts · {cart.reduce((n, line) => n + line.quantity, 0)}{" "}
+            items →
+          </Text>
+        </Pressable>
         <ScrollView
           contentContainerStyle={s.content}
           keyboardShouldPersistTaps="handled"
@@ -126,8 +165,9 @@ export default function App() {
             <Text style={{ color: "#af7120", fontSize: 16 }}>ⓘ</Text>
             <Text style={s.noticeText}>
               Horizon-listed parts for ARA8708T1. Fitment is pending diagram
-              verification. Prices and stock are unknown. The “EXB V2” alias is
-              not yet confirmed for this model ID.
+              verification. Only captured Horizon prices are available; no live
+              three-vendor quotes. The “EXB V2” alias is not yet confirmed for
+              this model ID.
             </Text>
           </View>
           {tab === "Explore" && (
@@ -213,24 +253,33 @@ export default function App() {
                 </Pressable>
                 <View style={s.cardBody}>
                   <Text style={s.partNumber}>
-                    {p.brand} · Catalog ID: {p.id}
+                    {p.brand} · {p.manufacturerPartNumber ?? p.id}
                   </Text>
                   <Text style={s.partName}>{p.name}</Text>
                   <Text style={s.fitment}>
-                    {p.vehicles.join(" / ")} · Retailer-listed; diagram check
-                    pending
+                    ARA8708T1 · Also listed for{" "}
+                    {Math.max(0, p.fitments.length - 1)} other models. Diagram
+                    check pending.
                   </Text>
                   <View style={s.cardFooter}>
                     <View>
-                      <Text style={s.micro}>PRICE & STOCK</Text>
-                      <Text style={s.partName}>Unknown</Text>
+                      <Text style={s.micro}>HORIZON SNAPSHOT · NOT LIVE</Text>
+                      <Text style={s.partName}>
+                        {displayObservedPrice(p.observedPrice)}
+                      </Text>
+                      <Text style={s.fitment}>
+                        {p.observedPrice
+                          ? `Captured ${p.observedPrice.observedAt.slice(0, 10)}`
+                          : "No observed quote"}{" "}
+                        · Stock unverified
+                      </Text>
                     </View>
                     <Pressable
                       style={s.compare}
                       onPress={() => setSelected(p)}
                       accessibilityLabel={`View sources and retailers for ${p.name}`}
                     >
-                      <Text style={s.compareText}>Sources & retailers ↗</Text>
+                      <Text style={s.compareText}>Compare & view models →</Text>
                     </Pressable>
                   </View>
                 </View>
@@ -302,26 +351,49 @@ export default function App() {
           <View style={s.sheet}>
             <Text style={s.sectionTitle}>Choose your vehicle</Text>
             <Text style={s.subtitle}>
-              Only ARA8708T1 has sourced parts in this release. Check the model
-              ID on your vehicle; versions are not interchangeable.
+              This catalog covers 210 source-listed Kraton parts and their
+              shared-model associations. Another model filter shows shared
+              entries, not its full parts catalog.
             </Text>
-            {vehicles.map((v) => (
-              <Pressable
-                key={v}
-                style={s.option}
-                onPress={() => {
-                  setVehicle(v);
-                  setPicker(false);
-                }}
-              >
-                <Text
-                  style={{ fontSize: 17, color: vehicle === v ? red : "#222" }}
-                >
-                  {v}
-                </Text>
-                <Text>{vehicle === v ? "✓" : "→"}</Text>
-              </Pressable>
-            ))}
+            <TextInput
+              style={[s.search, { padding: 12 }]}
+              value={vehicleQuery}
+              onChangeText={setVehicleQuery}
+              placeholder="Find a model or model number"
+              accessibilityLabel="Filter vehicle picker"
+            />
+            <ScrollView
+              style={{ maxHeight: 400 }}
+              keyboardShouldPersistTaps="handled"
+            >
+              {vehicles
+                .filter((v) =>
+                  v.toLowerCase().includes(vehicleQuery.toLowerCase().trim()),
+                )
+                .map((v) => (
+                  <Pressable
+                    key={v}
+                    style={s.option}
+                    onPress={() => {
+                      setVehicle(v);
+                      setPicker(false);
+                    }}
+                  >
+                    <Text
+                      style={{
+                        flex: 1,
+                        marginRight: 10,
+                        fontSize: 15,
+                        lineHeight: 21,
+                        color: vehicle === v ? red : "#222",
+                      }}
+                    >
+                      {v}
+                    </Text>
+                    <Text>{vehicle === v ? "✓" : "→"}</Text>
+                  </Pressable>
+                ))}
+            </ScrollView>
             <Pressable style={s.close} onPress={() => setPicker(false)}>
               <Text>Cancel</Text>
             </Pressable>
@@ -329,19 +401,34 @@ export default function App() {
         </View>
       </Modal>
       <Modal
-        visible={!!selected}
+        visible={!!selected || cartVendor !== null}
         transparent
         animationType="slide"
-        onRequestClose={() => setSelected(null)}
+        onRequestClose={() => {
+          setSelected(null);
+          setCartVendor(null);
+        }}
       >
         <View style={s.overlay}>
           <View style={s.sheet}>
             <ScrollView>
-              {selected && (
+              {cartVendor && (
+                <VendorCartPanel
+                  vendor={cartVendor}
+                  cart={cart}
+                  onVendor={setCartVendor}
+                  onQuantity={quantity}
+                  onClose={() => setCartVendor(null)}
+                  onManualCheckout={manualCheckout}
+                  storageError={storageError}
+                />
+              )}
+              {!cartVendor && selected && (
                 <>
                   <View style={s.section}>
                     <Text style={s.partNumber}>
-                      {selected.brand} / Catalog ID: {selected.id}
+                      {selected.brand} / Part:{" "}
+                      {selected.manufacturerPartNumber ?? selected.id}
                     </Text>
                     <Pressable
                       onPress={() => setSelected(null)}
@@ -355,8 +442,9 @@ export default function App() {
                   <View style={s.notice}>
                     <Text style={s.noticeText}>
                       Retailer-listed fitment · Diagram verification pending. No
-                      live prices or availability are connected. Catalog IDs may
-                      differ from manufacturer part numbers.
+                      live quotes or stock feeds are connected. Any displayed
+                      Horizon price is a dated snapshot. Catalog IDs may differ
+                      from manufacturer part numbers.
                     </Text>
                   </View>
                   <Text style={s.fitment}>
@@ -365,38 +453,21 @@ export default function App() {
                     {selected.provenance.observedAt.slice(0, 10)}. Categories
                     are inferred from listing titles.
                   </Text>
-                  <Pressable
-                    onPress={() => open(selected.provenance.sourceUrl)}
-                  >
-                    <Text style={s.link}>
-                      View source & vehicle association ↗
-                    </Text>
-                  </Pressable>
-                  {["Horizon Hobby", "Jenny’s RC", "eBay"].map((retailer) => (
-                    <View key={retailer} style={s.listing}>
-                      <View style={{ flex: 1 }}>
-                        <Text style={s.partName}>{retailer}</Text>
-                        <Text style={s.fitment}>
-                          Price unknown · Stock unknown
-                        </Text>
-                        <Pressable
-                          onPress={() => open(retailerUrl(retailer, selected))}
-                        >
-                          <Text style={s.link}>
-                            {retailer === "Horizon Hobby"
-                              ? "Open catalog product ↗"
-                              : "Search catalog ID ↗"}
-                          </Text>
-                        </Pressable>
-                      </View>
-                    </View>
-                  ))}
-                  <Text style={s.disclaimer}>
-                    Horizon opens the catalog product; other retailers search
-                    the catalog ID. A search does not establish a matching
-                    offer. Check manufacturer part number, fitment, condition,
-                    shipping and seller before buying.
+                  <Text selectable style={s.fitment}>
+                    Catalog ID: {selected.id}
+                    {"\n"}Source: {selected.provenance.sourceUrl}
                   </Text>
+                  {storageError !== "" && (
+                    <Text style={s.noticeText}>{storageError}</Text>
+                  )}
+                  <VendorComparison
+                    key={selected.id}
+                    part={selected}
+                    cart={cart}
+                    onAdd={add}
+                    onCart={openCart}
+                  />
+                  <FitmentList key={`fitment-${selected.id}`} part={selected} />
                   <Pressable
                     style={s.saveButton}
                     onPress={() => toggle(selected.id)}

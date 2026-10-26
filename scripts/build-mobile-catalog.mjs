@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { mergeFitments } from "./merge-fitments.mjs";
 import { validateSweep } from "./validate-discovery.mjs";
 const input = JSON.parse(
   readFileSync(
@@ -12,6 +13,18 @@ const input = JSON.parse(
 const check = validateSweep(input);
 if (!check.complete)
   throw Error(`Incomplete catalog: ${check.errors.join("; ")}`);
+const details = JSON.parse(
+  readFileSync(
+    new URL("../database/discovery/part-associations.json", import.meta.url),
+    "utf8",
+  ),
+);
+if (
+  details.failures.length ||
+  details.captured_count !== input.records.length ||
+  new Set(details.records.map((r) => r.id)).size !== input.records.length
+)
+  throw Error("Part evidence capture is incomplete");
 const vehicle = "Kraton 6S EXB (ARA8708T1)";
 function category(name) {
   if (/tire|tyre|wheel|dboots/i.test(name)) return "Wheels & tires";
@@ -35,12 +48,34 @@ const records = input.records.map((record) => {
     page.query.relationType !== "Standardparts"
   )
     throw Error("Unexpected source relation");
+  const detail = details.records.find((row) => row.id === record.id);
+  if (!detail) throw Error(`Missing part-page evidence ${record.id}`);
+  const fitments = mergeFitments(
+    {
+      vehicleId: "ARA8708T1",
+      name: "ARRMA 1/8 KRATON 6S EXB AVC 4X4 RTR Brushless Speed Truck, Black",
+      brand: "ARRMA",
+      relationship: "standard",
+      sourceUrl: page.source_url,
+      sourceSha256: page.sha256,
+      observedAt: page.retrieved_at,
+      sourceLocator: record.source_locator,
+    },
+    detail.associations,
+  );
+  const vehicleLabels = fitments.map((row) =>
+    row.vehicleId === "ARA8708T1" ? vehicle : `${row.name} (${row.vehicleId})`,
+  );
   return {
     id: record.id,
+    manufacturerPartNumber: detail.manufacturerPartNumber,
+    fitments,
+    associationCoverage: detail.coverageNote,
+    observedPrice: detail.observedPrice,
     name: record.name,
     brand: record.brand ?? "Brand not stated",
     category: category(record.name),
-    vehicles: [vehicle],
+    vehicles: vehicleLabels,
     icon: "⚙",
     description:
       "Listed by Horizon Hobby under ARA8708T1 replacement parts. Check your exact model and the manufacturer diagram before ordering. Catalog IDs may differ from manufacturer part numbers.",
@@ -71,5 +106,5 @@ writeFileSync(
     ";\nexport default catalog;\n",
 );
 console.log(
-  `Generated ${records.length} sourced records; zero price or stock claims.`,
+  `Generated ${records.length} sourced records; captured Horizon snapshots only; no live prices or stock claims.`,
 );
