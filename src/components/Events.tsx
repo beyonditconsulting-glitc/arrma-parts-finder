@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import records from "../data/events.json";
 import { pacificDate, nextFriday } from "../eventDates";
 
-type Event = { id: string; name: string; start: string; end: string; location: string; region: string; category: string; source: string; sourceName: string; checked: string };
+type Event = { id: string; name: string; start: string; end: string; location: string; region: string; category: string; source: string; sourceName: string; checked: string; details?: string };
 const allEvents: Event[] = records;
 function displayDate(value: string) { return new Date(`${value}T12:00:00Z`).toLocaleDateString("en-US", { timeZone: "UTC", month: "short", day: "numeric", year: "numeric" }); }
 export function Events({ open }: { open: (url: string) => void }) {
@@ -21,7 +21,7 @@ export function Events({ open }: { open: (url: string) => void }) {
     <View style={s.filters}>{["All", "USA", "International"].map((value) => <Pressable key={value} style={[s.filter, region === value && s.active]} onPress={() => setRegion(value)} accessibilityRole="button" accessibilityState={{ selected: region === value }}><Text style={region === value ? s.activeText : s.filterText}>{value}</Text></Pressable>)}</View>
     <Text style={s.copy}>Curated starter listings, checked October 27, 2026. Confirm details with organizers before making plans.</Text>
     {matches.length === 0 && <Text style={s.copy}>No upcoming events match this search.</Text>}
-    {matches.map((event) => <View key={event.id} style={s.card}><Text style={s.eventName}>{event.name}</Text><Text style={s.details}>{displayDate(event.start)}{event.end !== event.start ? ` – ${displayDate(event.end)}` : ""}</Text><Text style={s.details}>{event.location} · {event.region}</Text><Text style={s.small}>{event.sourceName} · checked {displayDate(event.checked)}{event.sourceName === "RCSignup" ? " · listing start date; confirm full schedule" : ""}</Text><Pressable accessibilityRole="link" onPress={() => open(event.source)}><Text style={s.link}>Event details →</Text></Pressable></View>)}
+    {matches.map((event) => <View key={event.id} style={s.card}><Text style={s.eventName}>{event.name}</Text><Text style={s.details}>{displayDate(event.start)}{event.end !== event.start ? ` – ${displayDate(event.end)}` : ""}</Text><Text style={s.details}>{event.location} · {event.region}</Text>{event.details && <Text style={s.details}>{event.details}</Text>}<Text style={s.small}>{event.sourceName} · checked {displayDate(event.checked)}{event.sourceName === "RCSignup" ? " · listing start date; confirm full schedule" : ""}</Text><Pressable accessibilityRole="link" onPress={() => open(event.source)}><Text style={s.link}>{event.id === "rc-sand-sharks-2026-12-20" ? "Organizer website →" : "Event details →"}</Text></Pressable></View>)}
     <Text style={s.small}>Listings are a snapshot, not an automatically updated worldwide calendar.</Text>
   </View>;
 }

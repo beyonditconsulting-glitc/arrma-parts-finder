@@ -5,6 +5,7 @@ import { useVendorCart } from "./src/useVendorCart";
 import { vendors, type Vendor } from "./src/cart";
 import { displayObservedPrice } from "./src/offers";
 import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
+import { HobbyShops } from "./src/components/HobbyShops";
 import { Events } from "./src/components/Events";
 import { Graveyard } from "./src/components/Graveyard";
 import { FitmentList } from "./src/components/FitmentList";
@@ -39,7 +40,7 @@ export default function App() {
   const [vehicle, setVehicle] = useState(catalogVehicle);
   const [category, setCategory] = useState("All parts");
   const { tab: routeTab } = useLocalSearchParams<{ tab?: string }>();
-  const tab = ["Explore", "Upgrades", "Saved", "Graveyard", "Events"].includes(routeTab ?? "")
+  const tab = ["Explore", "Upgrades", "Saved", "Graveyard", "Events", "Shops"].includes(routeTab ?? "")
     ? routeTab!
     : "Explore";
   const setTab = (next: string) => router.setParams({ tab: next });
@@ -118,7 +119,7 @@ export default function App() {
           contentContainerStyle={s.content}
           keyboardShouldPersistTaps="handled"
         >
-          {tab === "Events" ? <Events open={(url) => void open(url)} /> : tab === "Graveyard" ? <Graveyard /> : <>
+          {tab === "Shops" ? <HobbyShops open={(url) => void open(url)} /> : tab === "Events" ? <Events open={(url) => void open(url)} /> : tab === "Graveyard" ? <Graveyard /> : <>
           <View style={s.eyebrow}>
             <View style={s.dot} />
             <Text style={s.label}>LESS SEARCHING. MORE BASHING.</Text>
@@ -327,7 +328,7 @@ export default function App() {
           </>}
         </ScrollView>
         <View style={s.nav}>
-          {["Explore", "Upgrades", "Saved", "Graveyard", "Events"].map((t, i) => (
+          {["Explore", "Upgrades", "Saved", "Graveyard", "Events", "Shops"].map((t, i) => (
             <Pressable
               key={t}
               style={s.navItem}
@@ -336,7 +337,7 @@ export default function App() {
               accessibilityState={{ selected: tab === t }}
             >
               <Text style={[s.navIcon, tab === t && { color: red }]}>
-                {["⌕", "⚡", "♡", "☠", "▦"][i]}
+                {["⌕", "⚡", "♡", "☠", "▦", "⌂"][i]}
               </Text>
               <Text style={[s.navLabel, tab === t && { color: red }]}>
                 {t}
