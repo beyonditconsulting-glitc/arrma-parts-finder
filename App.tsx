@@ -5,7 +5,9 @@ import { useVendorCart } from "./src/useVendorCart";
 import { vendors, type Vendor } from "./src/cart";
 import { displayObservedPrice } from "./src/offers";
 import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
+import { Graveyard } from "./src/components/Graveyard";
 import { FitmentList } from "./src/components/FitmentList";
+import { RelatedProducts } from "./src/components/RelatedProducts";
 import { StatusBar } from "expo-status-bar";
 import {
   ScrollView,
@@ -36,7 +38,7 @@ export default function App() {
   const [vehicle, setVehicle] = useState(catalogVehicle);
   const [category, setCategory] = useState("All parts");
   const { tab: routeTab } = useLocalSearchParams<{ tab?: string }>();
-  const tab = ["Explore", "Upgrades", "Saved"].includes(routeTab ?? "")
+  const tab = ["Explore", "Upgrades", "Saved", "Graveyard"].includes(routeTab ?? "")
     ? routeTab!
     : "Explore";
   const setTab = (next: string) => router.setParams({ tab: next });
@@ -115,6 +117,7 @@ export default function App() {
           contentContainerStyle={s.content}
           keyboardShouldPersistTaps="handled"
         >
+          {tab === "Graveyard" ? <Graveyard /> : <>
           <View style={s.eyebrow}>
             <View style={s.dot} />
             <Text style={s.label}>LESS SEARCHING. MORE BASHING.</Text>
@@ -320,9 +323,10 @@ export default function App() {
             Independent enthusiast app. Not affiliated with ARRMA or the listed
             retailers. Saved parts last for this session.
           </Text>
+          </>}
         </ScrollView>
         <View style={s.nav}>
-          {["Explore", "Upgrades", "Saved"].map((t, i) => (
+          {["Explore", "Upgrades", "Saved", "Graveyard"].map((t, i) => (
             <Pressable
               key={t}
               style={s.navItem}
@@ -331,7 +335,7 @@ export default function App() {
               accessibilityState={{ selected: tab === t }}
             >
               <Text style={[s.navIcon, tab === t && { color: red }]}>
-                {["⌕", "⚡", "♡"][i]}
+                {["⌕", "⚡", "♡", "☠"][i]}
               </Text>
               <Text style={[s.navLabel, tab === t && { color: red }]}>
                 {t}
@@ -461,6 +465,14 @@ export default function App() {
                     <Text style={s.noticeText}>{storageError}</Text>
                   )}
                   <FitmentList key={`fitment-${selected.id}`} part={selected} />
+                  <View style={s.notice}>
+                    <Text style={s.bannerTitle}>Repair tutorials</Text>
+                    <Text style={s.fitment}>Search YouTube for this part and vehicle. Review each video for your exact model and version.</Text>
+                    <Pressable accessibilityRole="link" onPress={() => void open(`https://www.youtube.com/results?search_query=${encodeURIComponent(`${selected.manufacturerPartNumber ?? selected.id} ${selected.provenance.vehicleId} ARRMA repair`)}`)}>
+                      <Text style={s.link}>Find repair videos on YouTube →</Text>
+                    </Pressable>
+                  </View>
+                  <RelatedProducts key={`related-${selected.id}`} part={selected} vehicle={vehicle} open={(url) => void open(url)} />
                   <VendorComparison
                     key={selected.id}
                     part={selected}
