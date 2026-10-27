@@ -23,10 +23,14 @@ import {
   Alert,
 } from "react-native";
 import {
-  vehicles,
+  models,
+  allModels,
+  allVersions,
+  versionsForModel,
+  searchPartsByModel,
+  vehicleModel,
   categories,
   catalogVehicle,
-  searchParts,
   retailerUrl,
   type Part,
 } from "./src/catalog";
@@ -37,7 +41,9 @@ export default function App() {
   const [cartVendor, setCartVendor] = useState<Vendor | null>(null);
   const [vehicleQuery, setVehicleQuery] = useState("");
   const [query, setQuery] = useState("");
-  const [vehicle, setVehicle] = useState(catalogVehicle);
+  const [model, setModel] = useState(vehicleModel(catalogVehicle));
+  const [version, setVersion] = useState(catalogVehicle);
+  const vehicle = version === allVersions ? model : version;
   const [category, setCategory] = useState("All parts");
   const { tab: routeTab } = useLocalSearchParams<{ tab?: string }>();
   const tab = ["Explore", "Upgrades", "Saved", "Graveyard", "Events", "Shops"].includes(routeTab ?? "")
@@ -46,12 +52,13 @@ export default function App() {
   const setTab = (next: string) => router.setParams({ tab: next });
   const [saved, setSaved] = useState<string[]>([]);
   const [selected, setSelected] = useState<Part | null>(null);
-  const [picker, setPicker] = useState(false);
+  const [picker, setPicker] = useState<"model" | "version" | null>(null);
   const [visibleCount, setVisibleCount] = useState(24);
-  useEffect(() => setVisibleCount(24), [query, vehicle, category, tab]);
-  const results = searchParts(
+  useEffect(() => setVisibleCount(24), [query, model, version, category, tab]);
+  const results = searchPartsByModel(
     query,
-    vehicle,
+    model,
+    version,
     tab === "Upgrades" ? "Upgrades" : category,
   ).filter((p) => tab !== "Saved" || saved.includes(p.id));
   const toggle = (id: string) =>
@@ -135,15 +142,12 @@ export default function App() {
             210 sourced replacement listings for ARA8708T1. Your next run starts
             here.
           </Text>
-          <Pressable
-            style={s.vehicle}
-            onPress={() => setPicker(true)}
-            accessibilityRole="button"
-          >
-            <View>
-              <Text style={s.micro}>YOUR VEHICLE</Text>
-              <Text style={s.vehicleName}>▱ {vehicle}</Text>
-            </View>
+          <Pressable style={s.vehicle} onPress={() => { setVehicleQuery(""); setPicker("model"); }} accessibilityRole="button" accessibilityLabel={`Choose model: ${model}`}>
+            <View style={{ flex: 1 }}><Text style={s.micro}>MODEL</Text><Text style={s.vehicleName}>{model}</Text></View>
+            <Text style={{ fontSize: 22 }}>⌄</Text>
+          </Pressable>
+          <Pressable style={s.vehicle} onPress={() => { setVehicleQuery(""); setPicker("version"); }} accessibilityRole="button" accessibilityLabel={`Choose version: ${version}`}>
+            <View style={{ flex: 1 }}><Text style={s.micro}>VERSION / MODEL ID</Text><Text style={s.vehicleName}>{version}</Text></View>
             <Text style={{ fontSize: 22 }}>⌄</Text>
           </Pressable>
           <View style={s.search}>
@@ -221,7 +225,8 @@ export default function App() {
               <Pressable
                 onPress={() => {
                   setQuery("");
-                  setVehicle("All vehicles");
+                  setModel(allModels);
+                  setVersion(allVersions);
                   setCategory("All parts");
                   setTab("Explore");
                 }}
@@ -348,14 +353,14 @@ export default function App() {
         </View>
       </View>
       <Modal
-        visible={picker}
+        visible={picker !== null}
         transparent
         animationType="slide"
-        onRequestClose={() => setPicker(false)}
+        onRequestClose={() => setPicker(null)}
       >
         <View style={s.overlay}>
           <View style={s.sheet}>
-            <Text style={s.sectionTitle}>Choose your vehicle</Text>
+            <Text style={s.sectionTitle}>{picker === "model" ? "Choose model" : "Choose version / model ID"}</Text>
             <Text style={s.subtitle}>
               This catalog covers 210 source-listed Kraton parts and their
               shared-model associations. Another model filter shows shared
@@ -372,7 +377,7 @@ export default function App() {
               style={{ maxHeight: 400 }}
               keyboardShouldPersistTaps="handled"
             >
-              {vehicles
+              {(picker === "model" ? models : versionsForModel(model))
                 .filter((v) =>
                   v.toLowerCase().includes(vehicleQuery.toLowerCase().trim()),
                 )
@@ -381,8 +386,8 @@ export default function App() {
                     key={v}
                     style={s.option}
                     onPress={() => {
-                      setVehicle(v);
-                      setPicker(false);
+                      if (picker === "model") { setModel(v); setVersion(allVersions); } else { setVersion(v); }
+                      setPicker(null);
                     }}
                   >
                     <Text
@@ -391,16 +396,16 @@ export default function App() {
                         marginRight: 10,
                         fontSize: 15,
                         lineHeight: 21,
-                        color: vehicle === v ? red : "#222",
+                        color: (picker === "model" ? model : version) === v ? red : "#222",
                       }}
                     >
                       {v}
                     </Text>
-                    <Text>{vehicle === v ? "✓" : "→"}</Text>
+                    <Text>{(picker === "model" ? model : version) === v ? "✓" : "→"}</Text>
                   </Pressable>
                 ))}
             </ScrollView>
-            <Pressable style={s.close} onPress={() => setPicker(false)}>
+            <Pressable style={s.close} onPress={() => setPicker(null)}>
               <Text>Cancel</Text>
             </Pressable>
           </View>
