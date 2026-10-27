@@ -68,6 +68,7 @@ const records = input.records.map((record) => {
   );
   return {
     id: record.id,
+    image: detail.image ?? null,
     manufacturerPartNumber: detail.manufacturerPartNumber,
     fitments,
     associationCoverage: detail.coverageNote,

@@ -12,6 +12,14 @@ export type Fitment = {
   }[];
 };
 export type Part = {
+  image: {
+    url: string;
+    alt: string;
+    sourceUrl: string;
+    sourceSha256: string;
+    observedAt: string;
+    sourceLocator: string;
+  } | null;
   manufacturerPartNumber: string | null;
   fitments: Fitment[];
   associationCoverage: string;

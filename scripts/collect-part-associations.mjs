@@ -113,6 +113,21 @@ for (const part of baseline.records) {
         : null;
     records.push({
       id: part.id,
+      image: (() => {
+        const image = product.images?.large?.[0];
+        if (!image?.url) return null;
+        const url = new URL(image.url);
+        if (url.protocol !== "https:" || url.username || url.password)
+          throw Error("Invalid product image URL");
+        return {
+          url: url.href,
+          alt: image.alt || product.name,
+          sourceUrl,
+          sourceSha256: sha256,
+          observedAt: time,
+          sourceLocator: `mobify-data productStore.productsById[${part.id}].images.large[0]`,
+        };
+      })(),
       manufacturerPartNumber: mpns.length === 1 ? mpns[0] : null,
       manufacturerNumberEvidence: specNumbers.length
         ? specNumbers

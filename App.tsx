@@ -5,6 +5,7 @@ import { useVendorCart } from "./src/useVendorCart";
 import { vendors, type Vendor } from "./src/cart";
 import { displayObservedPrice } from "./src/offers";
 import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
+import { ProductImage } from "./src/components/ProductImage";
 import { FitmentList } from "./src/components/FitmentList";
 import { StatusBar } from "expo-status-bar";
 import {
@@ -279,7 +280,9 @@ export default function App() {
                       onPress={() => setSelected(p)}
                       accessibilityLabel={`View other vehicles using ${p.name} and compare prices`}
                     >
-                      <Text style={s.compareText}>View vehicles & prices →</Text>
+                      <Text style={s.compareText}>
+                        View vehicles & prices →
+                      </Text>
                     </Pressable>
                   </View>
                 </View>
@@ -437,6 +440,7 @@ export default function App() {
                       <Text style={{ fontSize: 24 }}>✕</Text>
                     </Pressable>
                   </View>
+                  <ProductImage key={`image-${selected.id}`} part={selected} />
                   <Text style={s.bannerTitle}>{selected.name}</Text>
                   <Text style={s.subtitle}>{selected.description}</Text>
                   <View style={s.notice}>

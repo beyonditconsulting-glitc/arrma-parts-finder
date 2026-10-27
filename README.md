@@ -24,6 +24,7 @@ EXPO_NO_TELEMETRY=1 npx expo export --platform ios --platform android
 
 - 210 Horizon Hobby source-listed replacement entries for **Kraton 6S EXB (ARA8708T1)** replace the original six sample records.
 - Search by name, brand, catalog ID or exact vehicle ID, with title-derived category filters. Results display in batches of 24.
+- Part details show a sourced Horizon product photo above the title, using contain sizing, loading feedback and an unavailable-image fallback. Photos load from the source CDN and require connectivity.
 - Part details show source evidence and **also listed for** models, separating standard replacements from optional upgrades. The 210 exact part-page captures contain 5,564 associations across 336 distinct model IDs, including other brands; coverage is not exhaustive.
 - Search supports both catalog IDs and manufacturer numbers from source specifications. Different model revisions and color SKUs remain separate.
 - Three vendor panels keep comparison and add-to-app-cart actions inside the app. Each vendor has a separate SQLite-backed device cart with quantity editing and removal. Native persistence needs device validation.
