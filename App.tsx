@@ -4,8 +4,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useVendorCart } from "./src/useVendorCart";
 import { vendors, type Vendor } from "./src/cart";
 import { displayObservedPrice } from "./src/offers";
-import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
 import { ProductImage } from "./src/components/ProductImage";
+import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
 import { HobbyShops } from "./src/components/HobbyShops";
 import { Events } from "./src/components/Events";
 import { Graveyard } from "./src/components/Graveyard";
@@ -61,6 +61,7 @@ export default function App() {
   );
   const [picker, setPicker] = useState<"model" | "version" | null>(null);
   const [visibleCount, setVisibleCount] = useState(24);
+  const [partsExpanded, setPartsExpanded] = useState(false);
   useEffect(() => setVisibleCount(24), [query, model, version, category, tab]);
   const results = searchPartsByModel(
     query,
@@ -117,8 +118,8 @@ export default function App() {
         </View>
         <Pressable
           style={{
-            paddingHorizontal: 22,
-            paddingVertical: 12,
+            paddingHorizontal: 16,
+            paddingVertical: 7,
             backgroundColor: "#edf0e7",
           }}
           onPress={() => openCart(vendors[0])}
@@ -134,20 +135,12 @@ export default function App() {
           keyboardShouldPersistTaps="handled"
         >
           {tab === "Shops" ? <HobbyShops open={(url) => void open(url)} /> : tab === "Events" ? <Events open={(url) => void open(url)} /> : tab === "Graveyard" ? <Graveyard /> : <>
-          <View style={s.eyebrow}>
-            <View style={s.dot} />
-            <Text style={s.label}>LESS SEARCHING. MORE BASHING.</Text>
-          </View>
           <Text style={s.title}>
             {tab === "Saved"
-              ? "Your next\npit stop."
+              ? "Saved parts"
               : tab === "Upgrades"
-                ? "Built to go\nfurther."
-                : "Find your part.\nGet back out."}
-          </Text>
-          <Text style={s.subtitle}>
-            210 sourced replacement listings for ARA8708T1. Your next run starts
-            here.
+                ? "Upgrades"
+                : "Find your part"}
           </Text>
           <Pressable style={s.vehicle} onPress={() => { setVehicleQuery(""); setPicker("model"); }} accessibilityRole="button" accessibilityLabel={`Choose model: ${model}`}>
             <View style={{ flex: 1 }}><Text style={s.micro}>MODEL</Text><Text style={s.vehicleName}>{model}</Text></View>
@@ -164,7 +157,7 @@ export default function App() {
               placeholder="Part name, catalog ID, or vehicle"
               placeholderTextColor="#777b82"
               value={query}
-              onChangeText={setQuery}
+              onChangeText={(value) => { setQuery(value); if (value.trim()) setPartsExpanded(true); }}
               accessibilityLabel="Search parts"
               returnKeyType="search"
             />
@@ -177,15 +170,7 @@ export default function App() {
               </Pressable>
             )}
           </View>
-          <View style={s.notice}>
-            <Text style={{ color: "#af7120", fontSize: 16 }}>ⓘ</Text>
-            <Text style={s.noticeText}>
-              Horizon-listed parts for ARA8708T1. Fitment is pending diagram
-              verification. Only captured Horizon prices are available; no live
-              three-vendor quotes. The “EXB V2” alias is not yet confirmed for
-              this model ID.
-            </Text>
-          </View>
+          <Text style={s.catalogNote}>Kraton-based catalog · Fitment verification pending · Prices are not live</Text>
           {tab === "Explore" && (
             <ScrollView
               horizontal
@@ -207,16 +192,11 @@ export default function App() {
               ))}
             </ScrollView>
           )}
-          <View style={s.section}>
-            <Text style={s.sectionTitle}>
-              {tab === "Saved"
-                ? "Saved parts"
-                : tab === "Upgrades"
-                  ? "Upgrade your setup"
-                  : "Explore the parts bin"}
-            </Text>
-            <Text style={s.count}>{results.length} parts</Text>
-          </View>
+          <Pressable style={s.partsToggle} onPress={() => setPartsExpanded((open) => !open)} accessibilityRole="button" accessibilityState={{ expanded: partsExpanded }} accessibilityLabel={`${tab === "Saved" ? "Saved parts" : tab === "Upgrades" ? "Upgrade parts" : "Parts results"}, ${results.length} parts`}>
+            <Text style={s.partsToggleTitle}>{tab === "Saved" ? "Saved parts" : tab === "Upgrades" ? "Upgrade parts" : "Parts results"}</Text>
+            <Text style={s.count}>{results.length} parts  {partsExpanded ? "⌃" : "⌄"}</Text>
+          </Pressable>
+          {partsExpanded && <>
           {results.length === 0 && (
             <View style={s.empty}>
               <Text style={s.sectionTitle}>
@@ -296,9 +276,7 @@ export default function App() {
                       onPress={() => setSelected(p)}
                       accessibilityLabel={`View other vehicles using ${p.name} and compare prices`}
                     >
-                      <Text style={s.compareText}>
-                        View vehicles & prices →
-                      </Text>
+                      <Text style={s.compareText}>View vehicles & prices →</Text>
                     </Pressable>
                   </View>
                 </View>
@@ -317,6 +295,7 @@ export default function App() {
               </Text>
             </Pressable>
           )}
+          </>}
           <View style={s.upgradeBanner}>
             <Text style={s.bannerKicker}>MAKE IT YOURS</Text>
             <Text style={[s.bannerTitle, { color: "white" }]}>
@@ -353,7 +332,7 @@ export default function App() {
               <Text style={[s.navIcon, tab === t && { color: red }]}>
                 {["⌕", "⚡", "♡", "☠", "▦", "⌂"][i]}
               </Text>
-              <Text style={[s.navLabel, tab === t && { color: red }]}>
+              <Text style={[s.navLabel, tab === t && { color: red }]} numberOfLines={1} adjustsFontSizeToFit>
                 {t}
                 {t === "Saved" && saved.length ? ` (${saved.length})` : ""}
               </Text>
@@ -457,9 +436,9 @@ export default function App() {
                       <Text style={{ fontSize: 24 }}>✕</Text>
                     </Pressable>
                   </View>
-                  <ProductImage key={`image-${selected.id}`} part={selected} />
                   <Text style={s.bannerTitle}>{selected.name}</Text>
                   <Text style={s.subtitle}>{selected.description}</Text>
+                  <ProductImage key={`image-${selected.id}`} part={selected} />
                   <View style={s.notice}>
                     <Text style={s.noticeText}>
                       Retailer-listed fitment · Diagram verification pending. No
@@ -536,8 +515,9 @@ const s = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
-    padding: 22,
-    gap: 10,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    gap: 8,
     borderBottomWidth: 1,
     borderColor: "#e4e4df",
   },
@@ -556,11 +536,11 @@ const s = StyleSheet.create({
     fontWeight: "900",
     fontStyle: "italic",
   },
-  wordmark: { fontWeight: "900", fontSize: 20, letterSpacing: 1 },
+  wordmark: { fontWeight: "900", fontSize: 17, letterSpacing: 0.5 },
   micro: { fontSize: 9, fontWeight: "700", letterSpacing: 1, color: "#777c80" },
   demo: { borderWidth: 1, borderColor: "#d4d7ce", padding: 6, borderRadius: 4 },
   demoText: { fontSize: 8, fontWeight: "800", color: "#697461" },
-  content: { padding: 22, paddingBottom: 32 },
+  content: { paddingHorizontal: 16, paddingTop: 10, paddingBottom: 24 },
   eyebrow: {
     flexDirection: "row",
     gap: 7,
@@ -575,10 +555,10 @@ const s = StyleSheet.create({
     color: "#72766f",
   },
   title: {
-    fontSize: 46,
-    lineHeight: 49,
+    fontSize: 24,
+    lineHeight: 30,
     fontWeight: "900",
-    letterSpacing: -2,
+    letterSpacing: -0.5,
     color: "#202521",
   },
   subtitle: {
@@ -588,24 +568,25 @@ const s = StyleSheet.create({
     marginVertical: 14,
   },
   vehicle: {
-    marginTop: 12,
+    marginTop: 8,
     backgroundColor: "#eeefe9",
     borderWidth: 1,
     borderColor: "#dfe1d8",
-    padding: 16,
+    paddingHorizontal: 12,
+    paddingVertical: 9,
     borderRadius: 10,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
   vehicleName: {
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: "700",
-    marginTop: 6,
+    marginTop: 3,
     color: "#333b31",
   },
   search: {
-    marginTop: 14,
+    marginTop: 8,
     flexDirection: "row",
     alignItems: "center",
     gap: 12,
@@ -615,7 +596,7 @@ const s = StyleSheet.create({
     borderColor: "#dedfd9",
     borderRadius: 10,
   },
-  input: { flex: 1, paddingVertical: 17, fontSize: 14, color: "#252a25" },
+  input: { flex: 1, paddingVertical: 10, fontSize: 14, color: "#252a25" },
   notice: {
     flexDirection: "row",
     gap: 10,
@@ -625,6 +606,9 @@ const s = StyleSheet.create({
     marginVertical: 15,
   },
   noticeText: { fontSize: 11, lineHeight: 17, color: "#8b6c33", flex: 1 },
+  catalogNote: { fontSize: 10, lineHeight: 15, color: "#8b6c33", marginTop: 8 },
+  partsToggle: { marginTop: 12, marginBottom: 10, minHeight: 48, paddingHorizontal: 14, borderWidth: 1, borderColor: "#dfe3da", borderRadius: 10, backgroundColor: "white", flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  partsToggleTitle: { fontSize: 16, fontWeight: "800", color: "#293127" },
   chips: { gap: 8, paddingVertical: 4 },
   chip: {
     paddingVertical: 10,
@@ -771,11 +755,11 @@ const s = StyleSheet.create({
     borderTopWidth: 1,
     borderColor: "#e0e3d9",
     backgroundColor: "#fafbf7",
-    paddingVertical: 12,
+    paddingVertical: 7,
   },
   navItem: { flex: 1, alignItems: "center", gap: 3 },
-  navIcon: { fontSize: 25, color: "#8c9487" },
-  navLabel: { fontSize: 10, color: "#8c9487", fontWeight: "700" },
+  navIcon: { fontSize: 20, color: "#8c9487" },
+  navLabel: { fontSize: 9, color: "#8c9487", fontWeight: "700" },
   overlay: {
     flex: 1,
     backgroundColor: "#18211988",
