@@ -231,7 +231,7 @@ export default function App() {
                 <Pressable
                   onPress={() => setSelected(p)}
                   style={s.art}
-                  accessibilityLabel={`View sources and retailers for ${p.name}`}
+                  accessibilityLabel={`View other vehicles using ${p.name} and compare prices`}
                 >
                   <Text style={s.artLabel}>{p.category.toUpperCase()}</Text>
                   <Text style={s.partIcon}>{p.icon}</Text>
@@ -277,9 +277,9 @@ export default function App() {
                     <Pressable
                       style={s.compare}
                       onPress={() => setSelected(p)}
-                      accessibilityLabel={`View sources and retailers for ${p.name}`}
+                      accessibilityLabel={`View other vehicles using ${p.name} and compare prices`}
                     >
-                      <Text style={s.compareText}>Compare & view models →</Text>
+                      <Text style={s.compareText}>View vehicles & prices →</Text>
                     </Pressable>
                   </View>
                 </View>
@@ -460,6 +460,7 @@ export default function App() {
                   {storageError !== "" && (
                     <Text style={s.noticeText}>{storageError}</Text>
                   )}
+                  <FitmentList key={`fitment-${selected.id}`} part={selected} />
                   <VendorComparison
                     key={selected.id}
                     part={selected}
@@ -467,7 +468,6 @@ export default function App() {
                     onAdd={add}
                     onCart={openCart}
                   />
-                  <FitmentList key={`fitment-${selected.id}`} part={selected} />
                   <Pressable
                     style={s.saveButton}
                     onPress={() => toggle(selected.id)}

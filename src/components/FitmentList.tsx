@@ -32,7 +32,7 @@ export function FitmentList({ part }: { part: Part }) {
   ];
   return (
     <View>
-      <Text style={s.heading}>Also listed for ({other.length})</Text>
+      <Text style={s.heading}>Other vehicles using this part ({other.length})</Text>
       <Text style={s.note}>
         Same source part identity, exact model IDs. These are captured retailer
         associations, not independently verified diagram fitment. Optional
