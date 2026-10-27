@@ -24,7 +24,7 @@ EXPO_NO_TELEMETRY=1 npx expo export --platform ios --platform android
 
 - 210 Horizon Hobby source-listed replacement entries for **Kraton 6S EXB (ARA8708T1)** replace the original six sample records.
 - Search by name, brand, catalog ID or exact vehicle ID, with title-derived category filters. Results default to an always-visible spreadsheet-style list of the first five matches. Tap a row for details, or use the results-view dropdown for the full vertical card list, paged in batches of 24.
-- Full cards and details prefer exact matched Jenny’s product photos for the 5 supported parts. Other parts retain a clearly labeled Horizon fallback. Retry/loading states are available. Photos load from source CDNs and require connectivity.
+- Full cards and details use bundled Jenny’s product photos for the 5 exact supported parts. Image bytes are included with the app and their source/asset hashes are recorded, avoiding retailer CDN requests during normal use. The denied Horizon fallback is disabled; unmatched parts explicitly show that no exact Jenny photo is available. In Expo Go, the app assets still need to load from the running Metro server at least once.
 - Part details show source evidence and **also listed for** models, separating standard replacements from optional upgrades. The 210 exact part-page captures contain 5,564 associations across 336 distinct model IDs, including other brands; coverage is not exhaustive.
 - Search supports both catalog IDs and manufacturer numbers from source specifications. Different model revisions and color SKUs remain separate.
 - Three vendor panels keep comparison and add-to-app-cart actions inside the app. Each vendor has a separate SQLite-backed device cart with quantity editing and removal. Native persistence needs device validation.
@@ -32,7 +32,7 @@ EXPO_NO_TELEMETRY=1 npx expo export --platform ios --platform android
 - Horizon and the 5 matched Jenny’s parts display explicitly dated **observed snapshots**, not live quotes. Jenny’s coverage is 5/210 parts across 25 listings; all remaining matches stay unresolved. Take-off packaging/condition differences are visible. eBay prices are not connected; no sample prices or invented availability are displayed.
 - Fitment is **retailer-listed, pending diagram verification**. The informal “EXB V2” alias has not been independently established for ARA8708T1. Other model versions do not inherit this association.
 - Catalog IDs are source identifiers and can differ from manufacturer part numbers. Always check the exact product and model before ordering.
-- Unsourced M2C, Perfect Pass and RPM upgrade samples have been removed; Upgrades shows an explicit empty state until evidence-backed records are added.
+- The separate Upgrades tab is removed. M2C Racing, Perfect Pass and RPM upgrade vendor options now appear under each part’s Compare vendors section, explicitly marked unmatched until sourced fitment, prices and listings are available. No invented offer is added to a cart.
 - Session bookmarks remain available. They do not persist across app restarts.
 - **🎬 Maintenance** includes 32 unique official Horizon ARRMA support videos from 34 source entries. Search by topic, model wording or tool, then play inside the app with source-provided tool lists. No media is rehosted. Provider availability/embedding controls apply; video playback needs on-device validation.
 - Shared-vehicle lists paginate five rows at a time after grouping Standard, Optional and Other/mixed evidence, so optional listings cannot hide earlier standard matches.
@@ -87,3 +87,15 @@ Videos use a privacy-enhanced YouTube iframe inside `react-native-webview`, with
 The environment draft preserves existing domains and adds the necessary source/document/player hosts for review. Saving it is not publication or proof that a publisher permits a request. Review/save and publish in environment settings when preserving the cloud setup. Some upstream hosts still deny document access even when proxy connection succeeds.
 
 After pulling, run `npm ci`; the new player uses the Expo-compatible `react-native-webview`. Preserve local tunnel-package edits before merging if Git reports a conflict; do not reset them blindly.
+
+## Bundled product photos
+
+The Horizon image CDN returned HTTP 403 for both captured dynamic and original image URLs. The app no longer retries those URLs. `assets/products/` holds the five exact Jenny product images; `database/discovery/bundled-product-photos.json` records the original source URLs, source hashes, asset hashes, byte counts and capture times. `src/productPhotoAssets.ts` uses static React Native asset imports guarded by exact source URL, so future metadata cannot silently reuse a stale asset mapping.
+
+Rebuild after supported photo mappings change:
+
+```sh
+node scripts/bundle-product-photos.mjs
+```
+
+Verified unchanged cached bytes are reused without downloading. Use `--refresh` for an intentional source refresh. Downloads retain normal proxy/TLS verification, reject unsupported/non-image responses and replace files only after successful retrieval. No photo is assigned to an unresolved part merely to fill the UI.

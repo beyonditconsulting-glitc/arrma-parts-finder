@@ -52,7 +52,6 @@ export default function App() {
   const { tab: routeTab } = useLocalSearchParams<{ tab?: string }>();
   const tab = [
     "Explore",
-    "Upgrades",
     "Saved",
     "Graveyard",
     "Maintenance",
@@ -77,12 +76,9 @@ export default function App() {
   const [resultsView, setResultsView] = useState<"table" | "cards">("table");
   const [viewMenuOpen, setViewMenuOpen] = useState(false);
   useEffect(() => setVisibleCount(24), [query, model, version, category, tab]);
-  const results = searchPartsByModel(
-    query,
-    model,
-    version,
-    tab === "Upgrades" ? "Upgrades" : category,
-  ).filter((p) => tab !== "Saved" || saved.includes(p.id));
+  const results = searchPartsByModel(query, model, version, category).filter(
+    (p) => tab !== "Saved" || saved.includes(p.id),
+  );
   const toggle = (id: string) =>
     setSaved((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
   const openCart = (vendor: Vendor) => {
@@ -160,11 +156,7 @@ export default function App() {
           ) : (
             <>
               <Text style={s.title}>
-                {tab === "Saved"
-                  ? "Saved parts"
-                  : tab === "Upgrades"
-                    ? "Upgrades"
-                    : "Find your part"}
+                {tab === "Saved" ? "Saved parts" : "Find your part"}
               </Text>
               <View style={{ flexDirection: "row", gap: 8 }}>
                 <Pressable
@@ -253,11 +245,7 @@ export default function App() {
               <View style={s.resultsHeading}>
                 <View style={{ flex: 1 }}>
                   <Text style={s.partsToggleTitle}>
-                    {tab === "Saved"
-                      ? "Saved parts"
-                      : tab === "Upgrades"
-                        ? "Upgrade parts"
-                        : "Parts results"}
+                    {tab === "Saved" ? "Saved parts" : "Parts results"}
                   </Text>
                   <Text style={s.count}>{results.length} matches</Text>
                 </View>
@@ -302,15 +290,10 @@ export default function App() {
               )}
               {results.length === 0 && (
                 <View style={s.empty}>
-                  <Text style={s.sectionTitle}>
-                    {tab === "Upgrades"
-                      ? "Upgrade research is next"
-                      : "Nothing in the pit yet"}
-                  </Text>
+                  <Text style={s.sectionTitle}>Nothing in the pit yet</Text>
                   <Text style={s.subtitle}>
-                    {tab === "Upgrades"
-                      ? "No sourced upgrade records yet. We’ll add M2C, Perfect Pass and other brands when exact fitment evidence is available."
-                      : "Try another search or vehicle. Tap a part’s bookmark to save it for this session."}
+                    Try another search or vehicle. Tap a part’s bookmark to save
+                    it for this session.
                   </Text>
                   <Pressable
                     onPress={() => {
@@ -422,27 +405,6 @@ export default function App() {
                 version={version}
                 onBarcode={setQuery}
               />
-              {tab === "Upgrades" && (
-                <View style={s.upgradeBanner}>
-                  <Text style={s.bannerKicker}>MAKE IT YOURS</Text>
-                  <Text style={[s.bannerTitle, { color: "white" }]}>
-                    Stock is just the start.
-                  </Text>
-                  <Text style={s.bannerText}>
-                    M2C, Perfect Pass and RPM upgrade records are not sourced
-                    yet. No compatibility claims until supporting evidence is
-                    available.
-                  </Text>
-                  <Pressable
-                    onPress={() => {
-                      setTab("Upgrades");
-                      setQuery("");
-                    }}
-                  >
-                    <Text style={s.bannerLink}>Upgrade research →</Text>
-                  </Pressable>
-                </View>
-              )}
               <Text style={s.disclaimer}>
                 Independent enthusiast app. Not affiliated with ARRMA or the
                 listed retailers. Saved parts last for this session.
@@ -453,7 +415,6 @@ export default function App() {
         <View style={s.nav}>
           {[
             "Explore",
-            "Upgrades",
             "Saved",
             "Graveyard",
             "Maintenance",
@@ -468,7 +429,7 @@ export default function App() {
               accessibilityState={{ selected: tab === t }}
             >
               <Text style={[s.navIcon, tab === t && { color: red }]}>
-                {["⌕", "⚡", "♡", "☠", "🎬", "▦", "⌂"][i]}
+                {["⌕", "♡", "☠", "🎬", "▦", "⌂"][i]}
               </Text>
               <Text
                 style={[s.navLabel, tab === t && { color: red }]}

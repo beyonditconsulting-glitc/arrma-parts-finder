@@ -1,0 +1,65 @@
+{
+  "scope": "Unmodified original images tied to exact Jenny product matches. No borrowed photos for unresolved parts.",
+  "photos": [
+    {
+      "catalogPartId": "SPMXSM1700",
+      "manufacturerPartNumber": "SPMXSM1700",
+      "publisher": "Jenny’s RC",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1008/7342/products/IMG-2031_d2d370b4-6f9e-46f3-967a-1e4e6d420ee9.jpg?v=1605934363",
+      "sourceProductUrl": "https://jennysrc.com/products/arrma-typhon-v5-blx-motor-spektrum-firma-4074-2050kv-brushless-ara8606v5-1",
+      "sourceSha256": "a441084df7e32cb1a63fad3eefe8392508d48f8f99c274678b17ac919a4775d6",
+      "relativePath": "assets/products/jennys-SPMXSM1700.jpg",
+      "assetSha256": "25dabd79ef66d3c8d6b2227b0b0f8342d4082d551eed08a24334d99aa4a618d1",
+      "byteCount": 437562,
+      "capturedAt": "2026-10-27T17:06:11.496Z"
+    },
+    {
+      "catalogPartId": "SPMXSE2150",
+      "manufacturerPartNumber": "SPMXSE2150",
+      "publisher": "Jenny’s RC",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1008/7342/files/IMG-3758_7ca7009c-b464-45f8-9eec-41f430f7976e.jpg?v=1702046080",
+      "sourceProductUrl": "https://jennysrc.com/products/arrma-kraton-6s-exb-esc-spektum-firma-2150-waterproof-smart-v2-dual-ic5-ara8708v6",
+      "sourceSha256": "922322b721e093777712c8feccce8030a483a81a295527b786c588b38c8c38d2",
+      "relativePath": "assets/products/jennys-SPMXSE2150.jpg",
+      "assetSha256": "93f1b60540a5017c901c5458cb9c2cb867b1c2e65786a25fe5b94f3cafaa2220",
+      "byteCount": 430021,
+      "capturedAt": "2026-10-27T17:06:11.784Z"
+    },
+    {
+      "catalogPartId": "ARA320570",
+      "manufacturerPartNumber": "ARA320570",
+      "publisher": "Jenny’s RC",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1008/7342/files/IMG-1019_41db4a86-d0a3-4797-86af-27009b56c0a7.jpg?v=1703168965",
+      "sourceProductUrl": "https://jennysrc.com/products/arrma-kraton-6s-exb-chassis-black-aluminum-long-wheel-base-lwb-ara8708v6",
+      "sourceSha256": "922322b721e093777712c8feccce8030a483a81a295527b786c588b38c8c38d2",
+      "relativePath": "assets/products/jennys-ARA320570.jpg",
+      "assetSha256": "e7535f7c884ffaf4a9715f6ed8f414a0c8f4a4f3ebdd3e769bc95e391676da22",
+      "byteCount": 301962,
+      "capturedAt": "2026-10-27T17:06:12.194Z"
+    },
+    {
+      "catalogPartId": "ARAC9652",
+      "manufacturerPartNumber": "AR480002",
+      "publisher": "Jenny’s RC",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1008/7342/files/IMG_0361.jpg?v=1703732942",
+      "sourceProductUrl": "https://jennysrc.com/products/arrma-kraton-6s-exb-wing-rear-nylon-spoiler-224mm-black-ara8708v6",
+      "sourceSha256": "922322b721e093777712c8feccce8030a483a81a295527b786c588b38c8c38d2",
+      "relativePath": "assets/products/jennys-ARAC9652.jpg",
+      "assetSha256": "35494427554a99378a1087666265d399c9913edf68bd29f23f85eeea0d1743f1",
+      "byteCount": 199383,
+      "capturedAt": "2026-10-27T17:06:12.755Z"
+    },
+    {
+      "catalogPartId": "ARA310991",
+      "manufacturerPartNumber": "ARA310991",
+      "publisher": "Jenny’s RC",
+      "sourceImageUrl": "https://cdn.shopify.com/s/files/1/1008/7342/files/Ctrdiff_1.jpg?v=1699972863",
+      "sourceProductUrl": "https://jennysrc.com/products/arrma-big-rock-6s-center-differential-50t-spur-gear-ara7612",
+      "sourceSha256": "26f311a5f82e447c8e5b1114d695a2df016b65318ffdfe63904530a0ed16c09a",
+      "relativePath": "assets/products/jennys-ARA310991.jpg",
+      "assetSha256": "6a66bf07fd8ac8063dbf5551865282e038ed5b99e1b5bc6df7b0b1a53a803580",
+      "byteCount": 302915,
+      "capturedAt": "2026-10-27T17:06:12.888Z"
+    }
+  ]
+}

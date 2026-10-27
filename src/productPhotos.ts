@@ -17,11 +17,5 @@ export function productPhoto(part: Part) {
       note: "Take-off listing; contents and packaging should be checked before purchase.",
     };
   }
-  return part.image
-    ? {
-        ...part.image,
-        publisher: "Horizon Hobby",
-        note: "No exact Jenny’s product photo matched.",
-      }
-    : null;
+  return null;
 }

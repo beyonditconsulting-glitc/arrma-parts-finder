@@ -79,6 +79,24 @@ export function VendorComparison({
           </View>
         );
       })}
+      <Text style={s.heading}>Upgrade vendor options</Text>
+      <Text style={s.note}>
+        Upgrade sources are now shown here for each part. No compatible upgrade,
+        price or stock has been verified for this item yet.
+      </Text>
+      {["M2C Racing", "Perfect Pass", "RPM"].map((name) => (
+        <View key={name} style={s.card}>
+          <View style={s.row}>
+            <Text style={s.title}>{name}</Text>
+            <Text style={s.note}>Not matched</Text>
+          </View>
+          <Text style={s.note}>
+            No sourced upgrade offer for{" "}
+            {part.manufacturerPartNumber ?? part.id}. Compatibility, pricing and
+            cart transfer are not connected.
+          </Text>
+        </View>
+      ))}
       <Text style={s.note} accessibilityLiveRegion="polite">
         {added
           ? `Saved in your ${added} in-app cart. Nothing has been sent to the retailer.`

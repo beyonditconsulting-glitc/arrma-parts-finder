@@ -7,6 +7,7 @@ import {
   Text,
   View,
 } from "react-native";
+import { bundledProductPhoto } from "../productPhotoAssets";
 import { productPhoto } from "../productPhotos.ts";
 import type { Part } from "../catalog";
 
@@ -29,7 +30,9 @@ export function ProductImage({
           <>
             <Image
               key={`${image.url}-${attempt}`}
-              source={{ uri: image.url }}
+              source={
+                bundledProductPhoto(part.id, image.url) ?? { uri: image.url }
+              }
               style={s.image}
               resizeMode="contain"
               accessible
@@ -51,7 +54,9 @@ export function ProductImage({
         ) : (
           <View style={s.unavailable}>
             <Text style={[s.fallback, compact && s.compactFallback]}>
-              {failed ? "Photo could not load." : "Product image unavailable."}
+              {failed
+                ? "Photo could not load."
+                : "No exact Jenny’s product photo matched yet."}
             </Text>
             {failed && image && (
               <Pressable
