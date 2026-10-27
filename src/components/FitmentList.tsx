@@ -1,67 +1,93 @@
 import { useState } from "react";
 import { View, Text, Pressable, TextInput, StyleSheet } from "react-native";
 import type { Part } from "../catalog";
+import { fitmentPage } from "../fitment-list";
+
 export function FitmentList({ part }: { part: Part }) {
   const [query, setQuery] = useState("");
-  const [limit, setLimit] = useState(12);
+  const [page, setPage] = useState(0);
   const [sourceId, setSourceId] = useState<string | null>(null);
-  const other = part.fitments.filter(
-    (row) => row.vehicleId !== part.provenance.vehicleId,
+  const result = fitmentPage(
+    part.fitments,
+    part.provenance.vehicleId,
+    query,
+    page,
   );
-  const matches = other.filter((row) =>
-    `${row.name} ${row.vehicleId} ${row.brand}`
-      .toLowerCase()
-      .includes(query.toLowerCase().trim()),
-  );
-  const visible = matches.slice(0, limit);
-  const groups = [
-    {
-      label: "Standard replacement — retailer-listed",
-      rows: visible.filter((row) => row.relationship === "standard"),
-    },
-    {
-      label: "Optional upgrade — not original equipment",
-      rows: visible.filter((row) => row.relationship === "optional"),
-    },
-    {
-      label: "Other or mixed source associations — check fitment",
-      rows: visible.filter(
-        (row) => !["standard", "optional"].includes(row.relationship),
-      ),
-    },
-  ];
+  const changePage = (next: number) => {
+    setPage(next);
+    setSourceId(null);
+  };
   return (
     <View>
-      <Text style={s.heading}>Other vehicles using this part ({other.length})</Text>
-      <Text style={s.note}>
-        Same source part identity, exact model IDs. These are captured retailer
-        associations, not independently verified diagram fitment. Optional
-        upgrades are shown separately.
+      <Text accessibilityRole="header" style={s.heading}>
+        Other source-listed vehicles ({result.otherCount})
       </Text>
-      {other.length > 0 ? (
+      <Text style={s.note}>
+        Exact source model IDs for the same part. These are captured retailer
+        associations, not manufacturer-verified fitment. Versions, color
+        variants and successor models are not inferred from a shared family
+        name.
+      </Text>
+      <Text style={s.note}>{part.associationCoverage}</Text>
+      {result.otherCount > 0 ? (
         <>
           <TextInput
             style={s.search}
             value={query}
             onChangeText={(value) => {
               setQuery(value);
-              setLimit(12);
+              setPage(0);
+              setSourceId(null);
             }}
-            placeholder="Filter models or model numbers"
-            accessibilityLabel="Filter other vehicle models"
+            placeholder="Filter models or exact source model IDs"
+            accessibilityLabel="Filter other source-listed vehicle models"
           />
-          {groups.map(
+          {query.length > 0 && (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Clear vehicle filter"
+              onPress={() => {
+                setQuery("");
+                changePage(0);
+              }}
+            >
+              <Text style={s.link}>Clear filter</Text>
+            </Pressable>
+          )}
+          <Text style={s.note}>
+            {result.matchCount} of {result.otherCount} captured associations
+            match.
+            {"\n"}
+            {result.groups
+              .map(
+                (group) =>
+                  `${group.key === "other" ? "Other/mixed" : group.key === "standard" ? "Standard" : "Optional"}: ${group.matchCount}`,
+              )
+              .join(" · ")}
+            {"\n"}Standard entries appear first, then optional, then
+            other/mixed. These counts cover this captured list, not all
+            compatible vehicles.
+          </Text>
+          {result.groups.map(
             (group) =>
               group.rows.length > 0 && (
-                <View key={group.label}>
-                  <Text style={s.group}>{group.label}</Text>
+                <View key={group.key}>
+                  <Text accessibilityRole="header" style={s.group}>
+                    {group.label} ({group.rows.length} shown /{" "}
+                    {group.matchCount} matching)
+                  </Text>
                   {group.rows.map((row) => (
                     <View key={row.vehicleId} style={s.row}>
                       <Text style={s.name}>{row.name}</Text>
-                      <Text style={s.id}>
+                      <Text selectable style={s.id}>
                         {row.brand} · {row.vehicleId}
                       </Text>
                       <Pressable
+                        accessibilityRole="button"
+                        accessibilityLabel={`${sourceId === row.vehicleId ? "Hide" : "View"} evidence for ${row.vehicleId}`}
+                        accessibilityState={{
+                          expanded: sourceId === row.vehicleId,
+                        }}
                         onPress={() =>
                           setSourceId(
                             sourceId === row.vehicleId ? null : row.vehicleId,
@@ -75,32 +101,78 @@ export function FitmentList({ part }: { part: Part }) {
                         </Text>
                       </Pressable>
                       {sourceId === row.vehicleId &&
-                        row.sources.map((source, index) => (
-                          <View key={`${source.sha256}-${index}`}>
-                            <Text selectable style={s.note}>
-                              Horizon Hobby · Captured{" "}
-                              {source.observedAt.slice(0, 10)}
-                              {"\n"}
-                              {source.url}
-                              {"\n"}
-                              {source.locator}
-                            </Text>
-                          </View>
+                        (row.sources.length ? (
+                          row.sources.map((source, index) => (
+                            <View key={`${source.sha256}-${index}`}>
+                              <Text selectable style={s.note}>
+                                {part.provenance.publisher} · Captured{" "}
+                                {source.observedAt.slice(0, 10)}
+                                {"\n"}
+                                {source.url}
+                                {"\n"}
+                                {source.locator}
+                                {"\n"}Source SHA-256: {source.sha256}
+                              </Text>
+                            </View>
+                          ))
+                        ) : (
+                          <Text style={s.note}>
+                            Source evidence is missing for this association.
+                            Fitment is unverified.
+                          </Text>
                         ))}
                     </View>
                   ))}
                 </View>
               ),
           )}
-          {matches.length === 0 && (
-            <Text style={s.note}>No models match this filter.</Text>
-          )}
-          {matches.length > limit && (
-            <Pressable style={s.more} onPress={() => setLimit((n) => n + 24)}>
-              <Text style={s.link}>
-                Show more models ({visible.length} of {matches.length})
+          {result.matchCount === 0 ? (
+            <Text style={s.note}>
+              No captured models match this filter. Missing results do not
+              establish incompatibility.
+            </Text>
+          ) : (
+            <View style={s.pagination}>
+              <Text style={s.note}>
+                Showing {result.start}–{result.end} of {result.matchCount}
+                {"\n"}Page {result.page + 1} of {result.pageCount} · 5 per page
               </Text>
-            </Pressable>
+              {result.pageCount > 1 && (
+                <View style={s.controls}>
+                  <Pressable
+                    style={s.button}
+                    accessibilityRole="button"
+                    accessibilityLabel="Previous five vehicle associations"
+                    disabled={result.page === 0}
+                    accessibilityState={{ disabled: result.page === 0 }}
+                    onPress={() => changePage(result.page - 1)}
+                  >
+                    <Text style={[s.link, result.page === 0 && s.disabled]}>
+                      ← Previous
+                    </Text>
+                  </Pressable>
+                  <Pressable
+                    style={s.button}
+                    accessibilityRole="button"
+                    accessibilityLabel="Next five vehicle associations"
+                    disabled={result.page + 1 >= result.pageCount}
+                    accessibilityState={{
+                      disabled: result.page + 1 >= result.pageCount,
+                    }}
+                    onPress={() => changePage(result.page + 1)}
+                  >
+                    <Text
+                      style={[
+                        s.link,
+                        result.page + 1 >= result.pageCount && s.disabled,
+                      ]}
+                    >
+                      Next →
+                    </Text>
+                  </Pressable>
+                </View>
+              )}
+            </View>
           )}
         </>
       ) : (
@@ -128,5 +200,8 @@ const s = StyleSheet.create({
   name: { fontSize: 14, fontWeight: "700", lineHeight: 21, color: "#283329" },
   id: { fontSize: 11, color: "#6c7662", marginVertical: 4 },
   link: { fontSize: 11, color: "#bd3626", fontWeight: "700", marginTop: 8 },
-  more: { paddingVertical: 14 },
+  pagination: { paddingVertical: 10 },
+  controls: { flexDirection: "row", justifyContent: "space-between", gap: 16 },
+  button: { paddingVertical: 10, paddingHorizontal: 8, minHeight: 44 },
+  disabled: { color: "#92988c" },
 });

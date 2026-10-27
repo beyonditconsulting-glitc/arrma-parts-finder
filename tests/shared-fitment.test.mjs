@@ -89,3 +89,163 @@ test("every displayed association has a source and no prices claim to be live", 
     }
   }
 });
+
+test("shared lists group all matches before taking the compact five-row page", async () => {
+  const { fitmentPage, FITMENT_PAGE_SIZE } =
+    await import("../src/fitment-list.ts");
+  const source = {
+    url: "https://example.com/source",
+    sha256: "a".repeat(64),
+    observedAt: "2026-01-01T00:00:00Z",
+    locator: "fixture",
+  };
+  const row = (id, relationship, name = id) => ({
+    vehicleId: id,
+    name,
+    brand: "Test",
+    relationship,
+    sources: [source],
+  });
+  const fitments = [
+    row("primary", "standard"),
+    ...Array.from({ length: 7 }, (_, i) =>
+      row(`OPTION-${i}`, "optional", `A optional ${i}`),
+    ),
+    ...Array.from({ length: 6 }, (_, i) =>
+      row(`STANDARD-${i}`, "standard", `Z standard ${i}`),
+    ),
+  ];
+  const first = fitmentPage(fitments, "primary");
+  assert.equal(FITMENT_PAGE_SIZE, 5);
+  assert.equal(first.otherCount, 13);
+  assert.equal(first.groups[0].matchCount, 6);
+  assert.equal(first.groups[1].matchCount, 7);
+  assert.equal(first.groups[0].rows.length, 5);
+  assert.equal(first.groups[1].rows.length, 0);
+  const all = Array.from({ length: first.pageCount }, (_, page) =>
+    fitmentPage(fitments, "primary", "", page),
+  );
+  assert.deepEqual(
+    all.map((page) => page.groups.flatMap((group) => group.rows).length),
+    [5, 5, 3],
+  );
+  const ids = all.flatMap((page) =>
+    page.groups.flatMap((group) => group.rows.map((row) => row.vehicleId)),
+  );
+  assert.equal(ids.length, 13);
+  assert.equal(new Set(ids).size, 13);
+  assert.equal(
+    ids.some((id) => id === "primary"),
+    false,
+  );
+  assert.equal(
+    fitments[1].vehicleId,
+    "OPTION-0",
+    "presentation must not mutate source ordering",
+  );
+});
+
+test("mixed evidence stays separate and exact version/color/successor IDs remain distinct", async () => {
+  const { fitmentPage } = await import("../src/fitment-list.ts");
+  const fitments = [
+    {
+      vehicleId: "MODEL-V1T1",
+      name: "Test red",
+      brand: "Test",
+      relationship: "standard",
+      sources: [],
+    },
+    {
+      vehicleId: "MODEL-V1T2",
+      name: "Test blue",
+      brand: "Test",
+      relationship: "standard",
+      sources: [],
+    },
+    {
+      vehicleId: "MODEL-V2",
+      name: "Test successor",
+      brand: "Test",
+      relationship: "standard_and_optional",
+      sources: [],
+    },
+    {
+      vehicleId: "MODEL-V3",
+      name: "Test listed",
+      brand: "Test",
+      relationship: "listed",
+      sources: [],
+    },
+  ];
+  const result = fitmentPage(fitments, "MODEL-V1T1");
+  assert.equal(result.otherCount, 3);
+  assert.deepEqual(
+    result.groups.map((g) => g.matchCount),
+    [1, 0, 2],
+  );
+  assert.deepEqual(result.groups[2].rows.map((r) => r.relationship).sort(), [
+    "listed",
+    "standard_and_optional",
+  ]);
+  assert.deepEqual(
+    fitmentPage(fitments, "MODEL-V1T1", "test MODEL-V1T2").groups.flatMap((g) =>
+      g.rows.map((r) => r.vehicleId),
+    ),
+    ["MODEL-V1T2"],
+  );
+  assert.equal(
+    fitmentPage(fitments, "MODEL-V1T1", "MODEL-V4").matchCount,
+    0,
+    "an unlisted successor must not be inferred",
+  );
+});
+
+test("shared vehicle filters match independent terms and clamp pages safely", async () => {
+  const { fitmentPage } = await import("../src/fitment-list.ts");
+  const p = parts.find((part) => part.id === "ARA320754");
+  const result = fitmentPage(
+    p.fitments,
+    p.provenance.vehicleId,
+    "  ARA7704V3   ARRMA ",
+    99,
+  );
+  assert.equal(result.matchCount, 1);
+  assert.equal(result.page, 0);
+  assert.deepEqual(
+    result.groups.flatMap((g) => g.rows.map((row) => row.vehicleId)),
+    ["ARA7704V3"],
+  );
+  const empty = fitmentPage(
+    p.fitments,
+    p.provenance.vehicleId,
+    "not-a-source-model",
+    99,
+  );
+  assert.equal(empty.pageCount, 0);
+  assert.equal(empty.start, 0);
+  assert.equal(empty.end, 0);
+  assert.equal(empty.groups.flatMap((g) => g.rows).length, 0);
+});
+
+test("every captured other-model association is reachable in compact pages without extra inferred vehicles", async () => {
+  const { fitmentPage } = await import("../src/fitment-list.ts");
+  for (const part of parts) {
+    const first = fitmentPage(part.fitments, part.provenance.vehicleId);
+    const expected = part.fitments
+      .filter((row) => row.vehicleId !== part.provenance.vehicleId)
+      .map((row) => row.vehicleId)
+      .sort();
+    const actual = [];
+    for (let i = 0; i < first.pageCount; i++) {
+      const page = fitmentPage(part.fitments, part.provenance.vehicleId, "", i);
+      const rows = page.groups.flatMap((group) => group.rows);
+      assert.ok(rows.length <= 5);
+      actual.push(...rows.map((row) => row.vehicleId));
+    }
+    assert.deepEqual(actual.sort(), expected, part.id);
+    assert.equal(
+      first.groups.reduce((sum, group) => sum + group.matchCount, 0),
+      expected.length,
+    );
+  }
+});
