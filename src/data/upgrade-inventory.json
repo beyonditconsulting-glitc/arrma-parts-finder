@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "vendors": [
+    { "id": "m2c", "name": "M2C Racing", "status": "not_captured", "products": [] },
+    { "id": "perfect-pass", "name": "Perfect Pass", "status": "not_captured", "products": [] },
+    { "id": "basher-bodies", "name": "Basher Bodies", "status": "not_captured", "products": [] }
+  ]
+}
