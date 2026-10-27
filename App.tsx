@@ -6,7 +6,12 @@ import { vendors, type Vendor } from "./src/cart";
 import { displayObservedPrice } from "./src/offers";
 import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
 import { ProductImage } from "./src/components/ProductImage";
+import { HobbyShops } from "./src/components/HobbyShops";
+import { Events } from "./src/components/Events";
+import { Graveyard } from "./src/components/Graveyard";
+import { PartPhoto } from "./src/components/PartPhoto";
 import { FitmentList } from "./src/components/FitmentList";
+import { RelatedProducts } from "./src/components/RelatedProducts";
 import { StatusBar } from "expo-status-bar";
 import {
   ScrollView,
@@ -20,10 +25,14 @@ import {
   Alert,
 } from "react-native";
 import {
-  vehicles,
+  models,
+  allModels,
+  allVersions,
+  versionsForModel,
+  searchPartsByModel,
+  vehicleModel,
   categories,
   catalogVehicle,
-  searchParts,
   retailerUrl,
   type Part,
 } from "./src/catalog";
@@ -34,21 +43,29 @@ export default function App() {
   const [cartVendor, setCartVendor] = useState<Vendor | null>(null);
   const [vehicleQuery, setVehicleQuery] = useState("");
   const [query, setQuery] = useState("");
-  const [vehicle, setVehicle] = useState(catalogVehicle);
+  const [model, setModel] = useState(vehicleModel(catalogVehicle));
+  const [version, setVersion] = useState(catalogVehicle);
+  const vehicle = version === allVersions ? model : version;
   const [category, setCategory] = useState("All parts");
   const { tab: routeTab } = useLocalSearchParams<{ tab?: string }>();
-  const tab = ["Explore", "Upgrades", "Saved"].includes(routeTab ?? "")
+  const tab = ["Explore", "Upgrades", "Saved", "Graveyard", "Events", "Shops"].includes(routeTab ?? "")
     ? routeTab!
     : "Explore";
   const setTab = (next: string) => router.setParams({ tab: next });
   const [saved, setSaved] = useState<string[]>([]);
   const [selected, setSelected] = useState<Part | null>(null);
-  const [picker, setPicker] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  useEffect(() => setExpandedSections([]), [selected?.id]);
+  const toggleSection = (section: string) => setExpandedSections((current) =>
+    current.includes(section) ? current.filter((item) => item !== section) : [...current, section],
+  );
+  const [picker, setPicker] = useState<"model" | "version" | null>(null);
   const [visibleCount, setVisibleCount] = useState(24);
-  useEffect(() => setVisibleCount(24), [query, vehicle, category, tab]);
-  const results = searchParts(
+  useEffect(() => setVisibleCount(24), [query, model, version, category, tab]);
+  const results = searchPartsByModel(
     query,
-    vehicle,
+    model,
+    version,
     tab === "Upgrades" ? "Upgrades" : category,
   ).filter((p) => tab !== "Saved" || saved.includes(p.id));
   const toggle = (id: string) =>
@@ -116,6 +133,7 @@ export default function App() {
           contentContainerStyle={s.content}
           keyboardShouldPersistTaps="handled"
         >
+          {tab === "Shops" ? <HobbyShops open={(url) => void open(url)} /> : tab === "Events" ? <Events open={(url) => void open(url)} /> : tab === "Graveyard" ? <Graveyard /> : <>
           <View style={s.eyebrow}>
             <View style={s.dot} />
             <Text style={s.label}>LESS SEARCHING. MORE BASHING.</Text>
@@ -131,15 +149,12 @@ export default function App() {
             210 sourced replacement listings for ARA8708T1. Your next run starts
             here.
           </Text>
-          <Pressable
-            style={s.vehicle}
-            onPress={() => setPicker(true)}
-            accessibilityRole="button"
-          >
-            <View>
-              <Text style={s.micro}>YOUR VEHICLE</Text>
-              <Text style={s.vehicleName}>▱ {vehicle}</Text>
-            </View>
+          <Pressable style={s.vehicle} onPress={() => { setVehicleQuery(""); setPicker("model"); }} accessibilityRole="button" accessibilityLabel={`Choose model: ${model}`}>
+            <View style={{ flex: 1 }}><Text style={s.micro}>MODEL</Text><Text style={s.vehicleName}>{model}</Text></View>
+            <Text style={{ fontSize: 22 }}>⌄</Text>
+          </Pressable>
+          <Pressable style={s.vehicle} onPress={() => { setVehicleQuery(""); setPicker("version"); }} accessibilityRole="button" accessibilityLabel={`Choose version: ${version}`}>
+            <View style={{ flex: 1 }}><Text style={s.micro}>VERSION / MODEL ID</Text><Text style={s.vehicleName}>{version}</Text></View>
             <Text style={{ fontSize: 22 }}>⌄</Text>
           </Pressable>
           <View style={s.search}>
@@ -217,7 +232,8 @@ export default function App() {
               <Pressable
                 onPress={() => {
                   setQuery("");
-                  setVehicle("All vehicles");
+                  setModel(allModels);
+                  setVersion(allVersions);
                   setCategory("All parts");
                   setTab("Explore");
                 }}
@@ -235,7 +251,7 @@ export default function App() {
                   accessibilityLabel={`View other vehicles using ${p.name} and compare prices`}
                 >
                   <Text style={s.artLabel}>{p.category.toUpperCase()}</Text>
-                  <Text style={s.partIcon}>{p.icon}</Text>
+                  <PartPhoto partNumber={p.manufacturerPartNumber ?? p.id} partName={p.name} fallbackIcon={p.icon} />
                   <Text style={s.artBottom}>PIT / {p.brand.toUpperCase()}</Text>
                 </Pressable>
                 <Pressable
@@ -323,9 +339,10 @@ export default function App() {
             Independent enthusiast app. Not affiliated with ARRMA or the listed
             retailers. Saved parts last for this session.
           </Text>
+          </>}
         </ScrollView>
         <View style={s.nav}>
-          {["Explore", "Upgrades", "Saved"].map((t, i) => (
+          {["Explore", "Upgrades", "Saved", "Graveyard", "Events", "Shops"].map((t, i) => (
             <Pressable
               key={t}
               style={s.navItem}
@@ -334,7 +351,7 @@ export default function App() {
               accessibilityState={{ selected: tab === t }}
             >
               <Text style={[s.navIcon, tab === t && { color: red }]}>
-                {["⌕", "⚡", "♡"][i]}
+                {["⌕", "⚡", "♡", "☠", "▦", "⌂"][i]}
               </Text>
               <Text style={[s.navLabel, tab === t && { color: red }]}>
                 {t}
@@ -345,14 +362,14 @@ export default function App() {
         </View>
       </View>
       <Modal
-        visible={picker}
+        visible={picker !== null}
         transparent
         animationType="slide"
-        onRequestClose={() => setPicker(false)}
+        onRequestClose={() => setPicker(null)}
       >
         <View style={s.overlay}>
           <View style={s.sheet}>
-            <Text style={s.sectionTitle}>Choose your vehicle</Text>
+            <Text style={s.sectionTitle}>{picker === "model" ? "Choose model" : "Choose version / model ID"}</Text>
             <Text style={s.subtitle}>
               This catalog covers 210 source-listed Kraton parts and their
               shared-model associations. Another model filter shows shared
@@ -369,7 +386,7 @@ export default function App() {
               style={{ maxHeight: 400 }}
               keyboardShouldPersistTaps="handled"
             >
-              {vehicles
+              {(picker === "model" ? models : versionsForModel(model))
                 .filter((v) =>
                   v.toLowerCase().includes(vehicleQuery.toLowerCase().trim()),
                 )
@@ -378,8 +395,8 @@ export default function App() {
                     key={v}
                     style={s.option}
                     onPress={() => {
-                      setVehicle(v);
-                      setPicker(false);
+                      if (picker === "model") { setModel(v); setVersion(allVersions); } else { setVersion(v); }
+                      setPicker(null);
                     }}
                   >
                     <Text
@@ -388,16 +405,16 @@ export default function App() {
                         marginRight: 10,
                         fontSize: 15,
                         lineHeight: 21,
-                        color: vehicle === v ? red : "#222",
+                        color: (picker === "model" ? model : version) === v ? red : "#222",
                       }}
                     >
                       {v}
                     </Text>
-                    <Text>{vehicle === v ? "✓" : "→"}</Text>
+                    <Text>{(picker === "model" ? model : version) === v ? "✓" : "→"}</Text>
                   </Pressable>
                 ))}
             </ScrollView>
-            <Pressable style={s.close} onPress={() => setPicker(false)}>
+            <Pressable style={s.close} onPress={() => setPicker(null)}>
               <Text>Cancel</Text>
             </Pressable>
           </View>
@@ -451,27 +468,34 @@ export default function App() {
                       from manufacturer part numbers.
                     </Text>
                   </View>
-                  <Text style={s.fitment}>
-                    Source: {selected.provenance.publisher} replacement-parts
-                    lookup for {selected.provenance.vehicleId}. Captured{" "}
-                    {selected.provenance.observedAt.slice(0, 10)}. Categories
-                    are inferred from listing titles.
-                  </Text>
-                  <Text selectable style={s.fitment}>
-                    Catalog ID: {selected.id}
-                    {"\n"}Source: {selected.provenance.sourceUrl}
-                  </Text>
                   {storageError !== "" && (
                     <Text style={s.noticeText}>{storageError}</Text>
                   )}
-                  <FitmentList key={`fitment-${selected.id}`} part={selected} />
-                  <VendorComparison
-                    key={selected.id}
-                    part={selected}
-                    cart={cart}
-                    onAdd={add}
-                    onCart={openCart}
-                  />
+                  <View style={s.accordionTop}>
+                    <Text style={s.accordionHint}>Tap a section to open it</Text>
+                    <Pressable onPress={() => setExpandedSections([])} accessibilityRole="button" accessibilityLabel="Collapse all part detail sections">
+                      <Text style={s.link}>Collapse all</Text>
+                    </Pressable>
+                  </View>
+                  <PartSection title="Compatible vehicles" expanded={expandedSections.includes("fitment")} onToggle={() => toggleSection("fitment")}>
+                    <FitmentList key={`fitment-${selected.id}`} part={selected} />
+                  </PartSection>
+                  <PartSection title="Price comparison & carts" expanded={expandedSections.includes("vendors")} onToggle={() => toggleSection("vendors")}>
+                    <VendorComparison key={selected.id} part={selected} cart={cart} onAdd={add} onCart={openCart} />
+                  </PartSection>
+                  <PartSection title="Repair tutorials" expanded={expandedSections.includes("repair")} onToggle={() => toggleSection("repair")}>
+                    <Text style={s.fitment}>Search YouTube for this part and vehicle. Review each video for your exact model and version.</Text>
+                    <Pressable accessibilityRole="link" onPress={() => void open(`https://www.youtube.com/results?search_query=${encodeURIComponent(`${selected.manufacturerPartNumber ?? selected.id} ${selected.provenance.vehicleId} ARRMA repair`)}`)}>
+                      <Text style={s.link}>Find repair videos on YouTube →</Text>
+                    </Pressable>
+                  </PartSection>
+                  <PartSection title="Related products & 3D prints" expanded={expandedSections.includes("related")} onToggle={() => toggleSection("related")}>
+                    <RelatedProducts key={`related-${selected.id}`} part={selected} vehicle={vehicle} open={(url) => void open(url)} />
+                  </PartSection>
+                  <PartSection title="Source & catalog information" expanded={expandedSections.includes("source")} onToggle={() => toggleSection("source")}>
+                    <Text style={s.fitment}>Source: {selected.provenance.publisher} replacement-parts lookup for {selected.provenance.vehicleId}. Captured {selected.provenance.observedAt.slice(0, 10)}. Categories are inferred from listing titles.</Text>
+                    <Text selectable style={s.fitment}>Catalog ID: {selected.id}{"\n"}Source: {selected.provenance.sourceUrl}</Text>
+                  </PartSection>
                   <Pressable
                     style={s.saveButton}
                     onPress={() => toggle(selected.id)}
@@ -491,7 +515,22 @@ export default function App() {
     </SafeAreaView>
   );
 }
+function PartSection({ title, expanded, onToggle, children }: { title: string; expanded: boolean; onToggle: () => void; children: React.ReactNode }) {
+  return <View style={s.accordion}>
+    <Pressable style={s.accordionButton} onPress={onToggle} accessibilityRole="button" accessibilityLabel={title} accessibilityState={{ expanded }}>
+      <Text style={s.accordionTitle}>{title}</Text><Text style={s.accordionArrow}>{expanded ? "−" : "+"}</Text>
+    </Pressable>
+    {expanded && <View style={s.accordionBody}>{children}</View>}
+  </View>;
+}
 const s = StyleSheet.create({
+  accordionTop: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginVertical: 12 },
+  accordionHint: { color: "#687268", fontSize: 13 },
+  accordion: { borderWidth: 1, borderColor: "#dfe3da", borderRadius: 12, marginBottom: 9, backgroundColor: "#fff", overflow: "hidden" },
+  accordionButton: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", minHeight: 54, paddingHorizontal: 14 },
+  accordionTitle: { flex: 1, color: "#273129", fontSize: 16, fontWeight: "700" },
+  accordionArrow: { color: "#e5432f", fontSize: 24, paddingLeft: 10 },
+  accordionBody: { paddingHorizontal: 14, paddingBottom: 16 },
   safe: { flex: 1, backgroundColor: "#f8f8f5", paddingTop: 0 },
   shell: { flex: 1, width: "100%", maxWidth: 1000, alignSelf: "center" },
   header: {
