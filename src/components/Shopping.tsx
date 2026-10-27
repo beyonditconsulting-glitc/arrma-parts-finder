@@ -84,7 +84,7 @@ export function VendorComparison({
         Upgrade sources are now shown here for each part. No compatible upgrade,
         price or stock has been verified for this item yet.
       </Text>
-      {["M2C Racing", "Perfect Pass", "RPM"].map((name) => (
+      {["M2C Racing", "Perfect Pass", "RPM", "Basher Bodies"].map((name) => (
         <View key={name} style={s.card}>
           <View style={s.row}>
             <Text style={s.title}>{name}</Text>
