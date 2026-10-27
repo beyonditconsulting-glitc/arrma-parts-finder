@@ -1,0 +1,36 @@
+{
+  "status": "blocked_document_retrieval",
+  "verified_fitment_count": 0,
+  "attempts": [
+    {
+      "model_id": "ARA7704V3",
+      "official_name": "ARRMA 1/7 MOJAVE 6S EXB 4X4 RTR Brushless Desert Truck",
+      "product_source_url": "https://www.horizonhobby.com/product/ARA7704V3.html",
+      "product_source_sha256": "00bedba9030096098022facb2e30b54c8d48aa57d115d5b9110520815df03d53",
+      "document_url": "https://production-na01-horizonhobby.demandware.net/on/demandware.static/-/Sites-horizon-master/default/dw0df764fa/Manuals/ARA7704V3_TECH_PACK.pdf",
+      "document_label": "ARRMA 1/7 MOJAVE 6S EXB 4X4 RTR Brushless Desert Truck - Tech Pack",
+      "recorded_at": "2026-10-27T15:50:09.998Z",
+      "request_outcome": "HTTP 403 Forbidden",
+      "document_retrieved": false,
+      "document_sha256": null,
+      "diagram_identity_status": "not_reviewed",
+      "verified_fitments": []
+    },
+    {
+      "model_id": "ARA8708T1",
+      "official_name": "ARRMA 1/8 KRATON 6S EXB AVC 4X4 RTR Brushless Speed Truck, Black",
+      "product_source_url": "https://www.horizonhobby.com/product/ARA8708T1.html",
+      "product_source_sha256": "60d10119f3565ba05b1d32d15d50cdb7e6838dc35c402f9fa7fc66e9ccdca6ff",
+      "document_url": "https://production-na01-horizonhobby.demandware.net/on/demandware.static/-/Sites-horizon-master/default/dwffc2e7cc/Manuals/ARA8708T1_EXPLODED_VIEW_MULTI.PDF",
+      "document_label": "1/8 KRATON 6S BLX 4X4 EXB RTR Exploded View - Multilingual",
+      "recorded_at": "2026-10-27T15:50:09.998Z",
+      "request_outcome": "HTTP 403 Forbidden",
+      "document_retrieved": false,
+      "document_sha256": null,
+      "diagram_identity_status": "not_reviewed",
+      "verified_fitments": []
+    }
+  ],
+  "next_step": "Apply access for production-na01-horizonhobby.demandware.net or provide the official PDFs securely. Retry affected retrieval; then inspect exact model header and assembly callouts before approving fitment.",
+  "scope": "Two representative official documents. No claim of all models or generations verified."
+}
