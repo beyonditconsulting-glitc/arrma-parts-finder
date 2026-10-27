@@ -53,6 +53,11 @@ export default function App() {
   const setTab = (next: string) => router.setParams({ tab: next });
   const [saved, setSaved] = useState<string[]>([]);
   const [selected, setSelected] = useState<Part | null>(null);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  useEffect(() => setExpandedSections([]), [selected?.id]);
+  const toggleSection = (section: string) => setExpandedSections((current) =>
+    current.includes(section) ? current.filter((item) => item !== section) : [...current, section],
+  );
   const [picker, setPicker] = useState<"model" | "version" | null>(null);
   const [visibleCount, setVisibleCount] = useState(24);
   useEffect(() => setVisibleCount(24), [query, model, version, category, tab]);
@@ -459,35 +464,34 @@ export default function App() {
                       from manufacturer part numbers.
                     </Text>
                   </View>
-                  <Text style={s.fitment}>
-                    Source: {selected.provenance.publisher} replacement-parts
-                    lookup for {selected.provenance.vehicleId}. Captured{" "}
-                    {selected.provenance.observedAt.slice(0, 10)}. Categories
-                    are inferred from listing titles.
-                  </Text>
-                  <Text selectable style={s.fitment}>
-                    Catalog ID: {selected.id}
-                    {"\n"}Source: {selected.provenance.sourceUrl}
-                  </Text>
                   {storageError !== "" && (
                     <Text style={s.noticeText}>{storageError}</Text>
                   )}
-                  <FitmentList key={`fitment-${selected.id}`} part={selected} />
-                  <View style={s.notice}>
-                    <Text style={s.bannerTitle}>Repair tutorials</Text>
+                  <View style={s.accordionTop}>
+                    <Text style={s.accordionHint}>Tap a section to open it</Text>
+                    <Pressable onPress={() => setExpandedSections([])} accessibilityRole="button" accessibilityLabel="Collapse all part detail sections">
+                      <Text style={s.link}>Collapse all</Text>
+                    </Pressable>
+                  </View>
+                  <PartSection title="Compatible vehicles" expanded={expandedSections.includes("fitment")} onToggle={() => toggleSection("fitment")}>
+                    <FitmentList key={`fitment-${selected.id}`} part={selected} />
+                  </PartSection>
+                  <PartSection title="Price comparison & carts" expanded={expandedSections.includes("vendors")} onToggle={() => toggleSection("vendors")}>
+                    <VendorComparison key={selected.id} part={selected} cart={cart} onAdd={add} onCart={openCart} />
+                  </PartSection>
+                  <PartSection title="Repair tutorials" expanded={expandedSections.includes("repair")} onToggle={() => toggleSection("repair")}>
                     <Text style={s.fitment}>Search YouTube for this part and vehicle. Review each video for your exact model and version.</Text>
                     <Pressable accessibilityRole="link" onPress={() => void open(`https://www.youtube.com/results?search_query=${encodeURIComponent(`${selected.manufacturerPartNumber ?? selected.id} ${selected.provenance.vehicleId} ARRMA repair`)}`)}>
                       <Text style={s.link}>Find repair videos on YouTube →</Text>
                     </Pressable>
-                  </View>
-                  <RelatedProducts key={`related-${selected.id}`} part={selected} vehicle={vehicle} open={(url) => void open(url)} />
-                  <VendorComparison
-                    key={selected.id}
-                    part={selected}
-                    cart={cart}
-                    onAdd={add}
-                    onCart={openCart}
-                  />
+                  </PartSection>
+                  <PartSection title="Related products & 3D prints" expanded={expandedSections.includes("related")} onToggle={() => toggleSection("related")}>
+                    <RelatedProducts key={`related-${selected.id}`} part={selected} vehicle={vehicle} open={(url) => void open(url)} />
+                  </PartSection>
+                  <PartSection title="Source & catalog information" expanded={expandedSections.includes("source")} onToggle={() => toggleSection("source")}>
+                    <Text style={s.fitment}>Source: {selected.provenance.publisher} replacement-parts lookup for {selected.provenance.vehicleId}. Captured {selected.provenance.observedAt.slice(0, 10)}. Categories are inferred from listing titles.</Text>
+                    <Text selectable style={s.fitment}>Catalog ID: {selected.id}{"\n"}Source: {selected.provenance.sourceUrl}</Text>
+                  </PartSection>
                   <Pressable
                     style={s.saveButton}
                     onPress={() => toggle(selected.id)}
@@ -507,7 +511,22 @@ export default function App() {
     </SafeAreaView>
   );
 }
+function PartSection({ title, expanded, onToggle, children }: { title: string; expanded: boolean; onToggle: () => void; children: React.ReactNode }) {
+  return <View style={s.accordion}>
+    <Pressable style={s.accordionButton} onPress={onToggle} accessibilityRole="button" accessibilityLabel={title} accessibilityState={{ expanded }}>
+      <Text style={s.accordionTitle}>{title}</Text><Text style={s.accordionArrow}>{expanded ? "−" : "+"}</Text>
+    </Pressable>
+    {expanded && <View style={s.accordionBody}>{children}</View>}
+  </View>;
+}
 const s = StyleSheet.create({
+  accordionTop: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginVertical: 12 },
+  accordionHint: { color: "#687268", fontSize: 13 },
+  accordion: { borderWidth: 1, borderColor: "#dfe3da", borderRadius: 12, marginBottom: 9, backgroundColor: "#fff", overflow: "hidden" },
+  accordionButton: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", minHeight: 54, paddingHorizontal: 14 },
+  accordionTitle: { flex: 1, color: "#273129", fontSize: 16, fontWeight: "700" },
+  accordionArrow: { color: "#e5432f", fontSize: 24, paddingLeft: 10 },
+  accordionBody: { paddingHorizontal: 14, paddingBottom: 16 },
   safe: { flex: 1, backgroundColor: "#f8f8f5", paddingTop: 0 },
   shell: { flex: 1, width: "100%", maxWidth: 1000, alignSelf: "center" },
   header: {
