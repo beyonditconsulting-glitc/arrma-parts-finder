@@ -111,6 +111,7 @@ export default function App() {
               PIT FINDER<Text style={{ color: red }}> /</Text>
             </Text>
             <Text style={s.micro}>THE ARRMA PARTS COMPANION</Text>
+            <Text style={s.brandCredit}>by LitDecals.com</Text>
           </View>
           <View style={s.demo}>
             <Text style={s.demoText}>SOURCED CATALOG</Text>
@@ -538,6 +539,7 @@ const s = StyleSheet.create({
   },
   wordmark: { fontWeight: "900", fontSize: 17, letterSpacing: 0.5 },
   micro: { fontSize: 9, fontWeight: "700", letterSpacing: 1, color: "#777c80" },
+  brandCredit: { fontSize: 10, fontWeight: "700", color: "#e5432f", marginTop: 2 },
   demo: { borderWidth: 1, borderColor: "#d4d7ce", padding: 6, borderRadius: 4 },
   demoText: { fontSize: 8, fontWeight: "800", color: "#697461" },
   content: { paddingHorizontal: 16, paddingTop: 10, paddingBottom: 24 },
