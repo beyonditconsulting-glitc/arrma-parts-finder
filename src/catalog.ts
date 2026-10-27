@@ -1,3 +1,4 @@
+import { getJennyMatch } from "./integrations/jennys.ts";
 import catalog from "./data/kraton.js";
 export type Fitment = {
   vehicleId: string;
@@ -89,24 +90,76 @@ export function retailerUrl(retailer: string, part: Part) {
   return retailer === "Horizon Hobby"
     ? part.provenance.productUrl
     : retailer === "Jenny’s RC"
-      ? `https://jennysrc.com/search?q=${q}`
+      ? (getJennyMatch(part.id)?.productUrl ??
+        `https://jennysrc.com/search?q=${q}`)
       : `https://www.ebay.com/sch/i.html?_nkw=${q}`;
 }
 
 /** Group source vehicle labels by recognizable ARRMA model; preserve all other labels. */
 export const allModels = "All models";
 export const allVersions = "Any / All Versions";
-const modelNames = ["BIG ROCK", "KRATON", "TYPHON", "OUTCAST", "SENTON", "GRANITE", "MOJAVE", "TALION", "VORTEKS", "GORGON", "INFRACTION", "FELONY", "FIRETEAM", "NOTORIOUS", "LIMITLESS", "FURY", "VENDETTA", "RAIDER", "FAZON", "NERO"];
+const modelNames = [
+  "BIG ROCK",
+  "KRATON",
+  "TYPHON",
+  "OUTCAST",
+  "SENTON",
+  "GRANITE",
+  "MOJAVE",
+  "TALION",
+  "VORTEKS",
+  "GORGON",
+  "INFRACTION",
+  "FELONY",
+  "FIRETEAM",
+  "NOTORIOUS",
+  "LIMITLESS",
+  "FURY",
+  "VENDETTA",
+  "RAIDER",
+  "FAZON",
+  "NERO",
+];
 export function vehicleModel(label: string): string {
   if (!/^\s*(ARRMA\b|Kraton 6S EXB \()/i.test(label)) return "Other vehicles";
-  const name = modelNames.find((candidate) => new RegExp(`\\b${candidate}\\b`, "i").test(label));
-  return name ? name.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()) : "Other vehicles";
+  const name = modelNames.find((candidate) =>
+    new RegExp(`\\b${candidate}\\b`, "i").test(label),
+  );
+  return name
+    ? name.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase())
+    : "Other vehicles";
 }
-export const models = [allModels, ...[...new Set(vehicles.slice(1).map(vehicleModel))].sort()];
+export const models = [
+  allModels,
+  ...[...new Set(vehicles.slice(1).map(vehicleModel))].sort(),
+];
 export function versionsForModel(model: string): string[] {
-  return [allVersions, ...vehicles.slice(1).filter((label) => model === allModels || vehicleModel(label) === model).sort()];
+  return [
+    allVersions,
+    ...vehicles
+      .slice(1)
+      .filter((label) => model === allModels || vehicleModel(label) === model)
+      .sort(),
+  ];
 }
-export function searchPartsByModel(query: string, model: string, version: string, category = "All parts") {
-  const candidates = searchParts(query, version === allVersions ? "All vehicles" : version, category);
-  return model === allModels ? candidates : candidates.filter((part) => part.vehicles.some((label) => vehicleModel(label) === model && (version === allVersions || label === version)));
+export function searchPartsByModel(
+  query: string,
+  model: string,
+  version: string,
+  category = "All parts",
+) {
+  const candidates = searchParts(
+    query,
+    version === allVersions ? "All vehicles" : version,
+    category,
+  );
+  return model === allModels
+    ? candidates
+    : candidates.filter((part) =>
+        part.vehicles.some(
+          (label) =>
+            vehicleModel(label) === model &&
+            (version === allVersions || label === version),
+        ),
+      );
 }

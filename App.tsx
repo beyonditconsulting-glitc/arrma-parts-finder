@@ -9,9 +9,9 @@ import { PhotoLookup } from "./src/components/PhotoLookup";
 import { ProductImage } from "./src/components/ProductImage";
 import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
 import { HobbyShops } from "./src/components/HobbyShops";
+import { Maintenance } from "./src/components/Maintenance";
 import { Events } from "./src/components/Events";
 import { Graveyard } from "./src/components/Graveyard";
-import { PartPhoto } from "./src/components/PartPhoto";
 import { FitmentList } from "./src/components/FitmentList";
 import { RelatedProducts } from "./src/components/RelatedProducts";
 import { StatusBar } from "expo-status-bar";
@@ -55,6 +55,7 @@ export default function App() {
     "Upgrades",
     "Saved",
     "Graveyard",
+    "Maintenance",
     "Events",
     "Shops",
   ].includes(routeTab ?? "")
@@ -148,7 +149,9 @@ export default function App() {
           contentContainerStyle={s.content}
           keyboardShouldPersistTaps="handled"
         >
-          {tab === "Shops" ? (
+          {tab === "Maintenance" ? (
+            <Maintenance />
+          ) : tab === "Shops" ? (
             <HobbyShops open={(url) => void open(url)} />
           ) : tab === "Events" ? (
             <Events open={(url) => void open(url)} />
@@ -337,10 +340,10 @@ export default function App() {
                           <Text style={s.artLabel}>
                             {p.category.toUpperCase()}
                           </Text>
-                          <PartPhoto
-                            partNumber={p.manufacturerPartNumber ?? p.id}
-                            partName={p.name}
-                            fallbackIcon={p.icon}
+                          <ProductImage
+                            key={`card-image-${p.id}`}
+                            part={p}
+                            compact
                           />
                           <Text style={s.artBottom}>
                             PIT / {p.brand.toUpperCase()}
@@ -448,29 +451,35 @@ export default function App() {
           )}
         </ScrollView>
         <View style={s.nav}>
-          {["Explore", "Upgrades", "Saved", "Graveyard", "Events", "Shops"].map(
-            (t, i) => (
-              <Pressable
-                key={t}
-                style={s.navItem}
-                onPress={() => setTab(t)}
-                accessibilityRole="tab"
-                accessibilityState={{ selected: tab === t }}
+          {[
+            "Explore",
+            "Upgrades",
+            "Saved",
+            "Graveyard",
+            "Maintenance",
+            "Events",
+            "Shops",
+          ].map((t, i) => (
+            <Pressable
+              key={t}
+              style={s.navItem}
+              onPress={() => setTab(t)}
+              accessibilityRole="tab"
+              accessibilityState={{ selected: tab === t }}
+            >
+              <Text style={[s.navIcon, tab === t && { color: red }]}>
+                {["⌕", "⚡", "♡", "☠", "🎬", "▦", "⌂"][i]}
+              </Text>
+              <Text
+                style={[s.navLabel, tab === t && { color: red }]}
+                numberOfLines={1}
+                adjustsFontSizeToFit
               >
-                <Text style={[s.navIcon, tab === t && { color: red }]}>
-                  {["⌕", "⚡", "♡", "☠", "▦", "⌂"][i]}
-                </Text>
-                <Text
-                  style={[s.navLabel, tab === t && { color: red }]}
-                  numberOfLines={1}
-                  adjustsFontSizeToFit
-                >
-                  {t}
-                  {t === "Saved" && saved.length ? ` (${saved.length})` : ""}
-                </Text>
-              </Pressable>
-            ),
-          )}
+                {t}
+                {t === "Saved" && saved.length ? ` (${saved.length})` : ""}
+              </Text>
+            </Pressable>
+          ))}
         </View>
       </View>
       <Modal
@@ -566,6 +575,19 @@ export default function App() {
                   onQuantity={quantity}
                   onClose={() => setCartVendor(null)}
                   onManualCheckout={manualCheckout}
+                  onCheckout={(url) =>
+                    Alert.alert(
+                      "Continue to Jenny’s RC?",
+                      "This replaces the existing Jenny’s browser cart with your selected matched items and quantities. Check take-off contents, final prices and stock there before ordering.",
+                      [
+                        { text: "Stay in app", style: "cancel" },
+                        {
+                          text: "Open Jenny’s cart",
+                          onPress: () => void open(url),
+                        },
+                      ],
+                    )
+                  }
                   storageError={storageError}
                 />
               )}
@@ -625,25 +647,22 @@ export default function App() {
                     />
                   </PartSection>
                   <PartSection
-                    title="Repair tutorials"
+                    title="Maintenance videos"
                     expanded={expandedSections.includes("repair")}
                     onToggle={() => toggleSection("repair")}
                   >
                     <Text style={s.fitment}>
-                      Search YouTube for this part and vehicle. Review each
-                      video for your exact model and version.
+                      Browse the official ARRMA support tutorials. Confirm your
+                      exact model before using a procedure.
                     </Text>
                     <Pressable
-                      accessibilityRole="link"
-                      onPress={() =>
-                        void open(
-                          `https://www.youtube.com/results?search_query=${encodeURIComponent(`${selected.manufacturerPartNumber ?? selected.id} ${selected.provenance.vehicleId} ARRMA repair`)}`,
-                        )
-                      }
+                      accessibilityRole="button"
+                      onPress={() => {
+                        setSelected(null);
+                        setTab("Maintenance");
+                      }}
                     >
-                      <Text style={s.link}>
-                        Find repair videos on YouTube →
-                      </Text>
+                      <Text style={s.link}>🎬 Open Maintenance →</Text>
                     </Pressable>
                   </PartSection>
                   <PartSection

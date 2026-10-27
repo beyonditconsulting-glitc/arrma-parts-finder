@@ -1,22 +1,39 @@
 import { useState } from "react";
-import { ActivityIndicator, Image, StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import { productPhoto } from "../productPhotos.ts";
 import type { Part } from "../catalog";
 
-export function ProductImage({ part }: { part: Part }) {
+export function ProductImage({
+  part,
+  compact = false,
+}: {
+  part: Part;
+  compact?: boolean;
+}) {
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
-  const image = part.image;
+  const [attempt, setAttempt] = useState(0);
+  const image = productPhoto(part);
+  const photoSource = image ? `${image.publisher} · ${image.note}` : "";
   return (
-    <View>
-      <View style={s.frame}>
+    <View style={compact ? s.compactContainer : undefined}>
+      <View style={[s.frame, compact && s.compactFrame]}>
         {image && !failed ? (
           <>
             <Image
+              key={`${image.url}-${attempt}`}
               source={{ uri: image.url }}
               style={s.image}
               resizeMode="contain"
               accessible
-              accessibilityLabel={image.alt || part.name}
+              accessibilityLabel={`${image.alt || part.name}. Photo source: ${photoSource}`}
               onLoadEnd={() => setLoading(false)}
               onError={() => {
                 setFailed(true);
@@ -32,20 +49,41 @@ export function ProductImage({ part }: { part: Part }) {
             )}
           </>
         ) : (
-          <Text style={s.fallback}>
-            {failed
-              ? "Product image could not load. Check your connection."
-              : "Product image unavailable."}
-          </Text>
+          <View style={s.unavailable}>
+            <Text style={[s.fallback, compact && s.compactFallback]}>
+              {failed ? "Photo could not load." : "Product image unavailable."}
+            </Text>
+            {failed && image && (
+              <Pressable
+                style={s.retry}
+                accessibilityRole="button"
+                accessibilityLabel={`Retry loading photo of ${part.name}`}
+                onPress={(event) => {
+                  event.stopPropagation();
+                  setAttempt((value) => value + 1);
+                  setFailed(false);
+                  setLoading(true);
+                }}
+              >
+                <Text style={s.retryText}>Retry photo</Text>
+              </Pressable>
+            )}
+          </View>
         )}
       </View>
-      {image && !failed && (
-        <Text style={s.caption}>Product image from Horizon Hobby</Text>
+      {!compact && image && !failed && (
+        <Text style={s.caption}>{photoSource}</Text>
       )}
     </View>
   );
 }
 const s = StyleSheet.create({
+  compactContainer: { width: "100%" },
+  compactFrame: { height: 105, borderWidth: 0, borderRadius: 6, marginTop: 0 },
+  compactFallback: { padding: 8, fontSize: 11, lineHeight: 15 },
+  unavailable: { alignItems: "center", padding: 8 },
+  retry: { paddingHorizontal: 12, paddingVertical: 8 },
+  retryText: { color: "#bd3626", fontSize: 12, fontWeight: "700" },
   frame: {
     height: 250,
     width: "100%",

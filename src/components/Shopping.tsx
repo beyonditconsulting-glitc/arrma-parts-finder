@@ -8,6 +8,7 @@ import {
   type Vendor,
   type CartLine,
 } from "../cart";
+import { getJennyMatch } from "../integrations/jennys.ts";
 import { vendorOffer } from "../offers";
 export function VendorComparison({
   part,
@@ -29,7 +30,9 @@ export function VendorComparison({
         guarantees. Shipping and tax are not included.
       </Text>
       {vendors.map((vendor) => {
-        const offer = vendorOffer(vendor, part.observedPrice);
+        const offer = vendorOffer(vendor, part.observedPrice, part.id);
+        const jenny =
+          vendor === "Jenny’s RC" ? getJennyMatch(part.id) : undefined;
         const count =
           cart.find((line) => line.partId === part.id && line.vendor === vendor)
             ?.quantity ?? 0;
@@ -44,6 +47,16 @@ export function VendorComparison({
                 ? `Captured ${offer.price.observedAt.slice(0, 10)} · Not live · Stock unverified`
                 : "No verified listing, price or stock connected."}
             </Text>
+            {jenny && (
+              <View>
+                <Text style={s.title}>{jenny.productTitle}</Text>
+                <Text style={s.note}>{jenny.conditionNote}</Text>
+                <Text style={s.note}>
+                  Selected listing uses Shopify variant {jenny.variantId}.
+                  Availability is only a captured observation.
+                </Text>
+              </View>
+            )}
             <View style={s.row}>
               <Pressable
                 style={s.button}
@@ -81,6 +94,7 @@ export function VendorCartPanel({
   onQuantity,
   onClose,
   onManualCheckout,
+  onCheckout,
   storageError,
 }: {
   vendor: Vendor;
@@ -89,10 +103,11 @@ export function VendorCartPanel({
   onQuantity: (vendor: Vendor, id: string, count: number) => void;
   onClose: () => void;
   onManualCheckout: (vendor: Vendor, part: Part) => void;
+  onCheckout: (url: string) => void;
   storageError: string;
 }) {
   const lines = cart.filter((line) => line.vendor === vendor);
-  const capability = checkoutCapability(vendor);
+  const capability = checkoutCapability(vendor, lines);
   return (
     <View>
       <View style={s.row}>
@@ -174,14 +189,43 @@ export function VendorCartPanel({
         No verified total is available. Price, shipping, tax and availability
         must be confirmed at checkout.
       </Text>
-      <View
-        style={s.disabled}
-        accessibilityRole="button"
-        accessibilityState={{ disabled: true }}
-      >
-        <Text style={s.title}>Retailer cart transfer unavailable</Text>
-        <Text style={s.note}>{capability.reason}</Text>
-      </View>
+      {capability.ready && capability.url ? (
+        <View>
+          <Pressable
+            style={s.button}
+            accessibilityRole="button"
+            onPress={() => onCheckout(capability.url!)}
+          >
+            <Text style={s.buttonText}>
+              Continue to Jenny’s preloaded cart →
+            </Text>
+          </Pressable>
+          <Text style={s.note}>
+            Opens Jenny’s RC with the exact matched variants and your
+            quantities, replacing existing Jenny’s browser-cart contents.
+            Jenny’s confirms final price, stock, shipping and tax. This does not
+            submit an order.
+          </Text>
+        </View>
+      ) : (
+        <View
+          style={s.disabled}
+          accessibilityRole="button"
+          accessibilityState={{ disabled: true }}
+        >
+          <Text style={s.title}>
+            {vendor === "Jenny’s RC"
+              ? "Preloaded cart needs exact available matches"
+              : "Retailer cart transfer unavailable"}
+          </Text>
+          <Text style={s.note}>{capability.reason}</Text>
+          {capability.unmatched.map((issue, index) => (
+            <Text key={`${issue.partId}-${index}`} style={s.note}>
+              {issue.partId || "Cart"}: {issue.reason}
+            </Text>
+          ))}
+        </View>
+      )}
       {lines.length > 0 && (
         <>
           <Text style={s.note}>

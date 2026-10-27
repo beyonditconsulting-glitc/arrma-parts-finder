@@ -1,3 +1,4 @@
+import { buildJennyCart } from "./integrations/jennys.ts";
 export const vendors = ["Horizon Hobby", "Jenny’s RC", "eBay"] as const;
 export type Vendor = (typeof vendors)[number];
 export type CartLine = { vendor: Vendor; partId: string; quantity: number };
@@ -64,13 +65,32 @@ export function vendorCartCount(cart: CartLine[], vendor: Vendor) {
     .filter((line) => line.vendor === vendor)
     .reduce((total, line) => total + line.quantity, 0);
 }
-// No connector is available yet: never manufacture a checkout URL or transfer success.
-export function checkoutCapability(vendor: Vendor): {
-  ready: false;
+export function checkoutCapability(
+  vendor: Vendor,
+  lines: readonly CartLine[] = [],
+): {
+  ready: boolean;
   reason: string;
+  url: string | null;
+  unmatched: { partId: string; reason: string }[];
 } {
+  if (vendor === "Jenny’s RC") {
+    const result = buildJennyCart(
+      lines.filter((line) => line.vendor === vendor),
+    );
+    return {
+      ready: result.ready,
+      url: result.url,
+      reason: result.ready
+        ? result.observationNote
+        : "No cart will be sent until every selected item has an exact, observed-available Jenny’s variant and valid quantity.",
+      unmatched: result.unmatched,
+    };
+  }
   return {
     ready: false,
+    url: null,
+    unmatched: [],
     reason: `${vendor} cart transfer is not connected. These items are saved in this app only.`,
   };
 }

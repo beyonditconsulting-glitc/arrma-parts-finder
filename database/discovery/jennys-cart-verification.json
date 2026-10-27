@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-27T15:57:26.493Z",
-  "retailer": "Jenny\u2019s RC",
+  "retailer": "Jenny’s RC",
   "method": "Shopify documented cart permalink, storefront=true",
   "session": "Fresh isolated anonymous guest QA session; not a user account",
   "expected": [
@@ -30,5 +30,16 @@
   "allExpectedItemsAndQuantitiesPresent": true,
   "checkoutSubmitted": false,
   "orderSubmitted": false,
-  "scope": "One live two-line, quantity-one-per-line check. Stock, prices and future carts remain retailer-controlled. No guest cookie, cart token, customer data or raw cart payload is stored in this report."
+  "scope": "One live two-line, quantity-one-per-line check. Stock, prices and future carts remain retailer-controlled. No guest cookie, cart token, customer data or raw cart payload is stored in this report.",
+  "existingCartBehavior": {
+    "test": "Opened a single-item permalink after the successful two-item guest check, in the same isolated cookie session.",
+    "beforeItemCount": 2,
+    "afterItemCount": 1,
+    "replacesRatherThanMerges": true,
+    "selectedVariantId": "47647080644885",
+    "removedOtherVariantIds": [
+      "32972242255926"
+    ],
+    "orderSubmitted": false
+  }
 }

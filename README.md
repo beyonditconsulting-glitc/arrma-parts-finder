@@ -24,16 +24,18 @@ EXPO_NO_TELEMETRY=1 npx expo export --platform ios --platform android
 
 - 210 Horizon Hobby source-listed replacement entries for **Kraton 6S EXB (ARA8708T1)** replace the original six sample records.
 - Search by name, brand, catalog ID or exact vehicle ID, with title-derived category filters. Results default to an always-visible spreadsheet-style list of the first five matches. Tap a row for details, or use the results-view dropdown for the full vertical card list, paged in batches of 24.
-- Part details show a sourced Horizon product photo above the title, using contain sizing, loading feedback and an unavailable-image fallback. Photos load from the source CDN and require connectivity.
+- Full cards and details prefer exact matched Jenny’s product photos for the 5 supported parts. Other parts retain a clearly labeled Horizon fallback. Retry/loading states are available. Photos load from source CDNs and require connectivity.
 - Part details show source evidence and **also listed for** models, separating standard replacements from optional upgrades. The 210 exact part-page captures contain 5,564 associations across 336 distinct model IDs, including other brands; coverage is not exhaustive.
 - Search supports both catalog IDs and manufacturer numbers from source specifications. Different model revisions and color SKUs remain separate.
 - Three vendor panels keep comparison and add-to-app-cart actions inside the app. Each vendor has a separate SQLite-backed device cart with quantity editing and removal. Native persistence needs device validation.
-- Retailer cart transfer is **not connected**. Checkout is explicitly unavailable; final manual-shopping actions warn that items/quantities will not transfer before leaving the app. No source or vendor links launch a browser during normal part comparison.
-- Horizon prices are explicitly dated **observed snapshots**, not live quotes. Jenny’s RC and eBay prices are unavailable until connected. Stock remains unverified; no sample prices or invented availability are displayed.
+- **Jenny’s preloaded-cart handoff is enabled for entirely matched carts.** It batches exact captured Shopify variants and quantities and fails the whole link if any selection is unresolved/unavailable. A fresh anonymous two-item test confirmed both IDs and quantities; no order was submitted. eBay/Horizon transfer remains unavailable. No vendor links launch a browser during normal part comparison; the final handoff requires confirmation.
+- Horizon and the 5 matched Jenny’s parts display explicitly dated **observed snapshots**, not live quotes. Jenny’s coverage is 5/210 parts across 25 listings; all remaining matches stay unresolved. Take-off packaging/condition differences are visible. eBay prices are not connected; no sample prices or invented availability are displayed.
 - Fitment is **retailer-listed, pending diagram verification**. The informal “EXB V2” alias has not been independently established for ARA8708T1. Other model versions do not inherit this association.
 - Catalog IDs are source identifiers and can differ from manufacturer part numbers. Always check the exact product and model before ordering.
 - Unsourced M2C, Perfect Pass and RPM upgrade samples have been removed; Upgrades shows an explicit empty state until evidence-backed records are added.
 - Session bookmarks remain available. They do not persist across app restarts.
+- **🎬 Maintenance** includes 32 unique official Horizon ARRMA support videos from 34 source entries. Search by topic, model wording or tool, then play inside the app with source-provided tool lists. No media is rehosted. Provider availability/embedding controls apply; video playback needs on-device validation.
+- Shared-vehicle lists paginate five rows at a time after grouping Standard, Optional and Other/mixed evidence, so optional listings cannot hide earlier standard matches.
 
 The app imports an offline data snapshot from `src/data/kraton.js`, generated from the captured official lookup in `database/discovery/kraton-ARA8708T1-parts.json`. This snapshot is not a live backend or a verified compatibility database. No new service or credential is required. Regenerate it with:
 
@@ -62,10 +64,26 @@ The Expo-specific home override is implemented by this SDK 58 CLI and should be 
 
 ## Retailer integration status
 
-The in-app carts store selected catalog items and quantities on the device. They do **not** represent a remote basket, inventory reservation or completed retailer transfer. Only the explicit final manual-shopping action opens a browser, with a confirmation explaining the limitations. Prices from source pages are captured observations, not a live three-vendor comparison.
+The local carts store selections and quantities on the device. The final supported Jenny’s action opens a documented Shopify cart permalink; it is not an order, stock reservation or price guarantee. A second live QA check established that the link replaces the existing merchant cart rather than merging it, so the final confirmation explicitly discloses that effect. It is enabled only when every selected line has an exact observed-available match. Partial carts never silently omit unmatched items. See [Jenny’s integration](docs/JENNYS.md) and [the live handoff receipt](database/discovery/jennys-cart-verification.json).
 
-Automatic vendor baskets and live comparisons still require supported integrations, verified vendor product/variant or listing IDs, and any required retailer credentials/permissions. No retailer credentials are configured. Do not construct guessed cart endpoints or assume that a catalog/MPN is a vendor variant ID. eBay listing condition and seller identity, Jenny’s exact product variants, and Horizon’s cart session must be handled independently. Seller IDs, currency, shipping, taxes, freshness, quantities, and supported stock need validation before enabling transfer. Store credentials only on a server, never in this mobile bundle.
+The public Jenny’s sweep captured 4,725 products, but strict identity/content checks accepted only 5 current catalog parts across 25 listings. Multi-part lots are deliberately excluded from individual-part prices/photos. The default choice is deterministic and observed-available, not a cheapest-price claim. Root verified one two-item cart in a fresh isolated guest session and visually checked a matched product image. Device UI/persistence and embedded video playback remain phone checks.
 
-The cloud access draft now includes `developer.ebay.com`, `jennysrc.com`, `shopify.dev` and `docs.expo.dev`; documentation/storefront requests were blocked when checked. Review/save that draft to apply access and publish to retain the cloud configuration. This does not create retailer accounts or authorize API use.
+The eBay server-only Browse adapter and tests exist, but no account, keys, production approval, deployed backend or authenticated request has been established. It must never be imported into the mobile app. The owner must [join eBay Developers](https://developer.ebay.com/join), create keys, obtain required production access and configure raw credentials in a trusted backend secret manager. Proxy placeholders cannot be combined as raw Basic OAuth credentials. See [eBay setup](docs/EBAY.md).
 
-After pulling this change, run `npm ci` because `expo-sqlite` was added with Expo’s SDK-compatible installer. If local tunnel-package changes prevent Git pull, preserve those changes before merging; do not reset them blindly.
+Horizon’s customer cart page is confirmed; a supported third-party multi-item transfer method is not. Do not guess endpoints or reuse private storefront client/session credentials. See [Horizon findings](docs/HORIZON-INTEGRATION.md).
+
+The compatibility work captured a complete 206-entry MOJAVE ARA7704V3 retailer parts relation: 142 shared IDs and 64 additional IDs. This is staged research, not an expanded reviewed mobile catalog. Official diagram PDFs still return an upstream HTTP 403; zero fitments have been marked diagram-verified. See [diagram status](docs/DIAGRAM-VERIFICATION.md).
+
+## Maintenance source and playback
+
+The source is [Horizon Hobby ARRMA Support](https://www.horizonhobby.com/hh-support-arrma/). `src/data/maintenance.js` preserves source titles, reused-title aliases, descriptions, required items, locators, source hash and capture time. The extraction deduplicates 34 entries into 32 video IDs. Rebuild using the retained local response:
+
+```sh
+node scripts/extract-maintenance.mjs database/evidence/maintenance.html
+```
+
+Videos use a privacy-enhanced YouTube iframe inside `react-native-webview`, with the actual app bundle identifier as the WebView base origin, inline/fullscreen controls, manual play, an error/retry state and no external navigation by default. The film icon appears in main navigation and part details link to the library. The app does not download or rehost videos, guarantee embedding availability or claim tutorial applicability to every part. Player readiness, network errors and provider errors remain distinct from catalog tests.
+
+The environment draft preserves existing domains and adds the necessary source/document/player hosts for review. Saving it is not publication or proof that a publisher permits a request. Review/save and publish in environment settings when preserving the cloud setup. Some upstream hosts still deny document access even when proxy connection succeeds.
+
+After pulling, run `npm ci`; the new player uses the Expo-compatible `react-native-webview`. Preserve local tunnel-package edits before merging if Git reports a conflict; do not reset them blindly.

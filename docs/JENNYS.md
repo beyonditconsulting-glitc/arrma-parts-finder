@@ -53,3 +53,5 @@ Neither the storefront endpoint nor the matcher infers vehicle compatibility. Th
 ## Live guest-cart verification
 
 Root tested the supported multi-item link in a fresh, isolated anonymous session. Jenny’s `/cart.js` returned both selected variant IDs at quantity one, with exactly two items total. No checkout or order was submitted. `database/discovery/jennys-cart-verification.json` records only normalized public IDs/counts and scope; no cookies, guest cart token or customer fields are saved to Git. This validates that particular handoff, not future stock, prices or arbitrary quantities.
+
+A second live check opened a one-item permalink in the same QA cookie session after the successful two-item check. The resulting cart contained only the selected item; the other prior item was removed. This establishes replacement rather than merge behavior for the tested link flow. The app therefore discloses browser-cart replacement in the final confirmation. It does not claim preservation/merge of an existing merchant cart.
