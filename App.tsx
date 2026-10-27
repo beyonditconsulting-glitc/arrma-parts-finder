@@ -439,14 +439,6 @@ export default function App() {
                   <Text style={s.bannerTitle}>{selected.name}</Text>
                   <Text style={s.subtitle}>{selected.description}</Text>
                   <ProductImage key={`image-${selected.id}`} part={selected} />
-                  <View style={s.notice}>
-                    <Text style={s.noticeText}>
-                      Retailer-listed fitment · Diagram verification pending. No
-                      live quotes or stock feeds are connected. Any displayed
-                      Horizon price is a dated snapshot. Catalog IDs may differ
-                      from manufacturer part numbers.
-                    </Text>
-                  </View>
                   {storageError !== "" && (
                     <Text style={s.noticeText}>{storageError}</Text>
                   )}
@@ -485,6 +477,14 @@ export default function App() {
                         : "Save for later"}
                     </Text>
                   </Pressable>
+                  <View style={s.notice}>
+                    <Text style={s.noticeText}>
+                      Retailer-listed fitment · Diagram verification pending. No
+                      live quotes or stock feeds are connected. Any displayed
+                      Horizon price is a dated snapshot. Catalog IDs may differ
+                      from manufacturer part numbers.
+                    </Text>
+                  </View>
                 </>
               )}
             </ScrollView>
