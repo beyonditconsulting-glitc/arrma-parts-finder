@@ -8,6 +8,7 @@ import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
 import { HobbyShops } from "./src/components/HobbyShops";
 import { Events } from "./src/components/Events";
 import { Graveyard } from "./src/components/Graveyard";
+import { PartPhoto } from "./src/components/PartPhoto";
 import { FitmentList } from "./src/components/FitmentList";
 import { RelatedProducts } from "./src/components/RelatedProducts";
 import { StatusBar } from "expo-status-bar";
@@ -244,7 +245,7 @@ export default function App() {
                   accessibilityLabel={`View other vehicles using ${p.name} and compare prices`}
                 >
                   <Text style={s.artLabel}>{p.category.toUpperCase()}</Text>
-                  <Text style={s.partIcon}>{p.icon}</Text>
+                  <PartPhoto partNumber={p.manufacturerPartNumber ?? p.id} partName={p.name} fallbackIcon={p.icon} />
                   <Text style={s.artBottom}>PIT / {p.brand.toUpperCase()}</Text>
                 </Pressable>
                 <Pressable
