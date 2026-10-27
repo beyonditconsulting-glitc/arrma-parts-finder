@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useVendorCart } from "./src/useVendorCart";
 import { vendors, type Vendor } from "./src/cart";
 import { displayObservedPrice } from "./src/offers";
+import { PhotoLookup } from "./src/components/PhotoLookup";
 import { ProductImage } from "./src/components/ProductImage";
 import { VendorComparison, VendorCartPanel } from "./src/components/Shopping";
 import { HobbyShops } from "./src/components/HobbyShops";
@@ -151,6 +152,7 @@ export default function App() {
             <View style={{ flex: 1 }}><Text style={s.micro}>VERSION / MODEL ID</Text><Text style={s.vehicleName}>{version}</Text></View>
             <Text style={{ fontSize: 22 }}>⌄</Text>
           </Pressable>
+          <PhotoLookup model={model} version={version} onBarcode={(value) => { setQuery(value); setPartsExpanded(true); }} />
           <View style={s.search}>
             <Text style={{ fontSize: 24, color: "#7b7d80" }}>⌕</Text>
             <TextInput
@@ -803,3 +805,4 @@ const s = StyleSheet.create({
   },
   empty: { padding: 25, backgroundColor: "#eeefe9", borderRadius: 10 },
 });
+

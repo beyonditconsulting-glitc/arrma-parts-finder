@@ -25,7 +25,20 @@
     },
     "plugins": [
       "expo-router",
-      "expo-sqlite"
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Pit Finder to scan part barcodes.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Pit Finder to select a photo of an RC part."
+        }
+      ]
     ],
     "scheme": "pitfinder"
   }
