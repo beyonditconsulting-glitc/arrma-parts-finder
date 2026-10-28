@@ -1,17 +1,19 @@
-import data from './data/horizon-catalog.json';
+import index from './data/horizon-catalog.json';
+import { loadHorizonModel } from './data/horizon-model-loaders';
 import type { Part } from './catalog.ts';
 
 type Association = [number, number, number[]];
 type Sku = { sku: string; color: string | null; is_fallback: boolean; status: string; expectedCount: number | null; associations: Association[] };
 type Model = { brand_id: string; model_id: string; name: string; discontinued: boolean; status: string; skus: Sku[] };
-const models = data.models as Model[];
+type ModelShard = { model: Model; relationships: string[]; products: string[][]; captures: string[][]; snapshots: [number, number | null, string | null][] };
+const models = index.models;
 const modelIndex = new Map(models.map(m => [JSON.stringify([m.brand_id, m.model_id]), m]));
 const modelFor = (brandId: string, modelId: string) => modelIndex.get(JSON.stringify([brandId, modelId]));
 const skuFor = (brandId: string, modelId: string, sku: string) => modelFor(brandId, modelId)?.skus.find(s => s.sku === sku);
 const matches = (text: string, query: string) => query.toLowerCase().trim().split(/\s+/).every(t => text.toLowerCase().includes(t));
 const productUrl = (id: string) => `https://www.horizonhobby.com/product/${encodeURIComponent(id)}.html`;
-export const horizonBrands = data.brands;
-export const horizonMetadata = data.metadata;
+export const horizonBrands = index.brands;
+export const horizonMetadata = index.metadata;
 export function getHorizonModels(brandId: string, query = '') {
   return models.filter(m => m.brand_id === brandId && matches(`${m.model_id} ${m.name}`, query))
     .map(({ brand_id, model_id, name, discontinued }) => ({ brand_id, model_id, name, discontinued }));
@@ -21,13 +23,16 @@ export function getHorizonSkus(brandId: string, modelId: string) {
 }
 export function getHorizonCoverage(brandId: string, modelId: string, sku: string) {
   const selected = skuFor(brandId, modelId, sku);
-  return { status: selected?.status ?? (modelFor(brandId, modelId)?.skus.length ? 'unknown_sku' : modelFor(brandId, modelId)?.status ?? 'unknown_model'), expectedCount: selected?.expectedCount ?? null, observedCount: selected?.associations.length ?? 0 };
+  return { status: selected?.status ?? (modelFor(brandId, modelId)?.skus.length ? 'unknown_sku' : modelFor(brandId, modelId)?.status ?? 'unknown_model'), expectedCount: selected?.expectedCount ?? null, observedCount: selected?.observedCount ?? 0 };
 }
 export function getHorizonParts(brandId: string, modelId: string, sku: string, query = ''): Part[] {
   const model = modelFor(brandId, modelId);
   const selected = skuFor(brandId, modelId, sku);
   if (!model || !selected) return [];
-  return selected.associations.flatMap(([productIndex, relationshipIndex, snapshotIndexes]) => {
+  const data = loadHorizonModel(brandId, modelId) as ModelShard;
+  const records = data.model.skus.find(item => item.sku === sku);
+  if (!records) return [];
+  return records.associations.flatMap(([productIndex, relationshipIndex, snapshotIndexes]) => {
     const relationship = data.relationships[relationshipIndex];
     const [id, name, brand] = data.products[productIndex] as string[];
     if (!matches(`${id} ${name} ${brand} ${model.name} ${sku}`, query)) return [];

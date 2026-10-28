@@ -39,16 +39,22 @@ lookups. Nothing here publishes the application.
 
 ## Storage and evidence
 
-Schema version 2 stores products once as `[id, name, brand]`, captures once as
-`[relativePath, sha256, capturedAt]`, and snapshots once as
-`[captureIndex, amountMinorOrNull, currencyOrNull]`. A SKU stores associations as
-`[productIndex, relationshipIndex, snapshotIndexes]`; the `relationships` table
-stores source relationship labels once. Models contain their own
-SKU indexes and coverage. Raw JSON, HTML, images, and complete `Part` objects are
-not bundled. The full JSON is 8,084,304 bytes
-uncompressed (1,344,221 bytes with gzip for reference). Normalized tables avoid
-copying product fields and relationship labels per association. The latest export
-capture is `2026-10-28T03:21:53.544548+00:00`.
+Schema version 3 keeps only model/SKU metadata and counts in the startup index
+`src/data/horizon-catalog.json` (343,640 bytes). The generated
+`src/data/horizon-model-loaders.ts` uses static deferred Metro `require` functions;
+registering them does not evaluate model data. Parts load only for the selected
+model. Each file under `src/data/horizon-models/` contains that model's normalized
+products, captures, snapshots, relationships and exact SKU associations. The largest
+model file is 69,745 bytes. This avoids eagerly evaluating the former 8 MB JSON
+module when Expo Go finishes downloading the app on iPhone.
+
+All 1,140 model files preserve the complete 160,708 source-listed associations.
+The complete database and retained evidence in `database/horizon-partfinder/`
+are unchanged. Per-model normalization duplicates shared product labels between
+models to keep individual loads bounded. Metro includes the files in an offline
+bundle; they need no retailer network request. Already visited model modules can
+remain in Metro's module cache. This change reduces startup allocation; physical
+iPhone crash resolution still requires a device retest.
 
 Parts are materialized only for the requested exact brand/model/SKU tuple.
 Model-ID fallback pseudo-SKUs are returned with `is_fallback: true`; their

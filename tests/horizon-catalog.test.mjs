@@ -5,12 +5,17 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import ts from 'typescript';
+import { gunzipSync } from 'node:zlib';
 
 const root = new URL('../', import.meta.url);
-function api(data) {
+function api(data, onLoad = () => {}) {
   const code = ts.transpileModule(readFileSync(new URL('src/horizonCatalog.ts', root), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
   const module = { exports: {} };
-  new Function('require', 'module', 'exports', code)(() => data, module, module.exports);
+  const index = { ...data, models: data.models.map(model => ({ ...model, skus: model.skus.map(sku => ({ ...sku, observedCount: sku.associations.length })) })) };
+  const requireFixture = (path) => path.includes('horizon-model-loaders')
+    ? { loadHorizonModel(brandId, modelId) { onLoad(brandId, modelId); return { ...data, model: data.models.find(model => model.brand_id === brandId && model.model_id === modelId) }; } }
+    : index;
+  new Function('require', 'module', 'exports', code)(requireFixture, module, module.exports);
   return module.exports;
 }
 const fixture = {
@@ -99,4 +104,62 @@ print(json.dumps(complete))
     assert.equal(h.getHorizonCoverage('b', 'm', 'm').expectedCount, 0);
     assert.equal(h.getHorizonCoverage('b', 'missing', 'missing').expectedCount, null);
   } finally { rmSync(directory, { recursive: true, force: true }); }
+});
+
+
+test('opening the catalog and selecting metadata never loads parts data', () => {
+  const loads = [];
+  const h = api(fixture, (...args) => loads.push(args));
+  h.getHorizonModels('b');
+  h.getHorizonSkus('b', 'm');
+  h.getHorizonCoverage('b', 'm', 'red');
+  assert.deepEqual(loads, []);
+  assert.equal(h.getHorizonParts('b', 'm', 'red')[0].id, 'RED-ID');
+  assert.deepEqual(loads, [['b', 'm']]);
+});
+
+test('bundled startup index is bounded and all model shards retain complete coverage', () => {
+  const bytes = readFileSync(new URL('src/data/horizon-catalog.json', root));
+  const index = JSON.parse(bytes);
+  assert.ok(bytes.length < 600_000, `startup index grew to ${bytes.length} bytes`);
+  assert.equal(index.schemaVersion, 3);
+  assert.equal(index.products, undefined);
+  assert.equal(index.snapshots, undefined);
+  const source = JSON.parse(gunzipSync(readFileSync(new URL('database/horizon-partfinder/associations.json.gz', root))));
+  const expected = new Set(source.map(row => JSON.stringify([row.brand_id, row.model_id, row.sku, row.product_id])));
+  let associations = 0;
+  const products = new Set();
+  const loaderSource = readFileSync(new URL('src/data/horizon-model-loaders.ts', root), 'utf8');
+  const compiled = ts.transpileModule(loaderSource, { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
+  const module = { exports: {} };
+  let loads = 0;
+  const requireShard = path => {
+    loads++;
+    const bytes = readFileSync(new URL(`src/data/${path.replace('./', '')}`, root));
+    assert.ok(bytes.length < 1_000_000, `oversized model shard: ${path}`);
+    return JSON.parse(bytes);
+  };
+  new Function('require', 'module', 'exports', compiled)(requireShard, module, module.exports);
+  assert.equal(loads, 0, 'loader registry eagerly loaded model files');
+  for (const model of index.models) {
+    assert.ok(model.skus.every(sku => sku.associations === undefined));
+    const shard = module.exports.loadHorizonModel(model.brand_id, model.model_id);
+    assert.equal(shard.model.model_id, model.model_id);
+    assert.equal(shard.model.brand_id, model.brand_id);
+    for (const sku of shard.model.skus) {
+      assert.equal(sku.associations.length, sku.expectedCount);
+      associations += sku.associations.length;
+      for (const [p, rel, snapshots] of sku.associations) {
+        assert.ok(shard.relationships[rel]);
+        assert.ok(snapshots.length > 0);
+        products.add(shard.products[p][0]);
+        assert.ok(expected.delete(JSON.stringify([model.brand_id, model.model_id, sku.sku, shard.products[p][0]])), 'missing, duplicate or incorrect source association');
+        for (const i of snapshots) assert.ok(shard.captures[shard.snapshots[i][0]][1]);
+      }
+    }
+  }
+  assert.equal(expected.size, 0);
+  assert.equal(loads, index.metadata.modelCount);
+  assert.equal(associations, index.metadata.associationCount);
+  assert.equal(products.size, index.metadata.productCount);
 });

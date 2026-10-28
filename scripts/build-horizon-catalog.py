@@ -79,6 +79,47 @@ def build(database, models_path):
     return result
 
 
+def write_catalog(data, output):
+    """Keep startup metadata small; defer model records behind static Metro requires."""
+    output.parent.mkdir(parents=True, exist_ok=True)
+    directory = output.parent / 'horizon-models'
+    directory.mkdir(exist_ok=True)
+    index = {key: data[key] for key in ('brands', 'metadata')}
+    index.update(schemaVersion=3, models=[])
+    loaders = []
+    for number, model in enumerate(data['models']):
+        product_ids = sorted({a[0] for sku in model['skus'] for a in sku['associations']})
+        snapshot_ids = sorted({i for sku in model['skus'] for a in sku['associations'] for i in a[2]})
+        capture_ids = sorted({data['snapshots'][i][0] for i in snapshot_ids})
+        product_map = {old: new for new, old in enumerate(product_ids)}
+        snapshot_map = {old: new for new, old in enumerate(snapshot_ids)}
+        capture_map = {old: new for new, old in enumerate(capture_ids)}
+        metadata = {key: value for key, value in model.items() if key != 'skus'}
+        metadata['skus'] = [{**{k: v for k, v in sku.items() if k != 'associations'},
+                             'observedCount': len(sku['associations'])} for sku in model['skus']]
+        index['models'].append(metadata)
+        shard = {'model': {**model, 'skus': [
+            {**sku, 'associations': [[product_map[a[0]], a[1], [snapshot_map[i] for i in a[2]]]
+                                    for a in sku['associations']]} for sku in model['skus']]},
+                 'relationships': data['relationships'],
+                 'products': [data['products'][i] for i in product_ids],
+                 'captures': [data['captures'][i] for i in capture_ids],
+                 'snapshots': [[capture_map[data['snapshots'][i][0]], *data['snapshots'][i][1:]]
+                               for i in snapshot_ids]}
+        filename = f'{number:04d}.json'
+        (directory / filename).write_text(json.dumps(shard, ensure_ascii=False, separators=(',', ':')) + '\n')
+        key = json.dumps([model['brand_id'], model['model_id']], separators=(',', ':'))
+        loaders.append(f'  {json.dumps(key)}: () => require("./horizon-models/{filename}"),')
+    loader = '// Generated static deferred requires; never load a model during startup.\n'
+    loader += 'const loaders: Record<string, () => unknown> = {\n' + '\n'.join(loaders) + '\n};\n'
+    loader += 'export function loadHorizonModel(brandId: string, modelId: string): unknown {\n'
+    loader += '  return loaders[JSON.stringify([brandId, modelId])]?.();\n}\n'
+    (output.parent / 'horizon-model-loaders.ts').write_text(loader)
+    temporary = output.with_suffix('.tmp')
+    temporary.write_text(json.dumps(index, ensure_ascii=False, separators=(',', ':')) + '\n')
+    temporary.replace(output)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--database', type=Path, default=Path('/workspace/horizon-partfinder/exports/horizon.sqlite'))
@@ -86,8 +127,5 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, default=Path(__file__).resolve().parents[1] / 'src/data/horizon-catalog.json')
     args = parser.parse_args()
     result = build(args.database, args.models)
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    temporary = args.output.with_suffix('.tmp')
-    temporary.write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')) + '\n')
-    temporary.replace(args.output)
+    write_catalog(result, args.output)
     print(json.dumps(result['metadata']))
