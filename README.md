@@ -22,6 +22,7 @@ EXPO_NO_TELEMETRY=1 npx expo export --platform ios --platform android
 
 ## Features and data boundaries
 
+- **Explore → All Horizon models** adds searchable brand, model and exact SKU/model lookup selection for all 1,140 models across 14 configured brands, including discontinued models. Each lookup retains its own parts/accessory associations, coverage counts, capture evidence and dated prices. The existing detail, saving and vendor-cart controls work with these entries. See [Horizon catalog](docs/HORIZON-CATALOG.md) and the [database package](database/horizon-partfinder/README.md).
 - 210 Horizon Hobby source-listed replacement entries for **Kraton 6S EXB (ARA8708T1)** replace the original six sample records.
 - Search by name, brand, catalog ID or exact vehicle ID, with title-derived category filters. Results default to an always-visible spreadsheet-style list of the first five matches. Tap a row for details, or use the results-view dropdown for the full vertical card list, paged in batches of 24.
 - Full cards and details use bundled Jenny’s product photos for the 5 exact supported parts. Image bytes are included with the app and their source/asset hashes are recorded, avoiding retailer CDN requests during normal use. The denied Horizon fallback is disabled; unmatched parts explicitly show that no exact Jenny photo is available. In Expo Go, the app assets still need to load from the running Metro server at least once.

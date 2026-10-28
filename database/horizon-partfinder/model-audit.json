@@ -1,0 +1,645 @@
+{
+  "audited_at_utc": "2026-10-28T03:22:11.549215+00:00",
+  "status": "pass",
+  "scope": "Exact completeness versus saved responses for all brands in saved partFinderBrands configuration.",
+  "limitations": [
+    "Cannot prove absence of silent server-side truncation or models omitted by the source endpoint.",
+    "Model audit only; SKU variants and parts associations are outside scope.",
+    "Public JavaScript is fetched only with --public-js; raw JSON does not include HTTP headers."
+  ],
+  "configured_brands": {
+    "brands-arrma": "ARRMA",
+    "brands-axial": "Axial",
+    "brands-blade": "Blade",
+    "brands-dle-engines": "DLE Engines",
+    "brands-e-flite": "E-flite",
+    "brands-hangar-9": "Hangar 9",
+    "brands-hobbyzone": "HobbyZone",
+    "brands-losi": "Losi",
+    "brands-os-engines": "OS Engines",
+    "brands-pro-boat": "Pro Boat",
+    "brands-saito-engines": "Saito Engines",
+    "brands-spektrum": "Spektrum",
+    "brands-team-losi-racing": "Team Losi Racing",
+    "brands-top-flite": "Top Flite"
+  },
+  "summary": {
+    "configured_brand_count": 14,
+    "raw_model_count": 1140,
+    "extracted_model_count": 1140,
+    "unique_model_ids": 1140,
+    "active": 381,
+    "discontinued": 759,
+    "error_count": 0,
+    "pagination_indicator_count": 0,
+    "duplicate_model_key_count": 0,
+    "cross_brand_id_count": 0,
+    "duplicate_name_group_count": 47
+  },
+  "per_brand": [
+    {
+      "brand": "ARRMA",
+      "brand_id": "brands-arrma",
+      "raw_count": 111,
+      "extracted_count": 111,
+      "active": 50,
+      "discontinued": 61,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Axial",
+      "brand_id": "brands-axial",
+      "raw_count": 99,
+      "extracted_count": 99,
+      "active": 25,
+      "discontinued": 74,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Blade",
+      "brand_id": "brands-blade",
+      "raw_count": 78,
+      "extracted_count": 78,
+      "active": 18,
+      "discontinued": 60,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "DLE Engines",
+      "brand_id": "brands-dle-engines",
+      "raw_count": 14,
+      "extracted_count": 14,
+      "active": 0,
+      "discontinued": 14,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "E-flite",
+      "brand_id": "brands-e-flite",
+      "raw_count": 289,
+      "extracted_count": 289,
+      "active": 111,
+      "discontinued": 178,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Hangar 9",
+      "brand_id": "brands-hangar-9",
+      "raw_count": 71,
+      "extracted_count": 71,
+      "active": 39,
+      "discontinued": 32,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "HobbyZone",
+      "brand_id": "brands-hobbyzone",
+      "raw_count": 44,
+      "extracted_count": 44,
+      "active": 12,
+      "discontinued": 32,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Losi",
+      "brand_id": "brands-losi",
+      "raw_count": 112,
+      "extracted_count": 112,
+      "active": 33,
+      "discontinued": 79,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "OS Engines",
+      "brand_id": "brands-os-engines",
+      "raw_count": 110,
+      "extracted_count": 110,
+      "active": 33,
+      "discontinued": 77,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Pro Boat",
+      "brand_id": "brands-pro-boat",
+      "raw_count": 42,
+      "extracted_count": 42,
+      "active": 12,
+      "discontinued": 30,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Saito Engines",
+      "brand_id": "brands-saito-engines",
+      "raw_count": 28,
+      "extracted_count": 28,
+      "active": 16,
+      "discontinued": 12,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Spektrum",
+      "brand_id": "brands-spektrum",
+      "raw_count": 101,
+      "extracted_count": 101,
+      "active": 27,
+      "discontinued": 74,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Team Losi Racing",
+      "brand_id": "brands-team-losi-racing",
+      "raw_count": 24,
+      "extracted_count": 24,
+      "active": 5,
+      "discontinued": 19,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    },
+    {
+      "brand": "Top Flite",
+      "brand_id": "brands-top-flite",
+      "raw_count": 17,
+      "extracted_count": 17,
+      "active": 0,
+      "discontinued": 17,
+      "raw_top_level_keys": [
+        "products"
+      ],
+      "duplicate_ids": {},
+      "exact_mapping_match": true,
+      "manifest_count_matches": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "cross_brand_ids": {},
+  "duplicate_names": [
+    {
+      "brand_id": "brands-arrma",
+      "name": "ARRMA 1/10 VORTEKS 3S 4X4 RTR Brushless Stadium Truck",
+      "model_ids": [
+        "ARA4305V3B",
+        "ARA4305V3"
+      ]
+    },
+    {
+      "brand_id": "brands-arrma",
+      "name": "ARRMA 1/7 MOJAVE 6S 4X4 RTR Brushless Desert Truck",
+      "model_ids": [
+        "ARA106058",
+        "ARA7604V2",
+        "ARA7604V3"
+      ]
+    },
+    {
+      "brand_id": "brands-arrma",
+      "name": "ARRMA 1/8 KRATON 6S 4X4 RTR Brushless Speed Truck",
+      "model_ids": [
+        "ARA8608V5",
+        "ARA106040",
+        "ARA8608V6"
+      ]
+    },
+    {
+      "brand_id": "brands-arrma",
+      "name": "ARRMA 1/8 NOTORIOUS 6S 4X4 RTR Brushless Stunt Truck",
+      "model_ids": [
+        "ARA8611V5",
+        "ARA106044",
+        "ARA8611V6"
+      ]
+    },
+    {
+      "brand_id": "brands-arrma",
+      "name": "ARRMA 1/8 TYPHON 4X4 RTR Brushed Buggy (Battery & Charger Included), Green",
+      "model_ids": [
+        "ARA4206V3",
+        "ARA102694"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/10 Capra Unlimited 1.9 4X4 Trail Buggy Brushed RTR",
+      "model_ids": [
+        "AXI03000B",
+        "AXI03000"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/10 SCX10 II Deadbolt 4X4 Brushed RTR",
+      "model_ids": [
+        "AXI03025",
+        "AXID9066"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/10 SCX10 III Base Camp 4X4 Rock Crawler Brushed RTR",
+      "model_ids": [
+        "AXI03027",
+        "AXI-1375"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/10 SCX10 III Early Ford Bronco 4X4 RTR",
+      "model_ids": [
+        "AXI03014B",
+        "AXI03014"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/10 SCX10 III Jeep JLU Wrangler 4X4 Rock Crawler with Portals, Kit",
+      "model_ids": [
+        "AXI03007B",
+        "AXI03007"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/10 SCX10 III Jeep JLU Wrangler 4X4 Rock Crawler with Portals RTR",
+      "model_ids": [
+        "AXI03003",
+        "AXI03003B"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/18 UTB18 Capra 4WD Unlimited Trail Buggy RTR",
+      "model_ids": [
+        "AXI01002",
+        "AXI01002V2"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/24 SCX24 2019 Jeep Wrangler JLU CRC 4WD Rock Crawler Brushed RTR",
+      "model_ids": [
+        "AXI00002V2",
+        "AXI00002"
+      ]
+    },
+    {
+      "brand_id": "brands-axial",
+      "name": "Axial 1/24 SCX24 Jeep JT Gladiator 4WD Rock Crawler Brushed RTR",
+      "model_ids": [
+        "AXI00005V2",
+        "AXI00005"
+      ]
+    },
+    {
+      "brand_id": "brands-blade",
+      "name": "Blade 120 S2 BNF with SAFE",
+      "model_ids": [
+        "BLH11800",
+        "BLH1180"
+      ]
+    },
+    {
+      "brand_id": "brands-blade",
+      "name": "Blade 120 S2 RTF with SAFE",
+      "model_ids": [
+        "BLH1100",
+        "BLH11000"
+      ]
+    },
+    {
+      "brand_id": "brands-blade",
+      "name": "Blade Nano S3 BNF Basic with AS3X and SAFE",
+      "model_ids": [
+        "BLH01350",
+        "BLH013050"
+      ]
+    },
+    {
+      "brand_id": "brands-blade",
+      "name": "Blade Nano S3 RTF with AS3X and SAFE",
+      "model_ids": [
+        "BLH01300",
+        "BLH013000"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Apprentice STS 1.5m RTF Smart Trainer with SAFE",
+      "model_ids": [
+        "EFL3700",
+        "EFL37000"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Carbon-Z Cub SS 2.1m BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL124500",
+        "EFL12450"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Cherokee 1.3m BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL54500",
+        "EFL5450",
+        "EFL05450"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Cherokee 1.3m PNP",
+      "model_ids": [
+        "EFL05475",
+        "EFL5475"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Commander mPd 1.4m BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL14850",
+        "EFL4850"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Commander mPd 1.4m PNP",
+      "model_ids": [
+        "EFL4875",
+        "EFL14875"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite EC-1500 Twin 1.5m BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL5750",
+        "EFL15750"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite EC-1500 Twin 1.5m PNP",
+      "model_ids": [
+        "EFL5775",
+        "EFL15775"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Extra 300 3D 1.3m BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL115500",
+        "EFL11550"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite F-16 Thunderbirds 70mm EDF Jet BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL178500",
+        "EFL78500"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Maule M-7 1.5m BNF Basic with AS3X and SAFE Select, includes Floats",
+      "model_ids": [
+        "EFL53500",
+        "EFL5350"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite P-47 Razorback 1.2m PNP",
+      "model_ids": [
+        "EFL8475",
+        "EFL08475"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Pitts S-1S BNF Basic with AS3X and SAFE Select, 850mm",
+      "model_ids": [
+        "EFL35500",
+        "EFL3550"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Timber X 1.2m BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL3850",
+        "EFL38500"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Turbo Timber Evolution 1.5m PNP, includes Floats",
+      "model_ids": [
+        "EFL105275",
+        "EFL105275B"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite V900 BNF Basic with AS3X and SAFE Select, 900mm",
+      "model_ids": [
+        "EFL7450",
+        "EFL74500"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Valiant 1.3m BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL4950",
+        "EFL49500"
+      ]
+    },
+    {
+      "brand_id": "brands-e-flite",
+      "name": "E-flite Viper 70mm EDF Jet BNF Basic with AS3X and SAFE Select",
+      "model_ids": [
+        "EFL077500",
+        "EFL77500"
+      ]
+    },
+    {
+      "brand_id": "brands-hangar-9",
+      "name": "Hangar 9 P-47D Thunderbolt 20cc ARF, 67\"",
+      "model_ids": [
+        "HAN2990",
+        "HAN2990B"
+      ]
+    },
+    {
+      "brand_id": "brands-hangar-9",
+      "name": "Hangar 9 P-51D Mustang 20cc ARF, 69.5\"",
+      "model_ids": [
+        "HAN2820",
+        "HAN2820B"
+      ]
+    },
+    {
+      "brand_id": "brands-hobbyzone",
+      "name": "HobbyZone AeroScout S 2 1.1m and RealFlight Trainer Success Program Ultimate Combo",
+      "model_ids": [
+        "HBZ380001SC",
+        "HBZ380002SC"
+      ]
+    },
+    {
+      "brand_id": "brands-hobbyzone",
+      "name": "HobbyZone Sport Cub S 2 RTF with SAFE",
+      "model_ids": [
+        "HBZ44000",
+        "HBZ444000"
+      ]
+    },
+    {
+      "brand_id": "brands-pro-boat",
+      "name": "Pro Boat Miss GEICO Zelos 36\" Twin Brushless Catamaran RTR",
+      "model_ids": [
+        "PRB08040",
+        "PRB08040V2"
+      ]
+    },
+    {
+      "brand_id": "brands-pro-boat",
+      "name": "Pro Boat Zelos G 48\" Gas Powered Catamaran RTR",
+      "model_ids": [
+        "PRB09004",
+        "PRB09004V2"
+      ]
+    },
+    {
+      "brand_id": "brands-spektrum",
+      "name": "Spektrum DX5 Pro 5-Channel DSMR Transmitter Only",
+      "model_ids": [
+        "SPMR5010",
+        "SPMR5025"
+      ]
+    },
+    {
+      "brand_id": "brands-spektrum",
+      "name": "Spektrum DX6e 6-Channel DSMX Transmitter Only",
+      "model_ids": [
+        "SPMR6650",
+        "SPMR6655"
+      ]
+    },
+    {
+      "brand_id": "brands-spektrum",
+      "name": "Spektrum DX8e 8-Channel DSMX Transmitter Only",
+      "model_ids": [
+        "SPMR8100",
+        "SPMR8105"
+      ]
+    },
+    {
+      "brand_id": "brands-spektrum",
+      "name": "Spektrum NX10+ 20-Channel DSMX Transmitter Only",
+      "model_ids": [
+        "SPMR10120A",
+        "SPMR10120"
+      ]
+    },
+    {
+      "brand_id": "brands-spektrum",
+      "name": "Spektrum NX8+ 20-Channel DSMX Transmitter Only",
+      "model_ids": [
+        "SPMR8210",
+        "SPMR8210A"
+      ]
+    }
+  ],
+  "pagination_indicators": [],
+  "public_js": {
+    "checked": false
+  },
+  "input_sha256": {
+    "raw/partfinder.html": "890956a811656732f8b6427ed0175f2a582a8bfcefd4fa121dd0fec32da7ba59",
+    "models.json": "6a5931b00e95a410d1c1c6b41b5378e9cb2028689da1d6c022021825b53f3550",
+    "manifest.json": "cebe50361ad2e7e53103cf231d76b87ea4ebbc70b69afc4b60540e4e8efbcda8",
+    "raw/brands-arrma.json": "9cbe247919e4aad38139e915c8d47bca767d479955aac8c7c68760e823a5c924",
+    "raw/brands-axial.json": "ad46bb654f910dfdb1a5a2e46c29882cc33a925ede00a1501853c02e4f38f1d4",
+    "raw/brands-blade.json": "247b20b46d315b59ad26b7157d8a58664be954af5852365c96c46ab7f92efdca",
+    "raw/brands-dle-engines.json": "a3bb0deb7a99eb155342fca6c805169051abada024b4c02ba1cf0fb7d9e6a64f",
+    "raw/brands-e-flite.json": "704fd645e946372ba73a1ce3bcc1f88a44bfc72dda2aed90b131f40cbccc79bc",
+    "raw/brands-hangar-9.json": "8c5a8a0e3b8d6ad6a28c7775a127ac8628c898a5d4f9395b1d5d950b3cb3e601",
+    "raw/brands-hobbyzone.json": "53b382bda01ad44dffb9e10e74bd59d3a9e4d3cdc20737e52aef6b2094ce9308",
+    "raw/brands-losi.json": "18d36aae254c2e1b63588b40d26663f72bb21f1f74032097f8a5ad19a9d62fb5",
+    "raw/brands-os-engines.json": "670ddab8d15c851db95ac17f7f09fd0b8ba21389db89af3d917c09b8ae6e44a3",
+    "raw/brands-pro-boat.json": "d0bdda7fa39125a218e7d192eb0208ae3a8808f6f5a5007e3385258495be0a3f",
+    "raw/brands-saito-engines.json": "292ddf0041154cc370e6e2b3ff6333eeea536f91a2afa510e038e0bd80b7523b",
+    "raw/brands-spektrum.json": "607e9768caecfdd77d8205c9b7e1f5bdbb79ad63718d8631b4979aab03d79c0a",
+    "raw/brands-team-losi-racing.json": "502710affd7fab97bea4e72b97ce2d7418dbede4793a5d644032672413c79a22",
+    "raw/brands-top-flite.json": "4ceae5011fcd04197e7b3c33d8c71b184d0be3bee67d52a618e45d03015cc63d"
+  }
+}

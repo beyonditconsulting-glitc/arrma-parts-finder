@@ -7,6 +7,7 @@ import {
   rmSync,
 } from "node:fs";
 import { createHash } from "node:crypto";
+import { Buffer } from "node:buffer";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
 import { parts } from "../src/catalog.ts";

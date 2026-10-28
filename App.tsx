@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useVendorCart } from "./src/useVendorCart";
 import { vendors, type Vendor } from "./src/cart";
 import { displayObservedPrice } from "./src/offers";
+import { HorizonCatalog } from "./src/components/HorizonCatalog";
 import { PartsTable } from "./src/components/PartsTable";
 import { PhotoLookup } from "./src/components/PhotoLookup";
 import { ProductImage } from "./src/components/ProductImage";
@@ -47,7 +48,6 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [model, setModel] = useState(vehicleModel(catalogVehicle));
   const [version, setVersion] = useState(catalogVehicle);
-  const vehicle = version === allVersions ? model : version;
   const [category, setCategory] = useState("All parts");
   const { tab: routeTab } = useLocalSearchParams<{ tab?: string }>();
   const tab = [
@@ -62,9 +62,13 @@ export default function App() {
     : "Explore";
   const setTab = (next: string) => router.setParams({ tab: next });
   const [saved, setSaved] = useState<string[]>([]);
-  const [selected, setSelected] = useState<Part | null>(null);
+  const [savedParts, setSavedParts] = useState<Part[]>([]);
+  const [selected, updateSelected] = useState<Part | null>(null);
+  const setSelected = (part: Part | null) => {
+    updateSelected(part);
+    setExpandedSections([]);
+  };
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  useEffect(() => setExpandedSections([]), [selected?.id]);
   const toggleSection = (section: string) =>
     setExpandedSections((current) =>
       current.includes(section)
@@ -72,15 +76,25 @@ export default function App() {
         : [...current, section],
     );
   const [picker, setPicker] = useState<"model" | "version" | null>(null);
-  const [visibleCount, setVisibleCount] = useState(24);
+  const [catalogMode, setCatalogMode] = useState<"parts" | "horizon">("parts");
+  const resultsKey = JSON.stringify([query, model, version, category, tab]);
+  const [pagination, setPagination] = useState({ key: resultsKey, count: 24 });
+  const visibleCount = pagination.key === resultsKey ? pagination.count : 24;
   const [resultsView, setResultsView] = useState<"table" | "cards">("table");
   const [viewMenuOpen, setViewMenuOpen] = useState(false);
-  useEffect(() => setVisibleCount(24), [query, model, version, category, tab]);
-  const results = searchPartsByModel(query, model, version, category).filter(
-    (p) => tab !== "Saved" || saved.includes(p.id),
-  );
-  const toggle = (id: string) =>
-    setSaved((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
+  const results = tab === "Saved"
+    ? savedParts.filter((part) =>
+        saved.includes(part.id) &&
+        query.toLowerCase().trim().split(/\s+/).every((term) =>
+          `${part.id} ${part.manufacturerPartNumber ?? ""} ${part.name} ${part.brand} ${part.vehicles.join(" ")}`.toLowerCase().includes(term),
+        ),
+      )
+    : searchPartsByModel(query, model, version, category);
+  const toggle = (id: string) => {
+    const part = selected?.id === id ? selected : results.find((item) => item.id === id);
+    if (part) setSavedParts((current) => [...current.filter((item) => item.id !== id), part]);
+    setSaved((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
+  };
   const openCart = (vendor: Vendor) => {
     setSelected(null);
     setCartVendor(vendor);
@@ -120,7 +134,7 @@ export default function App() {
             <Text style={s.wordmark}>
               PIT FINDER<Text style={{ color: red }}> /</Text>
             </Text>
-            <Text style={s.micro}>THE ARRMA PARTS COMPANION</Text>
+            <Text style={s.micro}>THE RC PARTS COMPANION</Text>
             <Text style={s.brandCredit}>by LitDecals.com</Text>
           </View>
           <View style={s.demo}>
@@ -158,6 +172,29 @@ export default function App() {
               <Text style={s.title}>
                 {tab === "Saved" ? "Saved parts" : "Find your part"}
               </Text>
+              {tab === "Explore" && (
+                <View style={s.catalogSwitch}>
+                  {([
+                    ["parts", "Current parts catalog"],
+                    ["horizon", "All Horizon models"],
+                  ] as const).map(([mode, label]) => (
+                    <Pressable
+                      key={mode}
+                      style={[s.catalogChoice, catalogMode === mode && s.activeChip]}
+                      accessibilityRole="button"
+                      accessibilityState={{ selected: catalogMode === mode }}
+                      onPress={() => setCatalogMode(mode)}
+                    >
+                      <Text style={[s.chipText, catalogMode === mode && { color: "white" }]}>{label}</Text>
+                    </Pressable>
+                  ))}
+                </View>
+              )}
+              {tab === "Explore" && catalogMode === "horizon" ? (
+                <HorizonCatalog onSelect={setSelected} />
+              ) : (
+                <>
+              {tab !== "Saved" && (
               <View style={{ flexDirection: "row", gap: 8 }}>
                 <Pressable
                   style={[s.vehicle, { flex: 1 }]}
@@ -194,6 +231,7 @@ export default function App() {
                   <Text style={{ fontSize: 22 }}>⌄</Text>
                 </Pressable>
               </View>
+              )}
               <View style={s.search}>
                 <Text style={{ fontSize: 24, color: "#7b7d80" }}>⌕</Text>
                 <TextInput
@@ -215,8 +253,8 @@ export default function App() {
                 )}
               </View>
               <Text style={s.catalogNote}>
-                Kraton-based catalog · Fitment verification pending · Prices are
-                not live
+                {tab === "Saved" ? "Saved source-listed parts" : "Kraton-based catalog"}
+                {" · Fitment verification pending · Prices are not live"}
               </Text>
               {tab === "Explore" && (
                 <ScrollView
@@ -352,9 +390,8 @@ export default function App() {
                           </Text>
                           <Text style={s.partName}>{p.name}</Text>
                           <Text style={s.fitment}>
-                            ARA8708T1 · Also listed for{" "}
-                            {Math.max(0, p.fitments.length - 1)} other models.
-                            Diagram check pending.
+                            Source-listed for {p.provenance.vehicleId} · {p.vehicles.join(", ")}.
+                            Fitment verification pending.
                           </Text>
                           <View style={s.cardFooter}>
                             <View>
@@ -388,7 +425,7 @@ export default function App() {
                   {visibleCount < results.length && (
                     <Pressable
                       style={s.saveButton}
-                      onPress={() => setVisibleCount((count) => count + 24)}
+                      onPress={() => setPagination({ key: resultsKey, count: visibleCount + 24 })}
                       accessibilityRole="button"
                     >
                       <Text style={s.compareText}>
@@ -400,11 +437,15 @@ export default function App() {
                   )}
                 </>
               )}
-              <PhotoLookup
-                model={model}
-                version={version}
-                onBarcode={setQuery}
-              />
+              {tab !== "Saved" && (
+                <PhotoLookup
+                  model={model}
+                  version={version}
+                  onBarcode={setQuery}
+                />
+              )}
+                </>
+              )}
               <Text style={s.disclaimer}>
                 Independent enthusiast app. Not affiliated with ARRMA or the
                 listed retailers. Saved parts last for this session.
@@ -585,7 +626,7 @@ export default function App() {
                     </Pressable>
                   </View>
                   <PartSection
-                    title="Compatible vehicles"
+                    title="Source-listed vehicles"
                     expanded={expandedSections.includes("fitment")}
                     onToggle={() => toggleSection("fitment")}
                   >
@@ -613,8 +654,8 @@ export default function App() {
                     onToggle={() => toggleSection("repair")}
                   >
                     <Text style={s.fitment}>
-                      Browse the official ARRMA support tutorials. Confirm your
-                      exact model before using a procedure.
+                      Selected vehicle: {selected.provenance.vehicleId} · {selected.vehicles.join(", ")}.
+                      The Maintenance tab contains ARRMA tutorials. Confirm the brand and exact model before using a procedure.
                     </Text>
                     <Pressable
                       accessibilityRole="button"
@@ -634,7 +675,7 @@ export default function App() {
                     <RelatedProducts
                       key={`related-${selected.id}`}
                       part={selected}
-                      vehicle={vehicle}
+                      vehicle={`${selected.provenance.vehicleId} ${selected.vehicles.join(" ")}`}
                       open={(url) => void open(url)}
                     />
                   </PartSection>
@@ -644,10 +685,9 @@ export default function App() {
                     onToggle={() => toggleSection("source")}
                   >
                     <Text style={s.fitment}>
-                      Source: {selected.provenance.publisher} replacement-parts
-                      lookup for {selected.provenance.vehicleId}. Captured{" "}
-                      {selected.provenance.observedAt.slice(0, 10)}. Categories
-                      are inferred from listing titles.
+                      Source-listed association from {selected.provenance.publisher}
+                      {" "}for {selected.provenance.vehicleId} · {selected.vehicles.join(", ")}. Captured{" "}
+                      {selected.provenance.observedAt.slice(0, 10)}. Source listings do not establish independently verified fitment.
                     </Text>
                     <Text selectable style={s.fitment}>
                       Catalog ID: {selected.id}
@@ -709,6 +749,8 @@ function PartSection({
   );
 }
 const s = StyleSheet.create({
+  catalogSwitch: { flexDirection: "row", gap: 8, marginVertical: 14 },
+  catalogChoice: { flex: 1, minHeight: 48, padding: 12, borderRadius: 10, borderWidth: 1, borderColor: "#dedfd9", justifyContent: "center", alignItems: "center" },
   accordionTop: {
     flexDirection: "row",
     justifyContent: "space-between",

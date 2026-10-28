@@ -1,0 +1,26 @@
+{
+  "source": "https://www.horizonhobby.com/partfinder",
+  "retrieved_at_utc": "2026-10-28T02:58:18.562607+00:00",
+  "model_count": 1140,
+  "brand_counts": {
+    "ARRMA": 111,
+    "Axial": 99,
+    "Blade": 78,
+    "DLE Engines": 14,
+    "E-flite": 289,
+    "Hangar 9": 71,
+    "HobbyZone": 44,
+    "Losi": 112,
+    "OS Engines": 110,
+    "Pro Boat": 42,
+    "Saito Engines": 28,
+    "Spektrum": 101,
+    "Team Losi Racing": 24,
+    "Top Flite": 17
+  },
+  "scope": "All public part finder model lists, returned SKU variants, website model-ID fallbacks, and paginated source-listed parts/accessories for all 14 configured brands. Discontinued products included; associations are not independently verified fitment.",
+  "collection_completed_at_utc": "2026-10-28T03:21:53.544388+00:00",
+  "completed_model_count": 1140,
+  "lookup_count": 1376,
+  "collection_error_count": 0
+}
